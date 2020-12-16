@@ -1,0 +1,11 @@
+framework module AlfredCore {
+  umbrella header "AlfredCore.h"
+
+  export *
+  module * { export * }
+}
+
+module AlfredCore.Swift {
+    header "AlfredCore-Swift.h"
+    requires objc
+}
