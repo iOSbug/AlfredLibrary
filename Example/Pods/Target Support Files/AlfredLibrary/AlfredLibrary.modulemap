@@ -1,0 +1,6 @@
+framework module AlfredLibrary {
+  umbrella header "AlfredLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

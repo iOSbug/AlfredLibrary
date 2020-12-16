@@ -1,0 +1,16 @@
+PODS:
+  - AlfredLibrary (0.1.0)
+
+DEPENDENCIES:
+  - AlfredLibrary (from `../`)
+
+EXTERNAL SOURCES:
+  AlfredLibrary:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AlfredLibrary: 1df55f244aed47be016a89e7f142833cee4c5623
+
+PODFILE CHECKSUM: cb183a816011c26f6f2ca7c5bb35f10db4fde0c0
+
+COCOAPODS: 1.10.0
