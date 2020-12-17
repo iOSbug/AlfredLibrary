@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AlfredLibrary'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'A short description of AlfredLibrary.'
 
 # This description is used to generate tags and improve search results.
@@ -31,9 +31,10 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
 
-  s.vendored_frameworks = "**/AlfredLibrary.framework"
-  s.vendored_frameworks = "**/AlfredCore.framework"
-  s.vendored_frameworks = "**/AlfredNetManager.framework"
+  s.vendored_frameworks = "libs/*.{framework}"
+#  s.vendored_frameworks = "**/AlfredLibrary.framework"
+#  s.vendored_frameworks = "**/AlfredCore.framework"
+#  s.vendored_frameworks = "**/AlfredNetManager.framework"
 
   s.frameworks   = 'NetworkExtension','Foundation','CoreLocation'
 
