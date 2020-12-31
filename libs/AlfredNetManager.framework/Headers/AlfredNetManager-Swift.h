@@ -229,16 +229,23 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AlfredLibMan
 
 @class AlfredLock;
 @class AlfredBridge;
+@class AlfredTimeZone;
 
 SWIFT_CLASS("_TtC16AlfredNetManager12CacheManager")
 @interface CacheManager : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CacheManager * _Nonnull shared;)
 + (CacheManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, copy) NSArray<AlfredLock *> * _Nonnull lockList;
-@property (nonatomic, copy) NSArray<AlfredBridge *> * _Nonnull gatewayList;
+@property (nonatomic, copy) NSArray<AlfredBridge *> * _Nonnull bridgeList;
 - (void)clear;
 - (void)unbindDeviceWithDeviceId:(NSString * _Nonnull)deviceId;
-- (AlfredLock * _Nullable)getLockDeviceWithDeviceId:(NSString * _Nonnull)deviceId SWIFT_WARN_UNUSED_RESULT;
+- (AlfredLock * _Nullable)getLockDevice:(NSString * _Nullable)deviceId SWIFT_WARN_UNUSED_RESULT;
+- (AlfredBridge * _Nullable)getLockBindGateway:(AlfredLock * _Nullable)device SWIFT_WARN_UNUSED_RESULT;
+- (AlfredBridge * _Nullable)getMygatewayByGatewayDid:(NSString * _Nullable)did SWIFT_WARN_UNUSED_RESULT;
+- (AlfredBridge * _Nullable)getMygatewayByLockId:(NSString * _Nullable)deviceId SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<AlfredLock *> * _Nonnull)getMyLocksByGatewayDid:(NSString * _Nullable)did SWIFT_WARN_UNUSED_RESULT;
+- (void)saveGatewayTimezone:(NSString * _Nonnull)gatewayId :(AlfredTimeZone * _Nonnull)timezones;
+- (AlfredTimeZone * _Nullable)getGatewayTimezone:(NSString * _Nonnull)gatewayId SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -252,7 +259,6 @@ SWIFT_CLASS("_TtC16AlfredNetManager10ErrorModel")
 
 @class AlfredDevices;
 @class NetErrorModel;
-@class AlfredDeviceList;
 @class AlfredLockRecords;
 
 SWIFT_CLASS("_TtC16AlfredNetManager15NetSwiftManager")
@@ -260,10 +266,10 @@ SWIFT_CLASS("_TtC16AlfredNetManager15NetSwiftManager")
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NetSwiftManager * _Nonnull shared;)
 + (NetSwiftManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)queryDevices:(void (^ _Nonnull)(AlfredDevices * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)deviceList:(void (^ _Nonnull)(AlfredDeviceList * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)fetchLockDevices:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(NSArray<AlfredLock *> * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)fetchLockRecords:(NSString * _Nonnull)deviceID limit:(NSInteger)limit page:(NSInteger)page success:(void (^ _Nonnull)(AlfredLockRecords * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)renameDevice:(NSString * _Nonnull)deviceID deviceType:(AlfredDeviceType)deviceType alias:(NSString * _Nonnull)alias success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)fetchDevice:(NSString * _Nonnull)deviceID deviceType:(AlfredDeviceType)deviceType success:(void (^ _Nonnull)(AlfredLock * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)fetchLockRecords:(NSString * _Nonnull)deviceID limit:(NSString * _Nonnull)limit page:(NSString * _Nonnull)page success:(void (^ _Nonnull)(AlfredLockRecords * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)updateLockRecords:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)renameDevice:(NSString * _Nonnull)deviceID deviceDid:(NSString * _Nonnull)deviceDid deviceType:(AlfredDeviceType)deviceType alias:(NSString * _Nonnull)alias success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)unbindDevice:(NSString * _Nonnull)deviceID deviceType:(AlfredDeviceType)deviceType success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -274,7 +280,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NetSwiftMana
 - (void)checkDeviceBindStatus:(NSString * _Nonnull)deviceID deviceType:(AlfredDeviceType)deviceType success:(void (^ _Nonnull)(AlfredDeviceBindStatus * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)getDevInfo:(NSString * _Nonnull)deviceID success:(void (^ _Nonnull)(AlfredLock * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)lockBind:(NSString * _Nonnull)deviceID type:(NSString * _Nonnull)type success:(void (^ _Nonnull)(AlfredLock * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)lockBindUac:(NSString * _Nonnull)deviceID deviceType:(NSString * _Nonnull)deviceType success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)lockBindUac:(NSString * _Nonnull)deviceID mac:(NSString * _Nonnull)mac deviceType:(NSString * _Nonnull)deviceType success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)lockPostinfo:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)updateBluetoothUuid:(NSString * _Nonnull)did bluuid:(NSString * _Nonnull)bluuid success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)lockPostkeys:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
@@ -283,6 +289,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NetSwiftMana
 
 @class AlfredBridges;
 @class DeviceToken;
+@class AlfredBridgeBindStatus;
+@class AlfredBridgeLockStatusListModel;
 @class AlfredBridgeOperate;
 @class AlfredBridgePair;
 
@@ -290,6 +298,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NetSwiftMana
 - (void)fetchBridgeDevices:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridges * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)getDevicePairToken:(void (^ _Nonnull)(DeviceToken * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (NSString * _Nonnull)getAlfredBridgePairUrl SWIFT_WARN_UNUSED_RESULT;
+- (void)gatewayCheckBind:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridgeBindStatus * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)gatewayStatus:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridgeLockStatusListModel * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)gatewayTransparent:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridgeOperate * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)gatewayTransparentResult:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridgeOperate * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)gatewayQueryBindReq:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridgePair * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
@@ -298,6 +308,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NetSwiftMana
 - (void)gatewayBindLock:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridgePair * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)gatewayUnbindUacLock:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)gatewayUnbindLock:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)gatewayTimezones:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredTimeZone * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)setgGatewayTimezone:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 @end
 
 
@@ -537,16 +549,23 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) AlfredLibMan
 
 @class AlfredLock;
 @class AlfredBridge;
+@class AlfredTimeZone;
 
 SWIFT_CLASS("_TtC16AlfredNetManager12CacheManager")
 @interface CacheManager : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) CacheManager * _Nonnull shared;)
 + (CacheManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, copy) NSArray<AlfredLock *> * _Nonnull lockList;
-@property (nonatomic, copy) NSArray<AlfredBridge *> * _Nonnull gatewayList;
+@property (nonatomic, copy) NSArray<AlfredBridge *> * _Nonnull bridgeList;
 - (void)clear;
 - (void)unbindDeviceWithDeviceId:(NSString * _Nonnull)deviceId;
-- (AlfredLock * _Nullable)getLockDeviceWithDeviceId:(NSString * _Nonnull)deviceId SWIFT_WARN_UNUSED_RESULT;
+- (AlfredLock * _Nullable)getLockDevice:(NSString * _Nullable)deviceId SWIFT_WARN_UNUSED_RESULT;
+- (AlfredBridge * _Nullable)getLockBindGateway:(AlfredLock * _Nullable)device SWIFT_WARN_UNUSED_RESULT;
+- (AlfredBridge * _Nullable)getMygatewayByGatewayDid:(NSString * _Nullable)did SWIFT_WARN_UNUSED_RESULT;
+- (AlfredBridge * _Nullable)getMygatewayByLockId:(NSString * _Nullable)deviceId SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<AlfredLock *> * _Nonnull)getMyLocksByGatewayDid:(NSString * _Nullable)did SWIFT_WARN_UNUSED_RESULT;
+- (void)saveGatewayTimezone:(NSString * _Nonnull)gatewayId :(AlfredTimeZone * _Nonnull)timezones;
+- (AlfredTimeZone * _Nullable)getGatewayTimezone:(NSString * _Nonnull)gatewayId SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -560,7 +579,6 @@ SWIFT_CLASS("_TtC16AlfredNetManager10ErrorModel")
 
 @class AlfredDevices;
 @class NetErrorModel;
-@class AlfredDeviceList;
 @class AlfredLockRecords;
 
 SWIFT_CLASS("_TtC16AlfredNetManager15NetSwiftManager")
@@ -568,10 +586,10 @@ SWIFT_CLASS("_TtC16AlfredNetManager15NetSwiftManager")
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NetSwiftManager * _Nonnull shared;)
 + (NetSwiftManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)queryDevices:(void (^ _Nonnull)(AlfredDevices * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)deviceList:(void (^ _Nonnull)(AlfredDeviceList * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)fetchLockDevices:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(NSArray<AlfredLock *> * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)fetchLockRecords:(NSString * _Nonnull)deviceID limit:(NSInteger)limit page:(NSInteger)page success:(void (^ _Nonnull)(AlfredLockRecords * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)renameDevice:(NSString * _Nonnull)deviceID deviceType:(AlfredDeviceType)deviceType alias:(NSString * _Nonnull)alias success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)fetchDevice:(NSString * _Nonnull)deviceID deviceType:(AlfredDeviceType)deviceType success:(void (^ _Nonnull)(AlfredLock * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)fetchLockRecords:(NSString * _Nonnull)deviceID limit:(NSString * _Nonnull)limit page:(NSString * _Nonnull)page success:(void (^ _Nonnull)(AlfredLockRecords * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)updateLockRecords:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)renameDevice:(NSString * _Nonnull)deviceID deviceDid:(NSString * _Nonnull)deviceDid deviceType:(AlfredDeviceType)deviceType alias:(NSString * _Nonnull)alias success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)unbindDevice:(NSString * _Nonnull)deviceID deviceType:(AlfredDeviceType)deviceType success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -582,7 +600,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NetSwiftMana
 - (void)checkDeviceBindStatus:(NSString * _Nonnull)deviceID deviceType:(AlfredDeviceType)deviceType success:(void (^ _Nonnull)(AlfredDeviceBindStatus * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)getDevInfo:(NSString * _Nonnull)deviceID success:(void (^ _Nonnull)(AlfredLock * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)lockBind:(NSString * _Nonnull)deviceID type:(NSString * _Nonnull)type success:(void (^ _Nonnull)(AlfredLock * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)lockBindUac:(NSString * _Nonnull)deviceID deviceType:(NSString * _Nonnull)deviceType success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)lockBindUac:(NSString * _Nonnull)deviceID mac:(NSString * _Nonnull)mac deviceType:(NSString * _Nonnull)deviceType success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)lockPostinfo:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)updateBluetoothUuid:(NSString * _Nonnull)did bluuid:(NSString * _Nonnull)bluuid success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)lockPostkeys:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
@@ -591,6 +609,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NetSwiftMana
 
 @class AlfredBridges;
 @class DeviceToken;
+@class AlfredBridgeBindStatus;
+@class AlfredBridgeLockStatusListModel;
 @class AlfredBridgeOperate;
 @class AlfredBridgePair;
 
@@ -598,6 +618,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NetSwiftMana
 - (void)fetchBridgeDevices:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridges * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)getDevicePairToken:(void (^ _Nonnull)(DeviceToken * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (NSString * _Nonnull)getAlfredBridgePairUrl SWIFT_WARN_UNUSED_RESULT;
+- (void)gatewayCheckBind:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridgeBindStatus * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)gatewayStatus:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridgeLockStatusListModel * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)gatewayTransparent:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridgeOperate * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)gatewayTransparentResult:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridgeOperate * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)gatewayQueryBindReq:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridgePair * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
@@ -606,6 +628,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NetSwiftMana
 - (void)gatewayBindLock:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredBridgePair * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)gatewayUnbindUacLock:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)gatewayUnbindLock:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)gatewayTimezones:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(AlfredTimeZone * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)setgGatewayTimezone:(NSDictionary<NSString *, id> * _Nonnull)params success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 @end
 
 

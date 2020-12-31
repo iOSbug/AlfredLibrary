@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
          subdeviceID:(NSString*)subdeviceID
                 mode:(NSString*)mode
             codeType:(AlfredLockCodeType)codeType
-             success:(nullable void (^)(void))success
+             success:(nullable void (^)(NSArray<AlfredLockCode *>*))success
              failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
 
 
@@ -54,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
            codeType:(AlfredLockCodeType)codeType
           codeIndex:(int)codeIndex
               value:(NSString*)value
-            success:(nullable void (^)(void))success
+            success:(nullable void (^)(AlfredLockCode *))success
             failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
 
 
@@ -83,8 +83,8 @@ NS_ASSUME_NONNULL_BEGIN
  *    @param     gatewayID          指定设备的SN
  *    @param     subdeviceID      网关下挂子设备的SN
  *    @param     mode                     子设备型号
- *    @param     startPage           日志起始页序号，从0开始计数
- *    @param     endPage               日志结束页序号，从0开始计数
+ *    @param     page                   日志起始页序号，从1开始计数
+ *    @param     limit                  每页的个数
  *    @param     success              成功回调
  *    @param     failure              失败回调
 
@@ -92,10 +92,30 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)getLockRecords:(NSString*)gatewayID
            subdeviceID:(NSString*)subdeviceID
                   mode:(NSString*)mode
-             startPage:(int)startPage
-               endPage:(int)endPage
-               success:(nullable void (^)(void))success
+                  page:(int)page
+                 limit:(int)limit
+               success:(nullable void (^)(NSArray<AlfredLockRecord *> *))success
                failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
+
+
+
+/**
+ *    远程设置门锁设备基本参数
+ *
+ *    @param     gatewayID          指定设备的SN
+ *    @param     subdeviceID      网关下挂子设备的SN
+ *    @param     configID             参数设置ID
+ *    @param     values                 参数设置值，根据参数设置ID不同，需调用者传入不同的值
+ *    @param     success              成功回调
+ *    @param     failure              失败回调
+
+ */
+- (void)setLockConfig:(NSString*)gatewayID
+          subdeviceID:(NSString*)subdeviceID
+             configID:(AlfredLockRequestConfig)configID
+               values:(id)values
+              success:(nullable void (^)(void))success
+              failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
 
 
 
@@ -104,7 +124,6 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *    @param     gatewayID          指定设备的SN
  *    @param     subdeviceID      网关下挂子设备的SN
- *    @param     mode                     子设备型号
  *    @param     codeType            key类别
  *    @param     codeIndex          key编号
  *    @param     startTime          开始时间
@@ -115,7 +134,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)setLockCodePeriodSchedule:(NSString*)gatewayID
                       subdeviceID:(NSString*)subdeviceID
-                             mode:(NSString*)mode
                          codeType:(AlfredLockCodeType)codeType
                         codeIndex:(int)codeIndex
                         startTime:(NSString*)startTime
@@ -130,10 +148,9 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *    @param     gatewayID          指定设备的SN
  *    @param     subdeviceID      网关下挂子设备的SN
- *    @param     mode                     子设备型号
  *    @param     codeType            key类别
  *    @param     codeIndex          key编号
- *    @param     weekday              一周里的天数
+ *    @param     weekdays              一周里的天数
  *    @param     startTime          开始时间
  *    @param     endTime              结束时间
  *    @param     success              成功回调
@@ -142,10 +159,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)setLockCodeWeeklySchedule:(NSString*)gatewayID
                       subdeviceID:(NSString*)subdeviceID
-                             mode:(NSString*)mode
                          codeType:(AlfredLockCodeType)codeType
                         codeIndex:(int)codeIndex
-                          weekday:(NSString*)weekday
+                         weekdays:(NSArray *)weekdays
                         startTime:(NSString*)startTime
                           endTime:(NSString*)endTime
                           success:(nullable void (^)(void))success
@@ -157,7 +173,6 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *    @param     gatewayID          指定设备的SN
  *    @param     subdeviceID      网关下挂子设备的SN
- *    @param     mode                     子设备型号
  *    @param     codeType            key类别
  *    @param     codeIndex          key编号
  *    @param     success              成功回调
@@ -166,7 +181,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)deleteLockCodeSchedule:(NSString*)gatewayID
                    subdeviceID:(NSString*)subdeviceID
-                          mode:(NSString*)mode
                       codeType:(AlfredLockCodeType)codeType
                      codeIndex:(int)codeIndex
                        success:(nullable void (^)(void))success
@@ -223,6 +237,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
+ *    网关以及下挂子设备的状态
+ *
+ *    @param     bridges               网关数组
+ *    @param     success              成功回调
+ *    @param     failure              失败回调
+
+ */
+- (void)bridgeLockStatus:(NSArray*)bridges
+                 success:(nullable void (^)(void))success
+                 failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
+
+
+
+/**
  *    重启网关设备
  *
  *    @param     gatewayID          指定设备的SN
@@ -246,17 +274,35 @@ NS_ASSUME_NONNULL_BEGIN
         success:(nullable void (^)(void))success
         failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
 
+
+/**
+ *    获取网关设备时区列表
+ *
+ *    @param     gatewayID          指定设备的SN
+ *    @param     success              成功回调
+ *    @param     failure              失败回调
+
+ */
+- (void)getTimezones:(NSString*)gatewayID
+             success:(nullable void (^)(AlfredTimeZone *))success
+             failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
+
+
 /**
  *    设置网关设备时区
  *
  *    @param     gatewayID          指定设备的SN
- *    @param     timezoneID        时区
+ *    @param     tzName                时区名称
+ *    @param     tzValue              时区内部值
+ *    @param     tzDistrict       时区内部别名
  *    @param     success              成功回调
  *    @param     failure              失败回调
 
  */
 - (void)restart:(NSString*)gatewayID
-    setTimezone:(NSString *)timezoneID
+         tzName:(NSString *)tzName
+        tzValue:(NSString *)tzValue
+     tzDistrict:(NSString *)tzDistrict
         success:(nullable void (^)(void))success
         failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
 

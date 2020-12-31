@@ -193,6 +193,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import ObjectiveC;
 #endif
 
+#import <AlfredCore/AlfredCore.h>
+
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 #if __has_warning("-Wpragma-clang-attribute")
@@ -214,6 +216,14 @@ SWIFT_CLASS("_TtC10AlfredCore11ResultModel")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC10AlfredCore12AbilityModel")
+@interface AbilityModel : ResultModel
+@property (nonatomic, copy) NSString * _Nullable enable;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class AlfredBridgeInfo;
 
 SWIFT_CLASS("_TtC10AlfredCore12AlfredBridge")
@@ -226,14 +236,32 @@ SWIFT_CLASS("_TtC10AlfredCore12AlfredBridge")
 @end
 
 
+SWIFT_CLASS("_TtC10AlfredCore22AlfredBridgeBindStatus")
+@interface AlfredBridgeBindStatus : ResultModel
+@property (nonatomic, copy) NSString * _Nullable deviceId;
+@property (nonatomic, copy) NSString * _Nullable retCode;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10AlfredCore27AlfredBridgeCapabilityModel")
+@interface AlfredBridgeCapabilityModel : ResultModel
+@property (nonatomic, copy) NSString * _Nullable diagnose;
+@property (nonatomic, copy) NSString * _Nullable localStorageTypes;
+@property (nonatomic, copy) NSString * _Nullable networkConfig;
+@property (nonatomic, copy) NSString * _Nullable privLiveStream;
+@property (nonatomic, copy) NSString * _Nullable timeZoneVersion;
+@property (nonatomic, copy) NSString * _Nullable newtz;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC10AlfredCore19AlfredBridgeHotspot")
 @interface AlfredBridgeHotspot : ResultModel
-@property (nonatomic, copy) NSString * _Nullable ss;
-@property (nonatomic) BOOL o;
-@property (nonatomic) NSInteger s;
-@property (nonatomic, copy) NSString * _Nullable c;
+@property (nonatomic, copy) NSString * _Nullable ssid;
+@property (nonatomic) BOOL open;
+@property (nonatomic) NSInteger signal;
 @property (nonatomic, copy) NSString * _Nullable i;
-@property (nonatomic, copy) NSString * _Nullable sn;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -248,6 +276,7 @@ SWIFT_CLASS("_TtC10AlfredCore16AlfredBridgeInfo")
 @property (nonatomic, strong) AlfredBridgeInfoNetworkConfig * _Nullable networkConfig;
 @property (nonatomic, strong) AlfredTimeConfig * _Nullable timeConfig;
 @property (nonatomic, strong) AlfredFwVersionUpgrade * _Nullable newFwversion;
+@property (nonatomic, strong) AlfredBridgeCapabilityModel * _Nullable capability;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -282,6 +311,26 @@ SWIFT_CLASS("_TtC10AlfredCore29AlfredBridgeInfoNetworkConfig")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class AlfredBridgeStatusModel;
+
+SWIFT_CLASS("_TtC10AlfredCore31AlfredBridgeLockStatusListModel")
+@interface AlfredBridgeLockStatusListModel : ResultModel
+@property (nonatomic, copy) NSArray<AlfredBridgeStatusModel *> * _Nullable value;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10AlfredCore27AlfredBridgeLockStatusModel")
+@interface AlfredBridgeLockStatusModel : ResultModel
+@property (nonatomic, copy) NSString * _Nullable deviceId;
+@property (nonatomic, copy) NSString * _Nullable onlineStatus;
+@property (nonatomic, copy) NSString * _Nullable lockStatus;
+@property (nonatomic, copy) NSString * _Nullable malfunction;
+@property (nonatomic, copy) NSString * _Nullable blesignal;
+@property (nonatomic, copy) NSString * _Nullable blesignalTs;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC10AlfredCore19AlfredBridgeOperate")
 @interface AlfredBridgeOperate : ResultModel
@@ -298,6 +347,15 @@ SWIFT_CLASS("_TtC10AlfredCore16AlfredBridgePair")
 @property (nonatomic, copy) NSString * _Nullable subDeviceId;
 @property (nonatomic, copy) NSString * _Nullable status;
 @property (nonatomic) BOOL value;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10AlfredCore23AlfredBridgeStatusModel")
+@interface AlfredBridgeStatusModel : ResultModel
+@property (nonatomic, copy) NSString * _Nullable deviceId;
+@property (nonatomic, copy) NSString * _Nullable onlineStatus;
+@property (nonatomic, copy) NSArray<AlfredBridgeLockStatusModel *> * _Nullable subDevices;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -353,8 +411,17 @@ SWIFT_CLASS("_TtC10AlfredCore22AlfredFwVersionUpgrade")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC10AlfredCore22AlfredInfoBluuidsModel")
+@interface AlfredInfoBluuidsModel : ResultModel
+@property (nonatomic, copy) NSString * _Nullable bluuid;
+@property (nonatomic, copy) NSString * _Nullable puuid;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class AlfredLockExtendModel;
-@class AlfredLockCode;
+@class AlfredLockInfo;
+@class AlfredLockAbilityModel;
 
 SWIFT_CLASS("_TtC10AlfredCore10AlfredLock")
 @interface AlfredLock : ResultModel
@@ -369,19 +436,38 @@ SWIFT_CLASS("_TtC10AlfredCore10AlfredLock")
 @property (nonatomic, copy) NSString * _Nullable type;
 @property (nonatomic, copy) NSString * _Nullable doorsensor;
 @property (nonatomic, strong) AlfredLockExtendModel * _Nullable extend;
-@property (nonatomic, copy) NSArray<AlfredLockCode *> * _Nullable keypersons;
+@property (nonatomic) BOOL connectBridge;
+@property (nonatomic) AlfredLockConnectState connectState;
+@property (nonatomic) AlfredLockStatus lockState;
+@property (nonatomic, strong) AlfredLockInfo * _Nullable lockInfo;
+@property (nonatomic, strong) AlfredLockAbilityModel * _Nullable ability;
+@property (nonatomic, copy) NSString * _Nullable gatewayLockBleSignal;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10AlfredCore22AlfredLockAbilityModel")
+@interface AlfredLockAbilityModel : ResultModel
+@property (nonatomic, strong) AbilityModel * _Nullable RFID;
+@property (nonatomic, strong) AbilityModel * _Nullable autolock;
+@property (nonatomic, strong) AbilityModel * _Nullable bluetooth;
+@property (nonatomic, strong) AbilityModel * _Nullable fingerprint;
+@property (nonatomic, strong) AbilityModel * _Nullable insidelock;
+@property (nonatomic, strong) AbilityModel * _Nullable language;
+@property (nonatomic, strong) AbilityModel * _Nullable leavemode;
+@property (nonatomic, strong) AbilityModel * _Nullable safemode;
+@property (nonatomic, strong) AbilityModel * _Nullable voice;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
 SWIFT_CLASS("_TtC10AlfredCore14AlfredLockCode")
 @interface AlfredLockCode : ResultModel
 @property (nonatomic, copy) NSString * _Nullable index;
-@property (nonatomic, copy) NSString * _Nullable type;
 @property (nonatomic, copy) NSString * _Nullable value;
 @property (nonatomic, copy) NSString * _Nullable codeAttr;
 @property (nonatomic, copy) NSString * _Nullable scheduleid;
-@property (nonatomic, copy) NSString * _Nullable scheduletype;
 @property (nonatomic, copy) NSString * _Nullable start;
 @property (nonatomic, copy) NSString * _Nullable end;
 @property (nonatomic, copy) NSArray<NSNumber *> * _Nullable week;
@@ -389,6 +475,8 @@ SWIFT_CLASS("_TtC10AlfredCore14AlfredLockCode")
 @property (nonatomic, copy) NSString * _Nullable did;
 @property (nonatomic, copy) NSString * _Nullable name;
 @property (nonatomic, copy) NSString * _Nullable personid;
+@property (nonatomic) AlfredLockCodeType _type;
+@property (nonatomic) AlfredLockCodeSchedule _scheduletype;
 + (AlfredLockCode * _Nonnull)getWeekScheduleModelWithResult:(NSString * _Nonnull)result SWIFT_WARN_UNUSED_RESULT;
 + (AlfredLockCode * _Nonnull)getYMDScheduleModelWithResult:(NSString * _Nonnull)result SWIFT_WARN_UNUSED_RESULT;
 + (AlfredLockCode * _Nonnull)getKeyModelWithResult:(NSString * _Nonnull)result SWIFT_WARN_UNUSED_RESULT;
@@ -401,6 +489,8 @@ SWIFT_CLASS("_TtC10AlfredCore21AlfredLockExtendModel")
 @property (nonatomic, copy) NSString * _Nullable name;
 @property (nonatomic, copy) NSString * _Nullable password1;
 @property (nonatomic, copy) NSString * _Nullable password2;
+@property (nonatomic, copy) NSArray<AlfredInfoBluuidsModel *> * _Nullable bluuids;
+@property (nonatomic, copy) NSArray<AlfredLockCode *> * _Nullable keys;
 @property (nonatomic, copy) NSString * _Nullable systemId;
 @property (nonatomic, copy) NSString * _Nullable modelnum;
 @property (nonatomic, copy) NSString * _Nullable fwversion;
@@ -447,6 +537,28 @@ SWIFT_CLASS("_TtC10AlfredCore21AlfredLockExtendModel")
 @end
 
 
+SWIFT_CLASS("_TtC10AlfredCore14AlfredLockInfo")
+@interface AlfredLockInfo : ResultModel
+@property (nonatomic, copy) NSString * _Nullable mainLockTongueState;
+@property (nonatomic, copy) NSString * _Nullable antilockState;
+@property (nonatomic, copy) NSString * _Nullable doorState;
+@property (nonatomic, copy) NSString * _Nullable doorMagnetState;
+@property (nonatomic, copy) NSString * _Nullable safeModeState;
+@property (nonatomic, copy) NSString * _Nullable adminPwdState;
+@property (nonatomic, copy) NSString * _Nullable autoState;
+@property (nonatomic, copy) NSString * _Nullable armingState;
+@property (nonatomic, copy) NSString * _Nullable powersave;
+@property (nonatomic) AlfredLockVoice soundVolume;
+@property (nonatomic, copy) NSString * _Nullable language;
+@property (nonatomic, copy) NSString * _Nullable battery;
+@property (nonatomic, copy) NSString * _Nullable batterytime;
+@property (nonatomic) uint64_t timeSeconds;
++ (AlfredLockInfo * _Nullable)getLockInfo:(NSString * _Nonnull)info SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC10AlfredCore16AlfredLockRecord")
 @interface AlfredLockRecord : ResultModel
 @property (nonatomic, copy) NSString * _Nullable name;
@@ -454,6 +566,9 @@ SWIFT_CLASS("_TtC10AlfredCore16AlfredLockRecord")
 @property (nonatomic, copy) NSString * _Nullable type;
 @property (nonatomic, copy) NSString * _Nullable index;
 @property (nonatomic, copy) NSString * _Nullable lockevent;
+@property (nonatomic) AlfredLockRecordID recordID;
++ (AlfredLockRecord * _Nullable)getCurrentRecordWithRecord:(NSString * _Nonnull)record SWIFT_WARN_UNUSED_RESULT;
++ (AlfredLockRecord * _Nullable)getNewLockLog:(NSString * _Nonnull)logstr SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -475,7 +590,18 @@ SWIFT_CLASS("_TtC10AlfredCore16AlfredTimeConfig")
 @property (nonatomic, copy) NSString * _Nullable tzGmt;
 @property (nonatomic, copy) NSString * _Nullable tzUtc;
 @property (nonatomic, copy) NSString * _Nullable tzString;
+@property (nonatomic, copy) NSString * _Nullable en;
 @property (nonatomic, copy) NSString * _Nullable tzDistrict;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class TzDistrictModel;
+
+SWIFT_CLASS("_TtC10AlfredCore14AlfredTimeZone")
+@interface AlfredTimeZone : ResultModel
+@property (nonatomic, copy) NSString * _Nullable version;
+@property (nonatomic, copy) NSArray<AlfredTimeConfig *> * _Nullable timeZones;
+@property (nonatomic, copy) NSArray<TzDistrictModel *> * _Nullable tzDistricts;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -542,11 +668,27 @@ SWIFT_CLASS("_TtC10AlfredCore13GCDTimerUtils")
 
 SWIFT_CLASS("_TtC10AlfredCore13NetErrorModel")
 @interface NetErrorModel : NSObject
+@property (nonatomic) NSInteger eCode;
 @property (nonatomic, copy) NSString * _Nullable eMessage;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+
+SWIFT_CLASS("_TtC10AlfredCore15TzDistrictModel")
+@interface TzDistrictModel : ResultModel
+@property (nonatomic, copy) NSString * _Nullable tzName;
+@property (nonatomic, copy) NSString * _Nullable tzUtc;
+@property (nonatomic, copy) NSString * _Nullable en;
+@property (nonatomic, copy) NSString * _Nullable zh;
+@property (nonatomic, copy) NSString * _Nullable fr;
+@property (nonatomic, copy) NSString * _Nullable de;
+@property (nonatomic, copy) NSString * _Nullable es;
+@property (nonatomic, copy) NSString * _Nullable pt;
+@property (nonatomic, copy) NSString * _Nullable ja;
+@property (nonatomic, copy) NSString * _Nullable po;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
@@ -748,6 +890,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import ObjectiveC;
 #endif
 
+#import <AlfredCore/AlfredCore.h>
+
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 #if __has_warning("-Wpragma-clang-attribute")
@@ -769,6 +913,14 @@ SWIFT_CLASS("_TtC10AlfredCore11ResultModel")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC10AlfredCore12AbilityModel")
+@interface AbilityModel : ResultModel
+@property (nonatomic, copy) NSString * _Nullable enable;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class AlfredBridgeInfo;
 
 SWIFT_CLASS("_TtC10AlfredCore12AlfredBridge")
@@ -781,14 +933,32 @@ SWIFT_CLASS("_TtC10AlfredCore12AlfredBridge")
 @end
 
 
+SWIFT_CLASS("_TtC10AlfredCore22AlfredBridgeBindStatus")
+@interface AlfredBridgeBindStatus : ResultModel
+@property (nonatomic, copy) NSString * _Nullable deviceId;
+@property (nonatomic, copy) NSString * _Nullable retCode;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10AlfredCore27AlfredBridgeCapabilityModel")
+@interface AlfredBridgeCapabilityModel : ResultModel
+@property (nonatomic, copy) NSString * _Nullable diagnose;
+@property (nonatomic, copy) NSString * _Nullable localStorageTypes;
+@property (nonatomic, copy) NSString * _Nullable networkConfig;
+@property (nonatomic, copy) NSString * _Nullable privLiveStream;
+@property (nonatomic, copy) NSString * _Nullable timeZoneVersion;
+@property (nonatomic, copy) NSString * _Nullable newtz;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC10AlfredCore19AlfredBridgeHotspot")
 @interface AlfredBridgeHotspot : ResultModel
-@property (nonatomic, copy) NSString * _Nullable ss;
-@property (nonatomic) BOOL o;
-@property (nonatomic) NSInteger s;
-@property (nonatomic, copy) NSString * _Nullable c;
+@property (nonatomic, copy) NSString * _Nullable ssid;
+@property (nonatomic) BOOL open;
+@property (nonatomic) NSInteger signal;
 @property (nonatomic, copy) NSString * _Nullable i;
-@property (nonatomic, copy) NSString * _Nullable sn;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -803,6 +973,7 @@ SWIFT_CLASS("_TtC10AlfredCore16AlfredBridgeInfo")
 @property (nonatomic, strong) AlfredBridgeInfoNetworkConfig * _Nullable networkConfig;
 @property (nonatomic, strong) AlfredTimeConfig * _Nullable timeConfig;
 @property (nonatomic, strong) AlfredFwVersionUpgrade * _Nullable newFwversion;
+@property (nonatomic, strong) AlfredBridgeCapabilityModel * _Nullable capability;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -837,6 +1008,26 @@ SWIFT_CLASS("_TtC10AlfredCore29AlfredBridgeInfoNetworkConfig")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class AlfredBridgeStatusModel;
+
+SWIFT_CLASS("_TtC10AlfredCore31AlfredBridgeLockStatusListModel")
+@interface AlfredBridgeLockStatusListModel : ResultModel
+@property (nonatomic, copy) NSArray<AlfredBridgeStatusModel *> * _Nullable value;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10AlfredCore27AlfredBridgeLockStatusModel")
+@interface AlfredBridgeLockStatusModel : ResultModel
+@property (nonatomic, copy) NSString * _Nullable deviceId;
+@property (nonatomic, copy) NSString * _Nullable onlineStatus;
+@property (nonatomic, copy) NSString * _Nullable lockStatus;
+@property (nonatomic, copy) NSString * _Nullable malfunction;
+@property (nonatomic, copy) NSString * _Nullable blesignal;
+@property (nonatomic, copy) NSString * _Nullable blesignalTs;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC10AlfredCore19AlfredBridgeOperate")
 @interface AlfredBridgeOperate : ResultModel
@@ -853,6 +1044,15 @@ SWIFT_CLASS("_TtC10AlfredCore16AlfredBridgePair")
 @property (nonatomic, copy) NSString * _Nullable subDeviceId;
 @property (nonatomic, copy) NSString * _Nullable status;
 @property (nonatomic) BOOL value;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10AlfredCore23AlfredBridgeStatusModel")
+@interface AlfredBridgeStatusModel : ResultModel
+@property (nonatomic, copy) NSString * _Nullable deviceId;
+@property (nonatomic, copy) NSString * _Nullable onlineStatus;
+@property (nonatomic, copy) NSArray<AlfredBridgeLockStatusModel *> * _Nullable subDevices;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -908,8 +1108,17 @@ SWIFT_CLASS("_TtC10AlfredCore22AlfredFwVersionUpgrade")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC10AlfredCore22AlfredInfoBluuidsModel")
+@interface AlfredInfoBluuidsModel : ResultModel
+@property (nonatomic, copy) NSString * _Nullable bluuid;
+@property (nonatomic, copy) NSString * _Nullable puuid;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class AlfredLockExtendModel;
-@class AlfredLockCode;
+@class AlfredLockInfo;
+@class AlfredLockAbilityModel;
 
 SWIFT_CLASS("_TtC10AlfredCore10AlfredLock")
 @interface AlfredLock : ResultModel
@@ -924,19 +1133,38 @@ SWIFT_CLASS("_TtC10AlfredCore10AlfredLock")
 @property (nonatomic, copy) NSString * _Nullable type;
 @property (nonatomic, copy) NSString * _Nullable doorsensor;
 @property (nonatomic, strong) AlfredLockExtendModel * _Nullable extend;
-@property (nonatomic, copy) NSArray<AlfredLockCode *> * _Nullable keypersons;
+@property (nonatomic) BOOL connectBridge;
+@property (nonatomic) AlfredLockConnectState connectState;
+@property (nonatomic) AlfredLockStatus lockState;
+@property (nonatomic, strong) AlfredLockInfo * _Nullable lockInfo;
+@property (nonatomic, strong) AlfredLockAbilityModel * _Nullable ability;
+@property (nonatomic, copy) NSString * _Nullable gatewayLockBleSignal;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC10AlfredCore22AlfredLockAbilityModel")
+@interface AlfredLockAbilityModel : ResultModel
+@property (nonatomic, strong) AbilityModel * _Nullable RFID;
+@property (nonatomic, strong) AbilityModel * _Nullable autolock;
+@property (nonatomic, strong) AbilityModel * _Nullable bluetooth;
+@property (nonatomic, strong) AbilityModel * _Nullable fingerprint;
+@property (nonatomic, strong) AbilityModel * _Nullable insidelock;
+@property (nonatomic, strong) AbilityModel * _Nullable language;
+@property (nonatomic, strong) AbilityModel * _Nullable leavemode;
+@property (nonatomic, strong) AbilityModel * _Nullable safemode;
+@property (nonatomic, strong) AbilityModel * _Nullable voice;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
 SWIFT_CLASS("_TtC10AlfredCore14AlfredLockCode")
 @interface AlfredLockCode : ResultModel
 @property (nonatomic, copy) NSString * _Nullable index;
-@property (nonatomic, copy) NSString * _Nullable type;
 @property (nonatomic, copy) NSString * _Nullable value;
 @property (nonatomic, copy) NSString * _Nullable codeAttr;
 @property (nonatomic, copy) NSString * _Nullable scheduleid;
-@property (nonatomic, copy) NSString * _Nullable scheduletype;
 @property (nonatomic, copy) NSString * _Nullable start;
 @property (nonatomic, copy) NSString * _Nullable end;
 @property (nonatomic, copy) NSArray<NSNumber *> * _Nullable week;
@@ -944,6 +1172,8 @@ SWIFT_CLASS("_TtC10AlfredCore14AlfredLockCode")
 @property (nonatomic, copy) NSString * _Nullable did;
 @property (nonatomic, copy) NSString * _Nullable name;
 @property (nonatomic, copy) NSString * _Nullable personid;
+@property (nonatomic) AlfredLockCodeType _type;
+@property (nonatomic) AlfredLockCodeSchedule _scheduletype;
 + (AlfredLockCode * _Nonnull)getWeekScheduleModelWithResult:(NSString * _Nonnull)result SWIFT_WARN_UNUSED_RESULT;
 + (AlfredLockCode * _Nonnull)getYMDScheduleModelWithResult:(NSString * _Nonnull)result SWIFT_WARN_UNUSED_RESULT;
 + (AlfredLockCode * _Nonnull)getKeyModelWithResult:(NSString * _Nonnull)result SWIFT_WARN_UNUSED_RESULT;
@@ -956,6 +1186,8 @@ SWIFT_CLASS("_TtC10AlfredCore21AlfredLockExtendModel")
 @property (nonatomic, copy) NSString * _Nullable name;
 @property (nonatomic, copy) NSString * _Nullable password1;
 @property (nonatomic, copy) NSString * _Nullable password2;
+@property (nonatomic, copy) NSArray<AlfredInfoBluuidsModel *> * _Nullable bluuids;
+@property (nonatomic, copy) NSArray<AlfredLockCode *> * _Nullable keys;
 @property (nonatomic, copy) NSString * _Nullable systemId;
 @property (nonatomic, copy) NSString * _Nullable modelnum;
 @property (nonatomic, copy) NSString * _Nullable fwversion;
@@ -1002,6 +1234,28 @@ SWIFT_CLASS("_TtC10AlfredCore21AlfredLockExtendModel")
 @end
 
 
+SWIFT_CLASS("_TtC10AlfredCore14AlfredLockInfo")
+@interface AlfredLockInfo : ResultModel
+@property (nonatomic, copy) NSString * _Nullable mainLockTongueState;
+@property (nonatomic, copy) NSString * _Nullable antilockState;
+@property (nonatomic, copy) NSString * _Nullable doorState;
+@property (nonatomic, copy) NSString * _Nullable doorMagnetState;
+@property (nonatomic, copy) NSString * _Nullable safeModeState;
+@property (nonatomic, copy) NSString * _Nullable adminPwdState;
+@property (nonatomic, copy) NSString * _Nullable autoState;
+@property (nonatomic, copy) NSString * _Nullable armingState;
+@property (nonatomic, copy) NSString * _Nullable powersave;
+@property (nonatomic) AlfredLockVoice soundVolume;
+@property (nonatomic, copy) NSString * _Nullable language;
+@property (nonatomic, copy) NSString * _Nullable battery;
+@property (nonatomic, copy) NSString * _Nullable batterytime;
+@property (nonatomic) uint64_t timeSeconds;
++ (AlfredLockInfo * _Nullable)getLockInfo:(NSString * _Nonnull)info SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC10AlfredCore16AlfredLockRecord")
 @interface AlfredLockRecord : ResultModel
 @property (nonatomic, copy) NSString * _Nullable name;
@@ -1009,6 +1263,9 @@ SWIFT_CLASS("_TtC10AlfredCore16AlfredLockRecord")
 @property (nonatomic, copy) NSString * _Nullable type;
 @property (nonatomic, copy) NSString * _Nullable index;
 @property (nonatomic, copy) NSString * _Nullable lockevent;
+@property (nonatomic) AlfredLockRecordID recordID;
++ (AlfredLockRecord * _Nullable)getCurrentRecordWithRecord:(NSString * _Nonnull)record SWIFT_WARN_UNUSED_RESULT;
++ (AlfredLockRecord * _Nullable)getNewLockLog:(NSString * _Nonnull)logstr SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1030,7 +1287,18 @@ SWIFT_CLASS("_TtC10AlfredCore16AlfredTimeConfig")
 @property (nonatomic, copy) NSString * _Nullable tzGmt;
 @property (nonatomic, copy) NSString * _Nullable tzUtc;
 @property (nonatomic, copy) NSString * _Nullable tzString;
+@property (nonatomic, copy) NSString * _Nullable en;
 @property (nonatomic, copy) NSString * _Nullable tzDistrict;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class TzDistrictModel;
+
+SWIFT_CLASS("_TtC10AlfredCore14AlfredTimeZone")
+@interface AlfredTimeZone : ResultModel
+@property (nonatomic, copy) NSString * _Nullable version;
+@property (nonatomic, copy) NSArray<AlfredTimeConfig *> * _Nullable timeZones;
+@property (nonatomic, copy) NSArray<TzDistrictModel *> * _Nullable tzDistricts;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1097,11 +1365,27 @@ SWIFT_CLASS("_TtC10AlfredCore13GCDTimerUtils")
 
 SWIFT_CLASS("_TtC10AlfredCore13NetErrorModel")
 @interface NetErrorModel : NSObject
+@property (nonatomic) NSInteger eCode;
 @property (nonatomic, copy) NSString * _Nullable eMessage;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+
+SWIFT_CLASS("_TtC10AlfredCore15TzDistrictModel")
+@interface TzDistrictModel : ResultModel
+@property (nonatomic, copy) NSString * _Nullable tzName;
+@property (nonatomic, copy) NSString * _Nullable tzUtc;
+@property (nonatomic, copy) NSString * _Nullable en;
+@property (nonatomic, copy) NSString * _Nullable zh;
+@property (nonatomic, copy) NSString * _Nullable fr;
+@property (nonatomic, copy) NSString * _Nullable de;
+@property (nonatomic, copy) NSString * _Nullable es;
+@property (nonatomic, copy) NSString * _Nullable pt;
+@property (nonatomic, copy) NSString * _Nullable ja;
+@property (nonatomic, copy) NSString * _Nullable po;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

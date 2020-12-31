@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)access:(NSString *)deviceId
 connectCallbak:(nullable void (^)(AlfredLock *device, AlfredLockConnectState state, AlfredError error))connectCallback
-notifyCallback:(nullable void (^)(AlfredLock *device, id _Nullable object))notifyCallback;
+notifyCallback:(nullable void (^)(AlfredLock *device, AlfredLockRecord *record))notifyCallback;
 
 /**
  *    获取当前请求接入设备的详细数据
@@ -126,7 +126,7 @@ notifyCallback:(nullable void (^)(AlfredLock *device, id _Nullable object))notif
                   codeIndex:(int)codeIndex
                   startTime:(NSString *)startTime
                     endTime:(NSString *)endTime
-                   weekdays:(NSString *)weekdays
+                   weekdays:(NSArray *)weekdays
                    callback:(AlfredBLECallback)callback;
 
 
@@ -159,14 +159,43 @@ notifyCallback:(nullable void (^)(AlfredLock *device, id _Nullable object))notif
 
 
 /**
- *    设置门锁设备基本参数
- *
- *    @param     deviceId 指定门锁对象SN
- *    @param     configID 门锁设备参数配置ID
- *    @param     values 参数设置值，根据参数设置ID不同，需调用者传入不同的值参数设置值，根据参数设置ID不同，需调用者传入不同的值
+ 设置门锁基本参数
+ 
+ @param deviceId 指定门锁对象SN
+ @param configID 参数设置ID
+ @param values 参数设置值，根据参数设置ID不同，需调用者传入不同的值
+ 
+             'LockRequestConfig_Language'
+             vaules: AlfredLockLanguage  语言类型参数
+                                 zh, //汉语
+                                 en, //英语
+                                 fr, //法语
+                                 pt, //葡萄牙语
+                                 es, //西班牙语
+ 
+             'LockRequestConfig_Voice'
+             vaules: AlfredLockVoice   0,1,2音量参数
+ 
+             'LockRequestConfig_Time'
+             vaules: NSString unix时间戳
+ 
+             'LockRequestConfig_Auto'
+             vaules: NSString   1为启用，0为关闭
+ 
+             'LockRequestConfig_InsideDeadLock'
+             vaules: NSString   1为启用，0为关闭
+  
+             'LockRequestConfig_AwayMode'
+             vaules: NSString   1为启用，0为关闭
 
- *    @param     callback 回调
-
+             'LockRequestConfig_PowerSafe'
+             vaules: NSString    1为启用，0为关闭
+ 
+             'LockRequestConfig_MasterPinCode'
+             vaules: NSString   新管理员密码
+ 
+ @param callback 连接状态回调 AlfredBLECallback<id, AlfredError>
+ 
  */
 - (void)setConfig:(NSString *)deviceId
          configID:(AlfredLockRequestConfig)configID
@@ -185,6 +214,8 @@ notifyCallback:(nullable void (^)(AlfredLock *device, id _Nullable object))notif
 
  */
 - (void)syncRecords:(NSString *)deviceId
+               page:(int)page
+              limit:(int)limit
            callback:(AlfredBLECallback)callback;
 
 /**

@@ -19,6 +19,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
+ *    获取定位权限用来连接网关
+ *
+
+ */
+- (void)accessLocation;
+
+
+/**
  *    连接小AP设备无线
  *
  *    @param     deviceId           设备的sn，可以通过扫描二维码获取

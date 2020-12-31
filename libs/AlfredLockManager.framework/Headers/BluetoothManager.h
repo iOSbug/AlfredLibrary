@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AlfredCore/AlfredCore.h>
 
-@class ConnectCallBack;
+typedef void(^BleOpendoorRecordBlock)(NSArray * _Nullable records, int totalCount); //所有开门消息
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -69,13 +69,13 @@ NS_ASSUME_NONNULL_BEGIN
  建立蓝牙通讯连接
  
  @param device 指定门锁对象，必须包含完整的设备产品数据(deviceID, password1, password2, systemid)，并且包含正确的鉴权数据内容，否则将无法正常接入
- @param connectDelegate 连接状态回调
+ @param connectCallbak 连接状态回调
  @param notifyCallback NotifyCallback<AlfredLock *device, AlfredLockInfoStatus status>
  
  */
 - (void)access:(AlfredLock *)device
 connectCallbak:(nullable void (^)(AlfredLock *device, AlfredLockConnectState state, AlfredError error))connectCallbak
-notifyCallback:(nullable void (^)(AlfredLock *device, id _Nullable object))notifyCallback;
+notifyCallback:(nullable void (^)(AlfredLock *device, AlfredLockRecord *__nullable record))notifyCallback;
 
 
 /**
@@ -91,6 +91,14 @@ notifyCallback:(nullable void (^)(AlfredLock *device, id _Nullable object))notif
  
  */
 - (AlfredLock *)getConnectedDevice;
+
+
+/**
+ 读取门锁基本信息
+ 
+ */
+- (void)getLockInfo:(AlfredBLECallback)callback;
+
 
 /**
  读取指定门锁的基本参数信息，需先接入鉴权成功
@@ -143,19 +151,15 @@ notifyCallback:(nullable void (^)(AlfredLock *device, id _Nullable object))notif
  @param callback 连接状态回调 AlfredCallback<Void, AlfredError>
  
  */
-//- (void)setConfig:(AlfredLock *)device
-//         configID:(AlfredLockConfig)configID
-//         callback:(AlfredBLECallback)callback
-//            value:(NSString *)value;
+- (void)setConfig:(AlfredLock *)device
+         configID:(AlfredLockRequestConfig)configID
+            value:(id)value
+         callback:(AlfredBLECallback)callback;
 
 
 /**
  读取门锁操作日志
  
- @param device 指定门锁对象
- @param startPage 日志起始页序号，从0开始计数
- @param endPage 日志结束页序号，从0开始计数
-
  @param callback AlfredCallback<AlfredLockRecords, AlfredError>
  Alfred门锁内最多可记录200条操作日志；
  日志总是将最新的记录插入到序列最前面，而不是顺序记录到旧记录后面；并且在200条日志容量达到上限后，丢弃最久的旧日志数据；
@@ -164,11 +168,8 @@ notifyCallback:(nullable void (^)(AlfredLock *device, id _Nullable object))notif
  目前仅记录AlfredLockRecord.OPERATION_UNLOCK的操作
  
  */
-- (void)getRecords:(AlfredLock *)device
-         startPage:(int)startPage
-           endPage:(int)endPage
-         callback:(AlfredBLECallback)callback;
-
+- (void)getDBHistoryRecoryOrder:(int)start endIndex:(int)end callback:(BleOpendoorRecordBlock)callback;
+- (void)getML2AllLockRecord:(int)type startIndex:(int)start endIndex:(int)end callback:(BleOpendoorRecordBlock)callback;
 
 
 /**
@@ -186,14 +187,15 @@ notifyCallback:(nullable void (^)(AlfredLock *device, id _Nullable object))notif
 
 
 /**
- 读取门锁已存在的PIN密钥列表
+ 读取门锁已存在的密钥列表
  
  @param device 指定门锁对象
  @param callback AlfredCallback<Array<Int>, AlfredError> 操作结果回调
  因PIN密钥存储的安全机制限制，仅能提取到已存在的密钥序号，不包含密钥内容。
  
  */
-- (void)getPincodes:(AlfredLock *)device
+- (void)getLockCodes:(AlfredLock *)device
+            codeType:(AlfredLockCodeType)codeType
             callback:(AlfredBLECallback)callback;
 
 
@@ -202,15 +204,16 @@ notifyCallback:(nullable void (^)(AlfredLock *device, id _Nullable object))notif
  添加PIN密钥
  
  @param device 指定门锁对象
- @param index PIN密钥序号，从0开始计数
- @param pincode PIN密钥内容，长度4~10位的纯数字，不能包含有4位及以上的连续或重复数字
-
+ @param codeType  钥匙类型
+ @param codeIndex 钥匙编号
+ @param value PIN密钥内容，长度4~10位的纯数字，不能包含有4位及以上的连续或重复数字
  @param callback AlfredCallback<Void, AlfredError> 操作结果回调
  
  */
-- (void)addPincode:(AlfredLock *)device
-             index:(int)index
-           pincode:(NSString *)pincode
+- (void)addLockCode:(AlfredLock *)device
+           codeType:(AlfredLockCodeType)codeType
+          codeIndex:(int)codeIndex
+              value:(NSString *)value
            callback:(AlfredBLECallback)callback;
 
 
@@ -219,39 +222,69 @@ notifyCallback:(nullable void (^)(AlfredLock *device, id _Nullable object))notif
  删除PIN密钥
  
  @param device 指定门锁对象
- @param index PIN密钥序号，从0开始计数
+ @param codeType  钥匙类型
+ @param codeIndex 钥匙编号
  @param callback AlfredCallback<Void, AlfredError> 操作结果回调
  
  */
-- (void)delPincode:(AlfredLock *)device
-             index:(int)index
-          callback:(AlfredBLECallback)callback;
-
-
-
-/**
- 读取指纹列表，仅提取已在的指纹序号
- 
- @param device 指定门锁对象
- @param callback AlfredCallback<Array<Int>, AlfredError> 操作结果回调
- 
- */
-- (void)getFingerprints:(AlfredLock *)device
-          callback:(AlfredBLECallback)callback;
-
+- (void)deleteLockCode:(AlfredLock *)device
+              codeType:(AlfredLockCodeType)codeType
+             codeIndex:(int)codeIndex
+              callback:(AlfredBLECallback)callback;
 
 
 /**
- 删除指纹
- 
- @param device 指定门锁对象
- @param index 指纹序号，从0开始计数
- @param callback AlfredCallback<Void, AlfredError> 操作结果回调
- 
+ *    修改密钥时间段时间计划
+ *
+ *    @param     device 指定门锁对象
+ *    @param     codeType 密钥类型
+ *    @param     codeIndex 密钥编号
+ *    @param     startTime 时间计划起始时间，Unix时间戳（自1970年1月1日0时起的秒数）
+ *    @param     endTime  时间计划结束时间，Unix时间戳（自1970年1月1日0时起的秒数）
+ *    @param     callback 回调
+
  */
-- (void)delFingerprint:(AlfredLock *)device
-             index:(int)index
-          callback:(AlfredBLECallback)callback;
+- (void)setLockCodeSchedule:(AlfredLock *)device
+                 scheduleId:(int)scheduleId
+                   codeType:(AlfredLockCodeType)codeType
+                  codeIndex:(int)codeIndex
+                  startTime:(NSString *)startTime
+                    endTime:(NSString *)endTime
+                   callback:(AlfredBLECallback)callback;
+
+/**
+ *    修改密钥周时间计划
+ *
+ *    @param     device 指定门锁对象
+ *    @param     codeType 密钥类型
+ *    @param     codeIndex 密钥编号
+ *    @param     startTime 时间计划起始时间，HH:mm
+ *    @param     endTime  时间计划结束时间，HH:mm
+ *    @param     weekdays  一周内时间计划生效的天数组合，“Sunday，Monday，Tuesday...” 即"1,1,1,0,0,0,0"
+ *    @param     callback 回调
+
+ */
+- (void)setLockCodeSchedule:(AlfredLock *)device
+                 scheduleId:(int)scheduleId
+                   codeType:(AlfredLockCodeType)codeType
+                  codeIndex:(int)codeIndex
+                  startTime:(NSString *)startTime
+                    endTime:(NSString *)endTime
+                   weekdays:(NSString *)weekdays
+                   callback:(AlfredBLECallback)callback;
+
+
+/**
+ *    删除密钥的时间计划
+ *
+ *    @param     device 指定门锁对象
+ *    @param     lockCode 密钥
+ *    @param     callback 回调
+
+ */
+- (void)deleteLockCodeSchedule:(AlfredLock *)device
+                      lockCode:(AlfredLockCode *)lockCode
+                      callback:(AlfredBLECallback)callback;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -213,8 +213,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC18AlfredBridgeBinder17BridgeSwiftBinder")
 @interface BridgeSwiftBinder : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BridgeSwiftBinder * _Nonnull sharedInstance;)
-+ (BridgeSwiftBinder * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BridgeSwiftBinder * _Nonnull shared;)
++ (BridgeSwiftBinder * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+- (void)accessLocation;
 - (void)connectToWiFiWithDeviceId:(NSString * _Nonnull)deviceId success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (void)querySSID:(NSString * _Nonnull)ssid success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (void)requestWifiListWithSuccess:(void (^ _Nonnull)(NSArray<AlfredBridgeHotspot *> * _Nonnull))success failure:(AlfredErrorCallback _Nonnull)failure;
@@ -443,8 +444,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 SWIFT_CLASS("_TtC18AlfredBridgeBinder17BridgeSwiftBinder")
 @interface BridgeSwiftBinder : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BridgeSwiftBinder * _Nonnull sharedInstance;)
-+ (BridgeSwiftBinder * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BridgeSwiftBinder * _Nonnull shared;)
++ (BridgeSwiftBinder * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+- (void)accessLocation;
 - (void)connectToWiFiWithDeviceId:(NSString * _Nonnull)deviceId success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (void)querySSID:(NSString * _Nonnull)ssid success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (void)requestWifiListWithSuccess:(void (^ _Nonnull)(NSArray<AlfredBridgeHotspot *> * _Nonnull))success failure:(AlfredErrorCallback _Nonnull)failure;

@@ -190,6 +190,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AlfredCore;
 @import ObjectiveC;
 #endif
 
@@ -209,18 +210,30 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 @class NetErrorModel;
+@class AlfredBridge;
+@class AlfredLockRecord;
+@class AlfredLockCode;
+@class AlfredTimeZone;
 
 SWIFT_CLASS("_TtC19AlfredBridgeManager18BridgeSwiftManager")
 @interface BridgeSwiftManager : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BridgeSwiftManager * _Nonnull sharedInstance;)
-+ (BridgeSwiftManager * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BridgeSwiftManager * _Nonnull shared;)
++ (BridgeSwiftManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)bridgeSend:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID data:(NSString * _Nonnull)data success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)devstatus:(NSArray<AlfredBridge *> * _Nonnull)gateways success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)bridgePairSubDev:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)unpairSubdevice:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)setLockOperation:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID data:(NSString * _Nonnull)data success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)setLockCodePeriodSchedule:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID mode:(NSString * _Nonnull)mode data:(NSString * _Nonnull)data usertypeData:(NSString * _Nonnull)usertypeData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)setLockCodeWeeklySchedule:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID mode:(NSString * _Nonnull)mode data:(NSString * _Nonnull)data usertypeData:(NSString * _Nonnull)usertypeData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)deleteLockCodeWeeklySchedule:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID mode:(NSString * _Nonnull)mode data:(NSString * _Nonnull)data usertypeData:(NSString * _Nonnull)usertypeData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)setLockOperation:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID operate:(AlfredLockOperation)operate data:(NSString * _Nonnull)data success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)getLockRecords:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID data:(NSString * _Nonnull)data page:(NSString * _Nonnull)page limit:(NSString * _Nonnull)limit success:(void (^ _Nonnull)(NSArray<AlfredLockRecord *> * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)setLockConfig:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID configID:(AlfredLockRequestConfig)configID values:(id _Nonnull)values data:(NSString * _Nonnull)data success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)getLockCodes:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID codeType:(AlfredLockCodeType)codeType data:(NSString * _Nonnull)data success:(void (^ _Nonnull)(NSArray<AlfredLockCode *> * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)addLockCode:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID codeType:(AlfredLockCodeType)codeType codeIndex:(NSString * _Nonnull)codeIndex data:(NSString * _Nonnull)data success:(void (^ _Nonnull)(AlfredLockCode * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)deleteLockCode:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID codeType:(AlfredLockCodeType)codeType codeIndex:(NSString * _Nonnull)codeIndex data:(NSString * _Nonnull)data schedData:(NSString * _Nullable)schedData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)setLockCodePeriodSchedule:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID codeType:(AlfredLockCodeType)codeType codeIndex:(NSString * _Nonnull)codeIndex scheduleId:(NSString * _Nonnull)scheduleId startTime:(NSString * _Nullable)startTime endTime:(NSString * _Nullable)endTime data:(NSString * _Nonnull)data usertypeData:(NSString * _Nonnull)usertypeData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)setLockCodeWeeklySchedule:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID codeType:(AlfredLockCodeType)codeType codeIndex:(NSString * _Nonnull)codeIndex scheduleId:(NSString * _Nonnull)scheduleId startTime:(NSString * _Nullable)startTime endTime:(NSString * _Nullable)endTime week:(NSArray<NSNumber *> * _Nullable)week data:(NSString * _Nonnull)data usertypeData:(NSString * _Nonnull)usertypeData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)deleteLockCodeSchedule:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID codeType:(AlfredLockCodeType)codeType codeIndex:(NSString * _Nonnull)codeIndex scheduleId:(NSString * _Nonnull)scheduleId data:(NSString * _Nonnull)data usertypeData:(NSString * _Nonnull)usertypeData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)getTimezones:(NSString * _Nonnull)gatewayID success:(void (^ _Nonnull)(AlfredTimeZone * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)setBridgeTimezone:(NSString * _Nonnull)gatewayID tzName:(NSString * _Nonnull)tzName tzValue:(NSString * _Nonnull)tzValue tzDistrict:(NSString * _Nonnull)tzDistrict success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -421,6 +434,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import AlfredCore;
 @import ObjectiveC;
 #endif
 
@@ -440,18 +454,30 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 @class NetErrorModel;
+@class AlfredBridge;
+@class AlfredLockRecord;
+@class AlfredLockCode;
+@class AlfredTimeZone;
 
 SWIFT_CLASS("_TtC19AlfredBridgeManager18BridgeSwiftManager")
 @interface BridgeSwiftManager : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BridgeSwiftManager * _Nonnull sharedInstance;)
-+ (BridgeSwiftManager * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BridgeSwiftManager * _Nonnull shared;)
++ (BridgeSwiftManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)bridgeSend:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID data:(NSString * _Nonnull)data success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)devstatus:(NSArray<AlfredBridge *> * _Nonnull)gateways success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)bridgePairSubDev:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (void)unpairSubdevice:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)setLockOperation:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID data:(NSString * _Nonnull)data success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)setLockCodePeriodSchedule:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID mode:(NSString * _Nonnull)mode data:(NSString * _Nonnull)data usertypeData:(NSString * _Nonnull)usertypeData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)setLockCodeWeeklySchedule:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID mode:(NSString * _Nonnull)mode data:(NSString * _Nonnull)data usertypeData:(NSString * _Nonnull)usertypeData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
-- (void)deleteLockCodeWeeklySchedule:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID mode:(NSString * _Nonnull)mode data:(NSString * _Nonnull)data usertypeData:(NSString * _Nonnull)usertypeData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)setLockOperation:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID operate:(AlfredLockOperation)operate data:(NSString * _Nonnull)data success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)getLockRecords:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID data:(NSString * _Nonnull)data page:(NSString * _Nonnull)page limit:(NSString * _Nonnull)limit success:(void (^ _Nonnull)(NSArray<AlfredLockRecord *> * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)setLockConfig:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID configID:(AlfredLockRequestConfig)configID values:(id _Nonnull)values data:(NSString * _Nonnull)data success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)getLockCodes:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID codeType:(AlfredLockCodeType)codeType data:(NSString * _Nonnull)data success:(void (^ _Nonnull)(NSArray<AlfredLockCode *> * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)addLockCode:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID codeType:(AlfredLockCodeType)codeType codeIndex:(NSString * _Nonnull)codeIndex data:(NSString * _Nonnull)data success:(void (^ _Nonnull)(AlfredLockCode * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)deleteLockCode:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID codeType:(AlfredLockCodeType)codeType codeIndex:(NSString * _Nonnull)codeIndex data:(NSString * _Nonnull)data schedData:(NSString * _Nullable)schedData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)setLockCodePeriodSchedule:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID codeType:(AlfredLockCodeType)codeType codeIndex:(NSString * _Nonnull)codeIndex scheduleId:(NSString * _Nonnull)scheduleId startTime:(NSString * _Nullable)startTime endTime:(NSString * _Nullable)endTime data:(NSString * _Nonnull)data usertypeData:(NSString * _Nonnull)usertypeData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)setLockCodeWeeklySchedule:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID codeType:(AlfredLockCodeType)codeType codeIndex:(NSString * _Nonnull)codeIndex scheduleId:(NSString * _Nonnull)scheduleId startTime:(NSString * _Nullable)startTime endTime:(NSString * _Nullable)endTime week:(NSArray<NSNumber *> * _Nullable)week data:(NSString * _Nonnull)data usertypeData:(NSString * _Nonnull)usertypeData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)deleteLockCodeSchedule:(NSString * _Nonnull)gatewayID subdeviceID:(NSString * _Nonnull)subdeviceID codeType:(AlfredLockCodeType)codeType codeIndex:(NSString * _Nonnull)codeIndex scheduleId:(NSString * _Nonnull)scheduleId data:(NSString * _Nonnull)data usertypeData:(NSString * _Nonnull)usertypeData success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)getTimezones:(NSString * _Nonnull)gatewayID success:(void (^ _Nonnull)(AlfredTimeZone * _Nonnull))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
+- (void)setBridgeTimezone:(NSString * _Nonnull)gatewayID tzName:(NSString * _Nonnull)tzName tzValue:(NSString * _Nonnull)tzValue tzDistrict:(NSString * _Nonnull)tzDistrict success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

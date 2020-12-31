@@ -18,8 +18,9 @@ typedef NS_ENUM(NSInteger,AlfredError) {
     PASSWORD1_MISSING, //鉴权码1丢失
     ACCESS_DATA_MISSING, //鉴权数据丢失
     MASTERPINCODE_ERROR, //管理员密码错误
+    CONNECTION_NOT_FOUND, //未找到该设备
     CONNECTION_NOT_CREATED, //接入连接未建立
-    CONNECTION_OCCUPIED, //当前接入连接正被占用
+    CONNECTION_OCCUPIED, //连接的设备不是当前设备
     CONNECTION_CREATE_FAILED,//接入连接创建失败
     CONNECTION_ON_OAD, //接入连接处于OAD模式
     CONNECTION_BUSYING, //当前接入连接正忙
@@ -33,6 +34,7 @@ typedef NS_ENUM(NSInteger,AlfredError) {
     BLE_REQUEST_FAILURE,//蓝牙请求失败
     BLE_REQUEST_NOT_AUTHORIZED,//蓝牙请求未鉴权
     BLE_REQUEST_AUTHORIZED_FAIL,//蓝牙请求鉴权失败
+    BLE_REQUEST_LOCKINFO_FAIL,//蓝牙获取门锁基本信息失败
     BLE_REQUEST_RESERVED_FIELD_NOT_ZERO,//保留区域没有置零
     BLE_REQUEST_MALFORMED_COMMAND,//蓝牙请求命令异常
     BLE_REQUEST_UNSUPPORT_COMMAND,//不支持的蓝牙请求
@@ -54,6 +56,8 @@ typedef NS_ENUM(NSInteger,AlfredError) {
     BLE_REQUEST_SOFTWARE_FAILURE,//蓝牙内部软件错误
     BLE_REQUEST_CALIBRATION_ERROR,//蓝牙请求校验过程出错
     BLE_REQUEST_NO_RESPONSE,//蓝牙请求已接收，但处理超时
+    BLE_LOCKCODE_SCHEDULE_NUM_OVER,//门锁时间计划最多五组
+    BLE_LOCKCODE_NO_EXIST,//门锁密钥不存在
     INTERNAL_ERROR,//未归类的其他内部错误
     
     BRIDGE_DEVICETOKEN_ERROR, //绑定获取token错误
@@ -76,6 +80,7 @@ typedef NS_ENUM(NSInteger,AlfredError) {
     BRIDGE_REQUEST_WIFICONFIG_BIND_FAILURE, //配网bind 失败
     BRIDGE_REQUEST_WIFICONFIG_CONNREADY_FAILURE, //配网conn ready 失败
     BRIDGE_REQUEST_WIFICONFIG_ANALYSIS_FAILURE, //配网请求解析失败
+    BRIDGE_BIND_OTHER, //网关被其他人已绑定
     BRIDGE_REQUEST_WIFICONFIG_TIMEOUT, //配网超时
     BRIDGE_UPDATEVENDOR_ERROR, //更新vendor失败
     
@@ -125,13 +130,13 @@ typedef NS_ENUM(NSUInteger,LockControlType) {
     LockControlType_APP = 0x04,    //APP 开锁(锁不鉴权)
 };
 
-#pragma mark -  密钥管理,同步密钥状态
-//Action
-typedef NS_ENUM(NSUInteger,LockPwdAction) {
-    LockPwdAction_setPwd = 0x01, //Set Code 设置密钥
-    LockPwdAction_getPwd = 0x02, //Get Code 查询密钥
-    LockPwdAction_delPwd = 0x03, //Clear Code 删除密钥
-    LockPwdAction_checkPwd = 0x04, //Check Code 验证密钥
+/**
+ 时间计划类型
+ */
+typedef NS_ENUM(NSUInteger,AlfredLockCodeSchedule) {
+    LockCodeSchedule_Always = 0x01,//永久生效
+    LockCodeSchedule_Weekly = 0x02, //周计划生效
+    LockCodeSchedule_Period = 0x03,//时间段内生效
 };
 
 //code
@@ -143,7 +148,7 @@ typedef NS_ENUM(NSUInteger,AlfredLockCodeType) {
 };
 
 //voice
-typedef NS_ENUM(NSUInteger,AlfredLockVoice) {
+typedef NS_ENUM(NSInteger,AlfredLockVoice) {
     LockVoice_Mute = 0,  //静音模式
     LockVoice_Sofly = 1, //低音量模式
     LockVoice_Loud = 2, //高音量模式
@@ -151,21 +156,20 @@ typedef NS_ENUM(NSUInteger,AlfredLockVoice) {
 
 //Language
 typedef NS_ENUM(NSUInteger,AlfredLockLanguage) {
-    LockLanguage_EN,  //英语
+    LockLanguage_EN = 0x01,  //英语
     LockLanguage_ES, //西班牙语
     LockLanguage_FR, //法语
     LockLanguage_PT, //葡萄牙语
     LockLanguage_ZH, //汉语
 };
 
-
-/**
- 时间计划类型
- */
-typedef NS_ENUM(NSInteger,AlfredLockCodeSchedule) {
-    LockCodeSchedule_Always = 1,//永久生效
-    LockCodeSchedule_Weekly = 2, //周计划生效
-    LockCodeSchedule_Period = 3,//时间段内生效
+#pragma mark -  密钥管理,同步密钥状态
+//Action
+typedef NS_ENUM(NSUInteger,LockPwdAction) {
+    LockPwdAction_setPwd = 0x01, //Set Code 设置密钥
+    LockPwdAction_getPwd = 0x02, //Get Code 查询密钥
+    LockPwdAction_delPwd = 0x03, //Clear Code 删除密钥
+    LockPwdAction_checkPwd = 0x04, //Check Code 验证密钥
 };
 
 #pragma mark -  锁参数修改
@@ -187,45 +191,46 @@ typedef NS_ENUM(NSUInteger,AlfredLockRequestConfig) {
 
 //index
 typedef NS_ENUM(NSUInteger,AlfredLockRecordID) {
-    LockRecordID_Lock,  //主锁舌上锁
-    LockRecordID_Unlock, //主锁舌解锁
-    LockRecordID_Magetic_Detection_Off, //门磁感应关门
-    LockRecordID_Magetic_Detection_On, //门磁感应开门
-    LockRecordID_Inside_Lock_On, //门内反锁
-    LockRecordID_Inside_Lock_Off, //解除反锁
-    LockRecordID_Away_Mode_On, //打开布防模式
-    LockRecordID_Away_Mode_Off, //关闭布防模式
-    LockRecordID_Safe_Mode_Off, //关闭安全模式
-    LockRecordID_Safe_Mode_On, //打开关闭模式
-    LockRecordID_Delete_Codes, //删除密钥
-    LockRecordID_Add_Codes, //添加密钥
-    LockRecordID_Manual_Lock, //门锁手动上锁模式
-    LockRecordID_Auto_Lock, //门锁自动上锁模式
-    LockRecordID_Rest, //门锁恢复出厂模式
-    LockRecordID_Master_Codes_Changed, //门锁管理员密码改变
-    LockRecordID_Power_Safe_Off, //关闭蓝牙节能模式
-    LockRecordID_Power_Safe_On, //打开蓝牙节能模式
-    LockRecordID_Set_Voice,//门锁音量设置
-    LockRecordID_Set_Language,//门锁语音设置
-    LockRecordID_Trigger_Doorbell_Button,//触发门铃按键
-    LockRecordID_Key_Changed,//修改密钥
-    LockRecordID_Infrared_Off,//关闭红外开关
-    LockRecordID_Infrared_On,//打开红外开关
-    LockRecordID_Exit_Master_Mode,//退出门锁管理员模式
-    LockRecordID_Enter_Master_Mode,//进入门锁管理员模式
-    LockRecordID_Corridor_Mode_On,//打开过道模式
-    LockRecordID_Corridor_Mode_Off,//关闭过道模式
-    LockRecordID_Vibration_Mode_Off,//关闭震动模式
-    LockRecordID_Vibration_Mode_On,//打开震动模式
-    LockRecordID_Alarm_Low_Power,//门锁低电量告警
-    LockRecordID_Alarm_LockDown,//门锁锁定告警
-    LockRecordID_Alarm_Violent,//门锁防撬告警
-    LockRecordID_Alarm_Away_Mode,//门锁布防告警
-    LockRecordID_Alarm_Duress,//门锁胁迫告警
-    LockRecordID_Alarm_Mechanical_Key,//门锁机械钥匙开门告警
-    LockRecordID_Alarm_Mechanical_Failure,//门锁锁舌故障告警
-    LockRecordID_Alarm_Input_Failure,//门锁密钥输入错误告警
-    LockRecordID_Alarm_Vibration,//震动告警
+    Unknown = 0,//未知
+    LockRecordID_Lock = 3,  //斜锁舌上锁
+    LockRecordID_Unlock = 4, //斜锁舌解锁
+    LockRecordID_Magetic_Detection_Off = 5, //门磁感应关门
+    LockRecordID_Magetic_Detection_On = 6, //门磁感应开门
+    LockRecordID_Inside_Lock_On = 7, //门内反锁
+    LockRecordID_Inside_Lock_Off = 8, //解除反锁
+    LockRecordID_Away_Mode_On = 9, //打开布防模式
+    LockRecordID_Away_Mode_Off = 10, //关闭布防模式
+    LockRecordID_Safe_Mode_Off = 11, //关闭安全模式
+    LockRecordID_Safe_Mode_On = 12, //打开关闭模式
+    LockRecordID_Delete_Codes = 13, //删除密钥
+    LockRecordID_Add_Codes = 14, //添加密钥
+    LockRecordID_Manual_Lock = 15, //门锁手动上锁模式
+    LockRecordID_Auto_Lock = 16, //门锁自动上锁模式
+    LockRecordID_Rest = 17, //门锁恢复出厂模式
+    LockRecordID_Master_Codes_Changed = 18, //门锁管理员密码改变
+    LockRecordID_Power_Safe_Off = 19, //关闭蓝牙节能模式
+    LockRecordID_Power_Safe_On = 20, //打开蓝牙节能模式
+    LockRecordID_Set_Voice = 21,//门锁音量设置
+    LockRecordID_Set_Language = 22,//门锁语音设置
+    LockRecordID_Trigger_Doorbell_Button = 23,//触发门铃按键
+    LockRecordID_Key_Changed = 24,//修改密钥
+    LockRecordID_Infrared_Off = 25,//关闭红外开关
+    LockRecordID_Infrared_On = 26,//打开红外开关
+    LockRecordID_Exit_Master_Mode = 27,//退出门锁管理员模式
+    LockRecordID_Enter_Master_Mode = 28,//进入门锁管理员模式
+    LockRecordID_Corridor_Mode_On = 29,//打开过道模式
+    LockRecordID_Corridor_Mode_Off = 30,//关闭过道模式
+    LockRecordID_Vibration_Mode_Off = 32,//关闭震动模式
+    LockRecordID_Vibration_Mode_On = 33,//打开震动模式
+    LockRecordID_Alarm_Low_Power = 129,//门锁低电量告警
+    LockRecordID_Alarm_LockDown = 130,//门锁锁定告警
+    LockRecordID_Alarm_Violent = 131,//门锁防撬告警
+    LockRecordID_Alarm_Away_Mode = 132,//门锁布防告警
+    LockRecordID_Alarm_Duress = 133,//门锁胁迫告警
+    LockRecordID_Alarm_Mechanical_Key = 134,//门锁机械钥匙开门告警
+    LockRecordID_Alarm_Mechanical_Failure = 135,//门锁锁舌故障告警
+    LockRecordID_Alarm_Input_Failure = 136,//门锁密钥输入错误告警
+    LockRecordID_Alarm_Vibration = 137,//震动告警
 };
 
 

@@ -220,11 +220,22 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BLEMessageSt
 - (AlfredBLECallback _Nullable)pull:(NSInteger)messageID;
 @end
 
+@class AlfredLock;
+@class AlfredLockRecord;
 
 SWIFT_CLASS("_TtC17AlfredLockManager16LockSwiftManager")
 @interface LockSwiftManager : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LockSwiftManager * _Nonnull shared;)
 + (LockSwiftManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+- (void)access:(AlfredLock * _Nonnull)device connectCallback:(void (^ _Nonnull)(AlfredLock * _Nonnull, AlfredLockConnectState, AlfredError))connectCallback notifyCallback:(void (^ _Nonnull)(AlfredLock * _Nonnull, AlfredLockRecord * _Nullable))notifyCallback;
+- (void)setConfig:(AlfredLock * _Nonnull)device configID:(AlfredLockRequestConfig)configID values:(id _Nonnull)values callback:(AlfredBLECallback _Nonnull)callback;
+- (void)getLockCodes:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType callback:(AlfredBLECallback _Nonnull)callback;
+- (void)deleteLockCode:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType codeIndex:(NSInteger)codeIndex callback:(AlfredBLECallback _Nonnull)callback;
+- (void)addLockCode:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType codeIndex:(NSInteger)codeIndex value:(NSString * _Nonnull)value callback:(AlfredBLECallback _Nonnull)callback;
+- (void)setLockCodeSchedule:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType codeIndex:(NSInteger)codeIndex startTime:(NSString * _Nonnull)startTime endTime:(NSString * _Nonnull)endTime callback:(AlfredBLECallback _Nonnull)callback;
+- (void)setLockCodeSchedule:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType codeIndex:(NSInteger)codeIndex startTime:(NSString * _Nonnull)startTime endTime:(NSString * _Nonnull)endTime weekdays:(NSArray * _Nonnull)weekdays callback:(AlfredBLECallback _Nonnull)callback;
+- (void)deleteLockCodeSchedule:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType codeIndex:(NSInteger)codeIndex callback:(AlfredBLECallback _Nonnull)callback;
+- (void)syncRecords:(AlfredLock * _Nonnull)device page:(NSString * _Nonnull)page limit:(NSString * _Nonnull)limit callback:(AlfredBLECallback _Nonnull)callback;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -455,11 +466,22 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BLEMessageSt
 - (AlfredBLECallback _Nullable)pull:(NSInteger)messageID;
 @end
 
+@class AlfredLock;
+@class AlfredLockRecord;
 
 SWIFT_CLASS("_TtC17AlfredLockManager16LockSwiftManager")
 @interface LockSwiftManager : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LockSwiftManager * _Nonnull shared;)
 + (LockSwiftManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+- (void)access:(AlfredLock * _Nonnull)device connectCallback:(void (^ _Nonnull)(AlfredLock * _Nonnull, AlfredLockConnectState, AlfredError))connectCallback notifyCallback:(void (^ _Nonnull)(AlfredLock * _Nonnull, AlfredLockRecord * _Nullable))notifyCallback;
+- (void)setConfig:(AlfredLock * _Nonnull)device configID:(AlfredLockRequestConfig)configID values:(id _Nonnull)values callback:(AlfredBLECallback _Nonnull)callback;
+- (void)getLockCodes:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType callback:(AlfredBLECallback _Nonnull)callback;
+- (void)deleteLockCode:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType codeIndex:(NSInteger)codeIndex callback:(AlfredBLECallback _Nonnull)callback;
+- (void)addLockCode:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType codeIndex:(NSInteger)codeIndex value:(NSString * _Nonnull)value callback:(AlfredBLECallback _Nonnull)callback;
+- (void)setLockCodeSchedule:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType codeIndex:(NSInteger)codeIndex startTime:(NSString * _Nonnull)startTime endTime:(NSString * _Nonnull)endTime callback:(AlfredBLECallback _Nonnull)callback;
+- (void)setLockCodeSchedule:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType codeIndex:(NSInteger)codeIndex startTime:(NSString * _Nonnull)startTime endTime:(NSString * _Nonnull)endTime weekdays:(NSArray * _Nonnull)weekdays callback:(AlfredBLECallback _Nonnull)callback;
+- (void)deleteLockCodeSchedule:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType codeIndex:(NSInteger)codeIndex callback:(AlfredBLECallback _Nonnull)callback;
+- (void)syncRecords:(AlfredLock * _Nonnull)device page:(NSString * _Nonnull)page limit:(NSString * _Nonnull)limit callback:(AlfredBLECallback _Nonnull)callback;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

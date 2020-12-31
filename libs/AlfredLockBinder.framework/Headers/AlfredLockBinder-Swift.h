@@ -210,13 +210,14 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 @class AlfredDeviceBindStatus;
+@class AlfredLock;
 
 SWIFT_CLASS("_TtC16AlfredLockBinder17LockBinderManager")
 @interface LockBinderManager : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LockBinderManager * _Nonnull shared;)
 + (LockBinderManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)searchDeviceListWithTimeout:(NSInteger)timeout name:(NSString * _Nonnull)name success:(void (^ _Nonnull)(NSArray<AlfredDeviceBindStatus *> * _Nonnull))success failure:(AlfredErrorCallback _Nonnull)failure;
-- (void)bindLockWithDevice:(AlfredDeviceBindStatus * _Nonnull)device mcode:(NSString * _Nonnull)mcode success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
+- (void)bindLockWithDevice:(AlfredDeviceBindStatus * _Nonnull)device mcode:(NSString * _Nonnull)mcode success:(void (^ _Nonnull)(AlfredLock * _Nonnull))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -437,13 +438,14 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 @class AlfredDeviceBindStatus;
+@class AlfredLock;
 
 SWIFT_CLASS("_TtC16AlfredLockBinder17LockBinderManager")
 @interface LockBinderManager : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LockBinderManager * _Nonnull shared;)
 + (LockBinderManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)searchDeviceListWithTimeout:(NSInteger)timeout name:(NSString * _Nonnull)name success:(void (^ _Nonnull)(NSArray<AlfredDeviceBindStatus *> * _Nonnull))success failure:(AlfredErrorCallback _Nonnull)failure;
-- (void)bindLockWithDevice:(AlfredDeviceBindStatus * _Nonnull)device mcode:(NSString * _Nonnull)mcode success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
+- (void)bindLockWithDevice:(AlfredDeviceBindStatus * _Nonnull)device mcode:(NSString * _Nonnull)mcode success:(void (^ _Nonnull)(AlfredLock * _Nonnull))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

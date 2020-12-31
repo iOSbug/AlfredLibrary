@@ -24,4 +24,6 @@
 + (NSString *)getHexByBinary:(NSString *)binary;
 
 + (NSString *)getRandomNumber:(int)from to:(int)to;
++ (BOOL)isInvalidString:(NSString *)string;
++ (BOOL)pinkeyLegal:(NSString *)text;
 @end

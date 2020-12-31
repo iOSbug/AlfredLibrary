@@ -9,8 +9,6 @@
 #import <AlfredCore/AlfredCore.h>
 #import <AlfredCore/AlfredCore-Swift.h>
 
-//#import <AlfredNetManager/AlfredNetManager-Swift.h>
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NetManager : NSObject
@@ -47,23 +45,6 @@ NS_ASSUME_NONNULL_BEGIN
             success:(nullable void (^)(AlfredLock *device))success
             failure:(nullable void (^)(NetErrorModel *error))failure;
 
-
-/**
- *    获取当前账户下指定设备的门锁操作记录
- *
- *    @param     deviceID          指定设备的SN
- *    @param     limit                 每页个数
- *    @param     page                   分页index
- *    @param     success              成功回调 AlfredLockRecords
- *    @param     failure              失败回调
-
- */
-- (void)fetchLockRecords:(NSString*)deviceID
-                   limit:(int)limit
-                    page:(int)page
-                 success:(nullable void (^)(AlfredLockRecords *lockRecords))success
-                 failure:(nullable void (^)(NetErrorModel *error))failure;
-
 /**
  *    更改当前账户下指定设备的别名
  *
@@ -75,6 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  */
 - (void)renameDevice:(NSString*)deviceID
+           deviceDid:(NSString *)deviceDid
           deviceType:(AlfredDeviceType)deviceType
                alias:(NSString*)alias
              success:(nullable void (^)(void))success
@@ -152,12 +134,14 @@ NS_ASSUME_NONNULL_END
  *    门锁绑定（uac）
  *
  *    @param     deviceID          指定设备的SN
+ *    @param     mac                     mac 地址
  *    @param     type                   设备类型
  *    @param     success              成功回调
  *    @param     failure              失败回调
 
  */
 - (void)lockBindUac:(NSString*_Nullable)deviceID
+                mac:(NSString*_Nullable)mac
                type:(NSString*_Nullable)type
             success:(nullable void (^)(void))success
             failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
@@ -218,6 +202,38 @@ NS_ASSUME_NONNULL_END
 @end
 
 
+@interface NetManager(AlfredLockManager)
+
+/**
+ *    门锁记录
+ *
+ *    @param     deviceID          指定设备的SN
+ *    @param     limit                   每页个数
+ *    @param     page                     页数
+ *    @param     success              成功回调
+ *    @param     failure              失败回调
+
+ */
+- (void)fetchLockRecords:(NSString*_Nullable)deviceID
+                   limit:(NSString*_Nullable)limit
+                    page:(NSString *_Nullable)page
+                 success:(nullable void (^)(AlfredLockRecords * _Nullable records))success
+                 failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
+
+
+/**
+ *    APP蓝牙手机开锁日志上报
+ *
+ *    @param     params                字典
+ *    @param     success              成功回调
+ *    @param     failure              失败回调
+
+ */
+- (void)updateLockRecords:(NSDictionary*_Nullable)params
+                  success:(nullable void (^)(void))success
+                  failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
+@end
+
 #pragma mark - Gateway
 
 @interface NetManager(AlfredBridge)
@@ -240,6 +256,32 @@ NS_ASSUME_NONNULL_END
 
  */
 - (NSString *_Nullable)getAlfredBridgePairUrl;
+
+
+/**
+ *    查询网关是否绑定成功
+ *
+ *    @param     params          字典
+ *    @param     success              成功回调
+ *    @param     failure              失败回调
+
+ */
+- (void)gatewayCheckBind:(NSDictionary*_Nullable)params
+                 success:(nullable void (^)(AlfredBridgeBindStatus * _Nullable bindResult))success
+                 failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
+
+
+/**
+ *    查询网关已经下挂设备的在线状态
+ *
+ *    @param     params          字典
+ *    @param     success              成功回调
+ *    @param     failure              失败回调
+
+ */
+- (void)gatewayStatus:(NSDictionary*_Nullable)params
+              success:(nullable void (^)(AlfredBridgeLockStatusListModel * _Nullable statusList))success
+              failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
 
 /**
  *    通过主机下发门锁指令(开关门等)
@@ -344,4 +386,30 @@ NS_ASSUME_NONNULL_END
 - (void)gatewayUnbindLock:(NSDictionary*_Nullable)params
                   success:(nullable void (^)(void))success
                   failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
+
+
+/**
+ *    网关时区
+ *
+ *    @param     params              字典
+ *    @param     success              成功回调
+ *    @param     failure              失败回调
+
+ */
+- (void)gatewayTimezones:(NSDictionary*_Nullable)params
+                 success:(nullable void (^)(AlfredTimeZone *_Nullable))success
+                 failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
+
+
+/**
+ *    设置网关时区
+ *
+ *    @param     params              字典
+ *    @param     success              成功回调
+ *    @param     failure              失败回调
+
+ */
+- (void)setGatewayTimezone:(NSDictionary*_Nullable)params
+                   success:(nullable void (^)(void))success
+                   failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
 @end

@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)registerDevice:(AlfredDeviceBindStatus *)device
          masterPincode:(NSString *)masterPincode
-               success:(nullable void (^)(void))success
+               success:(nullable void (^)(AlfredLock *))success
                failure:(AlfredErrorCallback)failure;
 @end
 

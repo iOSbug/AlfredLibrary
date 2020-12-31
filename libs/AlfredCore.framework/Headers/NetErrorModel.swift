@@ -8,13 +8,18 @@
 import UIKit
 
 public class NetErrorModel: NSObject {
-    
-    public var eCode: Int?
+    @objc
+    public var eCode: Int = -1
     @objc
     public var eMessage: String?
     
     public init(_ eCode: Int?, eMessage: String?) {
         self.eCode = eCode ?? -1
         self.eMessage = eMessage ?? "server internal error"
+    }
+    
+    @objc
+    public override init() {
+        super.init()
     }
 }
