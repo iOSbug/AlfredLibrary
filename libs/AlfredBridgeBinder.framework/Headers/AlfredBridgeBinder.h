@@ -16,4 +16,6 @@ FOUNDATION_EXPORT const unsigned char AlfredBridgeBinderVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <AlfredBridgeBinder/PublicHeader.h>
 
 #import <AlfredBridgeBinder/BridgeBinder.h>
+#import <AlfredBridgeBinder/NetworkUtility.h>
+#import <AlfredBridgeBinder/TCPManager.h>
 
