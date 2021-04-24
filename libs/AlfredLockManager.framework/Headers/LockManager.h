@@ -159,6 +159,36 @@ notifyCallback:(nullable void (^)(AlfredLock *device, AlfredLockRecord *record))
 
 
 /**
+ *    按键操作控制
+ *
+ *    @param     deviceId 指定门锁对象SN
+ *    @param     operation 开关门
+ *    @param     callback 回调
+
+ */
+- (void)setPinOperation:(NSString *)deviceId
+              operation:(AlfredLockOperation)operation
+            controlType:(LockControlType)controlType
+                   code:(NSString *)code
+               callback:(AlfredBLECallback)callback;
+
+
+/**
+ *    蓝牙开关门
+ *
+ *    @param     deviceId 指定门锁对象SN
+ *    @param     operation 开关门
+ *    @param     callback 回调
+
+ */
+- (void)openDoor:(NSString *)deviceId
+       password1:(NSString *)password1
+       password2:(NSString *)password2
+        systemId:(NSString *)systemId
+       operation:(AlfredLockOperation)operation
+        callback:(AlfredBLECallback)callback;
+
+/**
  设置门锁基本参数
  
  @param deviceId 指定门锁对象SN

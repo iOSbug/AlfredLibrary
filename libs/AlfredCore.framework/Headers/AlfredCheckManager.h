@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic) BOOL sdkInitState;
 @property(nonatomic) BOOL sdkSignInState;
 @property(nonatomic) AlfredError sdkinitErr;
+@property(nonatomic,strong) NSString *guestKey;
 
 + (instancetype)shared;
 

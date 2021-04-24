@@ -85,6 +85,9 @@ typedef NS_ENUM(NSInteger,AlfredError) {
     BRIDGE_UPDATEVENDOR_ERROR, //更新vendor失败
     
     NET_REQUEST_ERROR, //网络请求错误
+    
+    SYSTEM_TIME_TAMPERING, //系统时间被篡改
+    ACCESS_DATA_EXPIRED, //鉴权数据过期
 
     NONE_ERROR,//无错，请求成功完成时返回
 };

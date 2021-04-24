@@ -181,8 +181,23 @@ notifyCallback:(nullable void (^)(AlfredLock *device, AlfredLockRecord *__nullab
  
  */
 - (void)setOperation:(AlfredLock *)device
-         operation:(AlfredLockOperation)operation
-          callback:(AlfredBLECallback)callback;
+           operation:(AlfredLockOperation)operation
+            callback:(AlfredBLECallback)callback;
+
+
+/**
+ 门锁操作控制，使用按键开锁和关锁的操作
+ 
+ @param device 指定门锁对象
+ @param operation 门锁操作
+ @param callback AlfredCallback<Void, AlfredError> 操作结果回调
+ 
+ */
+- (void)setPinOperation:(AlfredLock *)device
+              operation:(AlfredLockOperation)operation
+            controlType:(LockControlType)controlType
+                   code:(NSString *)code
+               callback:(AlfredBLECallback)callback;
 
 
 
