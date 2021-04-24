@@ -45,6 +45,11 @@ notifyCallback:(nullable void (^)(AlfredLock *_Nullable device, AlfredLockRecord
            operation:(AlfredLockOperation)operation
             callback:(AlfredBLECallback)callback;
 
+
+/**
+ *   主动断开指定门锁的蓝牙通讯连接
+ */
+- (void)disconnect;
 @end
 
 NS_ASSUME_NONNULL_END
