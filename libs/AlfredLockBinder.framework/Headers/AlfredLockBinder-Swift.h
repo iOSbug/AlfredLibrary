@@ -218,6 +218,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LockBinderMa
 + (LockBinderManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)searchDeviceListWithTimeout:(NSInteger)timeout name:(NSString * _Nonnull)name success:(void (^ _Nonnull)(NSArray<AlfredDeviceBindStatus *> * _Nonnull))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (void)bindLockWithDevice:(AlfredDeviceBindStatus * _Nonnull)device mcode:(NSString * _Nonnull)mcode success:(void (^ _Nonnull)(AlfredLock * _Nonnull))success failure:(AlfredErrorCallback _Nonnull)failure;
+- (void)unbindLockWithDeviceId:(NSString * _Nonnull)deviceId success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -446,6 +447,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LockBinderMa
 + (LockBinderManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)searchDeviceListWithTimeout:(NSInteger)timeout name:(NSString * _Nonnull)name success:(void (^ _Nonnull)(NSArray<AlfredDeviceBindStatus *> * _Nonnull))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (void)bindLockWithDevice:(AlfredDeviceBindStatus * _Nonnull)device mcode:(NSString * _Nonnull)mcode success:(void (^ _Nonnull)(AlfredLock * _Nonnull))success failure:(AlfredErrorCallback _Nonnull)failure;
+- (void)unbindLockWithDeviceId:(NSString * _Nonnull)deviceId success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

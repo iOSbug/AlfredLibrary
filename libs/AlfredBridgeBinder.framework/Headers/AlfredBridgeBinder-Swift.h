@@ -220,6 +220,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BridgeSwiftB
 - (void)querySSID:(NSString * _Nonnull)ssid success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (void)requestWifiListWithSuccess:(void (^ _Nonnull)(NSArray<AlfredBridgeHotspot *> * _Nonnull))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (void)requestWifiConfigWithHotspot:(AlfredBridgeHotspot * _Nonnull)hotspot password:(NSString * _Nonnull)password success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
+- (void)unbindLockWithDeviceId:(NSString * _Nonnull)deviceId success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -451,6 +452,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BridgeSwiftB
 - (void)querySSID:(NSString * _Nonnull)ssid success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (void)requestWifiListWithSuccess:(void (^ _Nonnull)(NSArray<AlfredBridgeHotspot *> * _Nonnull))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (void)requestWifiConfigWithHotspot:(AlfredBridgeHotspot * _Nonnull)hotspot password:(NSString * _Nonnull)password success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
+- (void)unbindLockWithDeviceId:(NSString * _Nonnull)deviceId success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

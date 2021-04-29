@@ -44,6 +44,21 @@ NS_ASSUME_NONNULL_BEGIN
          masterPincode:(NSString *)masterPincode
                success:(nullable void (^)(AlfredLock *))success
                failure:(AlfredErrorCallback)failure;
+
+
+
+/**
+ *    解除当前账户下指定设备
+ *
+ *    @param     deviceID          指定设备的SN
+ *    @param     success              成功回调
+ *    @param     failure              失败回调
+
+ */
+- (void)unbindDevice:(NSString*)deviceID
+             success:(nullable void (^)(void))success
+             failure:(AlfredErrorCallback)failure;
+
 @end
 
 NS_ASSUME_NONNULL_END
