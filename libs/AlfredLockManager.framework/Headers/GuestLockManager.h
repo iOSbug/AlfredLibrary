@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)access:(NSString *)deviceId
       paramStr:(NSString *)paramStr
+       timeout:(int)timeout
 connectCallbak:(nullable void (^)(AlfredLock *_Nullable device, AlfredLockConnectState state, AlfredError error))connectCallback
 notifyCallback:(nullable void (^)(AlfredLock *_Nullable device, AlfredLockRecord *record))notifyCallback;
 

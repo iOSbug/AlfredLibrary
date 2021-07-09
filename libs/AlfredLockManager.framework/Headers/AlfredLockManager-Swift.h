@@ -227,7 +227,7 @@ SWIFT_CLASS("_TtC17AlfredLockManager16LockSwiftManager")
 @interface LockSwiftManager : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LockSwiftManager * _Nonnull shared;)
 + (LockSwiftManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (void)access:(AlfredLock * _Nonnull)device connectCallback:(void (^ _Nonnull)(AlfredLock * _Nonnull, AlfredLockConnectState, AlfredError))connectCallback notifyCallback:(void (^ _Nonnull)(AlfredLock * _Nonnull, AlfredLockRecord * _Nullable))notifyCallback;
+- (void)access:(AlfredLock * _Nonnull)device timeout:(NSInteger)timeout connectCallback:(void (^ _Nonnull)(AlfredLock * _Nonnull, AlfredLockConnectState, AlfredError))connectCallback notifyCallback:(void (^ _Nonnull)(AlfredLock * _Nonnull, AlfredLockRecord * _Nullable))notifyCallback;
 - (void)setConfig:(AlfredLock * _Nonnull)device configID:(AlfredLockRequestConfig)configID values:(id _Nonnull)values callback:(AlfredBLECallback _Nonnull)callback;
 - (void)getLockCodes:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType callback:(AlfredBLECallback _Nonnull)callback;
 - (void)deleteLockCode:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType codeIndex:(NSInteger)codeIndex callback:(AlfredBLECallback _Nonnull)callback;
@@ -473,7 +473,7 @@ SWIFT_CLASS("_TtC17AlfredLockManager16LockSwiftManager")
 @interface LockSwiftManager : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) LockSwiftManager * _Nonnull shared;)
 + (LockSwiftManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (void)access:(AlfredLock * _Nonnull)device connectCallback:(void (^ _Nonnull)(AlfredLock * _Nonnull, AlfredLockConnectState, AlfredError))connectCallback notifyCallback:(void (^ _Nonnull)(AlfredLock * _Nonnull, AlfredLockRecord * _Nullable))notifyCallback;
+- (void)access:(AlfredLock * _Nonnull)device timeout:(NSInteger)timeout connectCallback:(void (^ _Nonnull)(AlfredLock * _Nonnull, AlfredLockConnectState, AlfredError))connectCallback notifyCallback:(void (^ _Nonnull)(AlfredLock * _Nonnull, AlfredLockRecord * _Nullable))notifyCallback;
 - (void)setConfig:(AlfredLock * _Nonnull)device configID:(AlfredLockRequestConfig)configID values:(id _Nonnull)values callback:(AlfredBLECallback _Nonnull)callback;
 - (void)getLockCodes:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType callback:(AlfredBLECallback _Nonnull)callback;
 - (void)deleteLockCode:(AlfredLock * _Nonnull)device codeType:(AlfredLockCodeType)codeType codeIndex:(NSInteger)codeIndex callback:(AlfredBLECallback _Nonnull)callback;

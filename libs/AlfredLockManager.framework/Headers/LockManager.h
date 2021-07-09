@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  *    @param     notifyCallback 门锁状态变化通知
  */
 - (void)access:(NSString *)deviceId
+       timeout:(int)timeout
 connectCallbak:(nullable void (^)(AlfredLock *device, AlfredLockConnectState state, AlfredError error))connectCallback
 notifyCallback:(nullable void (^)(AlfredLock *device, AlfredLockRecord *record))notifyCallback;
 
