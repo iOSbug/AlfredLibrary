@@ -51,6 +51,16 @@ notifyCallback:(nullable void (^)(AlfredLock *_Nullable device, AlfredLockRecord
  *   主动断开指定门锁的蓝牙通讯连接
  */
 - (void)disconnect;
+
+
+/**
+ *    获取客人门锁数据
+ *    @param     deviceId 指定门锁对象SN
+ *    @param     paramStr URLSAFE_BASE64({password1}.{password2}.{systemId}.{expire_ts}) +"." +URLSAFE_BASE64({verify})
+
+ */
+- (nullable AlfredLock *)getGuestDevice:(NSString *)deviceId
+                               paramStr:(NSString *)paramStr;
 @end
 
 NS_ASSUME_NONNULL_END
