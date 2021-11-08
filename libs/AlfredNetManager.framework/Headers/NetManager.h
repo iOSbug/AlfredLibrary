@@ -78,7 +78,14 @@ NS_ASSUME_NONNULL_BEGIN
              failure:(nullable void (^)(NetErrorModel *error))failure;
 
 
+/**
+ *    获取标准时间戳
+ *    @param     success              成功回调NSString
+ *    @param     failure              失败回调
 
+ */
+- (void)timestamp:(nullable void (^)(NSString *timestamp))success
+          failure:(nullable void (^)(NetErrorModel *error))failure;
 
 @end
 

@@ -11,6 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum {
+    LOW,
+    HIGH
+}VerifyLevel;
+
 @interface GuestLockManager : NSObject
 
 /**
@@ -61,6 +66,17 @@ notifyCallback:(nullable void (^)(AlfredLock *_Nullable device, AlfredLockRecord
  */
 - (nullable AlfredLock *)getGuestDevice:(NSString *)deviceId
                                paramStr:(NSString *)paramStr;
+
+
+/**
+ *   校验等级开关设置
+ */
+- (void)setVerifyLevel:(VerifyLevel)level;
+
+/**
+ *   校验等级开关获取
+ */
+- (VerifyLevel)getVerifyLevel;
 @end
 
 NS_ASSUME_NONNULL_END
