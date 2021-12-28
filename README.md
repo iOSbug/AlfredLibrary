@@ -17,12 +17,12 @@ AlfredLibrary is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-To use with iOS15, xcode13, version == 13.0.7
-pod 'AlfredLibrary','13.0.7'
+To use with iOS15, xcode13, version == 13.1.0
+pod 'AlfredLibrary','13.1.0'
 
 
-To use with xcode12.4, version ~> 0.4.0
-pod 'AlfredLibrary','~> 0.4.0'
+To use with xcode12.4, version ~> 0.4.6
+pod 'AlfredLibrary','~> 0.4.6'
 
 ```
 
