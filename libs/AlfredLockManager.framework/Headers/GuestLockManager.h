@@ -16,6 +16,13 @@ typedef enum {
     HIGH
 }VerifyLevel;
 
+
+typedef enum {
+    DB1,
+    DB2,
+    ML2
+}DeviceMode;
+
 @interface GuestLockManager : NSObject
 
 /**
@@ -199,6 +206,12 @@ notifyCallback:(nullable void (^)(AlfredLock *_Nullable device, AlfredLockRecord
  */
 - (nullable AlfredLock *)getGuestDevice:(NSString *)deviceId
                                paramStr:(NSString *)paramStr;
+
+
+/**
+ *   设置门锁型号（类初始化时必须传入)
+ */
+- (void)setDeviceMode:(DeviceMode)mode;
 
 
 /**
