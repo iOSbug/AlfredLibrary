@@ -18,15 +18,15 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 To use with iOS15, Xcode13
-pod 'AlfredLibrary','13.1.01'
+pod 'AlfredLibrary','13.1.02'
 
 
 To use with iOS15, Xcode13.2.1
-pod 'AlfredLibrary','13.2.10'
+pod 'AlfredLibrary','13.2.11'
 
 
 To use with Xcode12.4
-pod 'AlfredLibrary','12.4.01'
+pod 'AlfredLibrary','12.4.02'
 
 ```
 
