@@ -210,8 +210,11 @@ notifyCallback:(nullable void (^)(AlfredLock *_Nullable device, AlfredLockRecord
 
 /**
  *   设置门锁型号（类初始化时必须传入)
+ *    @param     deviceId 指定门锁对象SN
+ *    @param     mode    门锁型号
  */
-- (void)setDeviceMode:(DeviceMode)mode;
+- (void)setDeviceMode:(NSString *)deviceId
+                 mode:(DeviceMode)mode;
 
 
 /**
