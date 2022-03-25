@@ -299,12 +299,12 @@ NS_ASSUME_NONNULL_BEGIN
  *    @param     failure              失败回调
 
  */
-- (void)restart:(NSString*)gatewayID
-         tzName:(NSString *)tzName
-        tzValue:(NSString *)tzValue
-     tzDistrict:(NSString *)tzDistrict
-        success:(nullable void (^)(void))success
-        failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
+- (void)setTimezone:(NSString*)gatewayID
+             tzName:(NSString *)tzName
+            tzValue:(NSString *)tzValue
+         tzDistrict:(NSString *)tzDistrict
+            success:(nullable void (^)(void))success
+            failure:(nullable void (^)(NetErrorModel * _Nullable error))failure;
 
 @end
 
