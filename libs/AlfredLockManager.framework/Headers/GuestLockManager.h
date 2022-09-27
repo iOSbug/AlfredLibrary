@@ -20,7 +20,8 @@ typedef enum {
 typedef enum {
     DB1,
     DB2,
-    ML2
+    ML2,
+    DB2S,
 }DeviceMode;
 
 @interface GuestLockManager : NSObject
