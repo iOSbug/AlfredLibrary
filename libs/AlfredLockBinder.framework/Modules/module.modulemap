@@ -6,6 +6,6 @@ framework module AlfredLockBinder {
 }
 
 module AlfredLockBinder.Swift {
-    header "AlfredLockBinder-Swift.h"
-    requires objc
+  header "AlfredLockBinder-Swift.h"
+  requires objc
 }
