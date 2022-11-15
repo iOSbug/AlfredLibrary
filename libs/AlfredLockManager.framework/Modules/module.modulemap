@@ -6,6 +6,6 @@ framework module AlfredLockManager {
 }
 
 module AlfredLockManager.Swift {
-    header "AlfredLockManager-Swift.h"
-    requires objc
+  header "AlfredLockManager-Swift.h"
+  requires objc
 }

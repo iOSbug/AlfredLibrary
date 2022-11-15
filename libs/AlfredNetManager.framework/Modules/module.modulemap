@@ -6,6 +6,6 @@ framework module AlfredNetManager {
 }
 
 module AlfredNetManager.Swift {
-    header "AlfredNetManager-Swift.h"
-    requires objc
+  header "AlfredNetManager-Swift.h"
+  requires objc
 }
