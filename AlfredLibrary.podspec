@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AlfredLibrary'
-  s.version          = '14.0.03'
+  s.version          = '20.0.00'
   s.summary          = 'A short description of AlfredLibrary.'
 
 # This description is used to generate tags and improve search results.
@@ -30,21 +30,27 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
+  s.default_subspec     = 'Core'
+  
+  s.subspec 'Core' do |ss|
 
-  s.vendored_frameworks = "libs/*.{framework}"
+    ss.vendored_frameworks = "libs/*.{framework}"
 #  s.vendored_frameworks = "**/AlfredLibrary.framework"
 #  s.vendored_frameworks = "**/AlfredCore.framework"
 #  s.vendored_frameworks = "**/AlfredNetManager.framework"
 
-  s.frameworks   = 'NetworkExtension','Foundation','CoreLocation'
+    ss.resources           = 'AlfredBundle.bundle'
+    ss.preserve_paths      = 'libs/*', 'AlfredBundle.bundle'
 
-  s.dependency 'HandyJSON', '~> 5.0.3-beta'
-  s.dependency 'Alamofire'
-  s.dependency 'CocoaAsyncSocket'
-  s.dependency 'FCUUID'
-  s.dependency 'CocoaSecurity'
+    ss.frameworks   = 'NetworkExtension','Foundation','CoreLocation'
+
+    ss.dependency 'HandyJSON', '~> 5.0.3-beta'
+    ss.dependency 'Alamofire'
+    ss.dependency 'CocoaAsyncSocket'
+    ss.dependency 'FCUUID'
+    ss.dependency 'CocoaSecurity'
 #  s.dependency 'SwiftSH'
-  s.dependency 'NMSSH'
+    ss.dependency 'NMSSH'
 
   # s.resource_bundles = {
   #   'AlfredLibrary' => ['AlfredLibrary/Assets/*.png']
@@ -53,4 +59,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+   end
+   
 end

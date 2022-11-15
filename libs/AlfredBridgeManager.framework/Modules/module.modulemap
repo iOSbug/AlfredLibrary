@@ -6,6 +6,6 @@ framework module AlfredBridgeManager {
 }
 
 module AlfredBridgeManager.Swift {
-  header "AlfredBridgeManager-Swift.h"
-  requires objc
+    header "AlfredBridgeManager-Swift.h"
+    requires objc
 }

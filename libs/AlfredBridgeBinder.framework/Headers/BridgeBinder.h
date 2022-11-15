@@ -87,6 +87,13 @@ NS_ASSUME_NONNULL_BEGIN
              success:(nullable void (^)(void))success
              failure:(AlfredErrorCallback)failure;
 
+
+/**
+*    取消配置无线热点网络
+*
+*/
+- (void)cancelWifiConfig;
+
 @end
 
 NS_ASSUME_NONNULL_END
