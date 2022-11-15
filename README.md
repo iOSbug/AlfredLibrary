@@ -18,6 +18,9 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 
+To use with iOS16, Xcode14.0
+pod 'AlfredLibrary','14.0.03'
+
 To use with iOS15, Xcode13.3
 pod 'AlfredLibrary','13.3.01'
 
