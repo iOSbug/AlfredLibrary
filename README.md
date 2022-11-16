@@ -22,7 +22,7 @@ To use with iOS16, Xcode14.0
 pod 'AlfredLibrary','14.0.04'
 
 To use with iOS15, Xcode13.3
-pod 'AlfredLibrary','13.3.01'
+pod 'AlfredLibrary','13.3.02'
 
 To use with iOS15, Xcode13.2.1
 pod 'AlfredLibrary','13.2.16'
