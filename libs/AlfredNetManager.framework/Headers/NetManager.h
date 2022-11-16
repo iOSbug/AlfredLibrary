@@ -7,7 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import <AlfredCore/AlfredCore.h>
-#import <AlfredCore/AlfredCore-Swift.h>
+//#import <AlfredCore/AlfredCore-Swift.h>
+@import AlfredCore;
 
 NS_ASSUME_NONNULL_BEGIN
 
