@@ -1,6 +1,0 @@
-use_frameworks!
-target 'AlfredLibrary_Tests' do
-  pod 'AlfredLibrary', :path => '../'
-  
-  
-end

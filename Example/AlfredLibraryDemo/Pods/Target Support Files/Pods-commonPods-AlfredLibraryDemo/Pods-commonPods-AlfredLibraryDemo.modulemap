@@ -1,0 +1,6 @@
+framework module Pods_commonPods_AlfredLibraryDemo {
+  umbrella header "Pods-commonPods-AlfredLibraryDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

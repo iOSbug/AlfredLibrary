@@ -1,0 +1,823 @@
+/*
+ Lock.strings
+ Alfred
+ 
+ Created by tianbao on 2018/6/14.
+ Copyright © 2018年 tianbao. All rights reserved.
+ */
+
+//Comm
+"next" = "Next";
+"ok" = "OK";
+"cancel" = "Cancel";
+"sure" = "OK";
+"set" = "Settings";
+"delete" = "Delete";
+"confirm" = "Confirm";
+"save" = "Save";
+"done" = "Done";
+
+"Pull to refresh" = "Pull to refresh";
+"Release to update" = "Release to update";
+"Loading..." = "Loading...";
+
+//"comm_bluetooth_open_tip" = "Switch Bluetooth on to allow Alfred connect to the device";  //已修改
+
+//"kickout_tip" = "your account has been logined by another device";
+"upgrade_button_title" = "Upgrade";
+"connect_bluetooth_fail" = "Connect BlueTooth failed";
+"ble_lock_connected_tip" = "%@ connected";
+
+"ble_state_tip" = "Turn Bluetooth ON to allow \"Alfred Home\" to Connect to devices";
+"ble_state_set" = "Settings";
+"ble_disconnect_tip" = "Bluetooth disconnected";
+"no_net_error" = "Disconnected\nCheck the network connection";
+"connect_fail" = "request failed";
+"gateway_operation_failed" = "operation failed";
+"bluetooth_operate_fail" = "Bluetooth operation failed";
+"app_network_switch_reason" = "Confirm that the app has the permission of \"Local Network\"?";
+
+// Login
+"login_on_new_device" = "Your account logged in on a new device";
+
+"login_mail_verify" = "Mailbox verification";
+"login_welcome_to_alfred" = "Hello, I am Alfred,\nPlease Sign up";
+"login_welcome" = "Welcome, ";
+"login_sign_up" = "Sign up";
+"login_email" = "Email";
+"login_password" = "Password";
+"login_confirm_password" = "Confirm password";
+"login_forget_password" = "Forgot password?";
+"login_sign_in" = "Sign in";
+"login_regist_password_description" = "Please use a combination of upper & lower case letters and numbers.\n MINIMUM 8 CHARACTERS ";
+"login_regist_confirmpassword_description" = "Confirm password and password must be the same";
+"login_agreement_reading_tips" = "I have read and agree to the Terms of Use";
+"login_agreement_tap_string" = "Terms of Use";
+"login_agree_terms_tips" = "Please read and agree to the terms.";
+
+"login_more" = "More";
+"login_switch_account" = "Switch account";
+"login_with_face" = "Face";
+"login_with_fingerprint" = "Fingerprint";
+"login_cancel" = "Cancel";
+"login_reset_password_nav" = "Reset password";
+"login_new_password" = "New password";
+"login_reset_password_tap" = "Reset";
+"login_enter_username" = "Enter Username";
+"login_enter_password" = "Enter Password";
+"login_enter_correct_email" = "Enter correct email address.";
+"login_agree" = "Agree";
+
+"login_register_verification_username" = "Verification code has been sent to:";
+"login_register_verification_code" = "Verification code";
+"login_register_verification_code_error" = "Incorrect verification code";
+"login_register_signin_success_title" = "Sign up successful";
+"login_register_resetpassword_success_title" = "Reset password successful";
+"login_register_success_info" = "You can sign in";
+
+"login_open_email_verify" = "Please open the email and verify it";
+"login_open_email_verify1" = "Open the email and fill in the verification code.";
+"login_open_email_action" = "open the email";
+"login_open_email_action1" = "Open the email";
+"login_send_email_again" = "Re-send email";
+"login_send_email_again_success" = "Email sent";
+"login_no_email" = "Can't find email?";
+"login_no_email_tips" = "If you don't see the verification email in your email inbox, please check your spam folder.\nIf you still don't see it, please set \"alfredinc.com\" as a whitelist in the mailbox and click \"Re-send email\".";
+"login_no_email_tips_count" = "If you don't see the verification email in your email inbox, please check your spam folder.\nIf you still don't see it, please set \"alfredinc.com\" as a whitelist in the mailbox and click \"Re-send email %@\".";
+
+"login_resend_email" = "Re-send email";
+
+// TouchID && FaceID
+"login_touch_id_type" = "Login with Touch ID";
+"login_face_id_type" = "Login with Face ID";
+"touch_id_show_content" = "Verify your Touch ID";
+"face_id_show_content" = "Verify your face ID";
+"login_touchId_tips" = "Click to verify Touch ID";
+"login_faceId_tips" = "Click to verify Face ID";
+"touch_id_enable_title"="Use Touch ID for a quick sign in";
+"face_id_enable_title"="Use Face ID for a quick sign in";
+"login_authId_cancel" = "Cancel";
+"login_open_authId_ok" = "OK";
+
+// Home
+"home_title" = "Devices";
+"home_nodevice_info" = "No device paired";
+"home_nodevice_add_btn" = "Add Device";
+
+"home_lock_record_title" = "Activities";
+"home_share_lock_guest" = "Guest";
+"home_connect_ble_device_tip" = "Connect to door lock?";
+"home_connect_ble_device_info" = "Please palm over keypad to wake up the door lock";
+
+"home_no_permission_to_unlock" = "No permission to unlock";
+"home_no_permission_to_operate" = "No permission";
+
+"home_change_admin_password_title" = "Change Mastercode";
+"home_change_admin_password_info_title" = "Your lock %@\nFor your security reasons, the Master Pin Code must be replaced.";
+"home_change_admin_password_info_msg" = "·4-10 digit number\n·Cannot contain more than 4 repeats numbers\n·Cannot contain more than 4 sequential numbers\n·Cannot repeat or contain previous master code";
+"home_change_admin_password_fail" = "Change mastercode failed";
+"home_sahre_delet_by_owner" = "Removed by host";
+
+"home_gateway_child_devices" = "%@ child devices";
+"home_device_gateway_status_online" = "Online";
+"home_device_gateway_status_offline" = "Offline";
+"home_device_lock_status_openable" = "Locked";//"Unlockable";//"Openable";
+"home_device_lock_status_lockable" = "Unlocked";//"Lockable";
+"home_device_lock_status_connectable" = "Connectable";
+"home_device_lock_status_not_reach" = "Not reach the access time";
+"home_device_lock_status_deleted_by_owner" = "Deleted by owner";
+"home_device_lock_bluetooth_unlock" = "Bluetooth unlock";
+"home_device_lock_bluetooth_lock" = "Bluetooth lock";
+"home_device_lock_wifi_unlock" = "Wi-Fi unlock";
+"home_device_lock_wifi_lock"="Wi-Fi lock";
+"home_device_gateway_name_text" = "Connectname";
+"home_device_gateway_remove_assignment" = "Remove assignment";
+
+"home_device_lock_door_sensor_unlock" = "Door open";
+"home_device_lock_door_sensor_lock" = "Door close";
+"home_device_lock_door_sensor_lost_connect" = "Lost connection";
+
+"home_device_gateway_unbind_info" = "The device is not yet assign to a Connect.\n There are Connects that can be assign.";
+"home_device_gateway_unbind_button" = "Go to assign";
+"home_device_gateway_no_gateway_info" = "No Connect in your account";
+"home_device_gateway_no_gateway_button" = "Add Connect";
+"home_device_gateway_bind_lock_to_gateway_title" = "Bind lock to Connect";
+"home_device_gateway_bind_lock_to_gateway_head" = "Select Connect near door lock so they can be assign via Bluetooth";
+"home_device_gateway_bind_assignment_success" = "Assignment success";
+"home_device_gateway_bind_assignment_fail" = "Assignment failure";
+"home_device_gateway_bind_assignment_fail_info" = "Make sure your lock is close to the Connect";
+"home_device_gateway_bind_assign_lock_to_gateway_title" = "Assign lock to Connect";
+"home_device_gateway_bind_assign_lock_to_gateway_head" = "Assign locks to Connect,you will know every situation abount your home wherever you are.";
+"home_device_gateway_open_door_fail" = "Open door failure";
+"home_device_gateway_close_door_fail" = "Close door failure";
+
+
+//Lock Info
+"lock_leave_mode" = " Away Mode";
+"lock_info_active" = "Activities";
+"lock_info_share" = "Share";
+"lock_info_setting" = "Setting";
+
+"lock_auto_unlock_info" = "One Touch Unlock";
+"lock_setting_del_device"="Delete the smart door lock?";
+"lock_setting_del_device_tip"="Once door lock is deleted, you can no longer manage the lock any more.";
+
+"lock_device_infomation_title" = "Device Information";
+"lock_device_infomation_model" = "Model";
+"lock_device_infomation_serial_number" = "Serial Numbers";
+"lock_device_infomation_bluetooth_name" = "Bluetooth Name";
+
+"lock_device_infomation_firmware_rev" = "Firmware Ver.";
+"lock_device_infomation_hardware_rev" = "Hardware Ver.";
+"lock_device_infomation_software_rev" = "Software Ver.";
+
+"lock_device_infomation_battery_time_just" = "Just now";
+"lock_info_push_set" = "Notifications";
+"lock_info_push_set_info" = "Turn Notifications On if you want to be notified when the status of your lock changes";
+
+"lock_sn_copy_success" = "Success copy";
+
+//  Home - Setting
+"home_lock_setting_title" = "Settings";
+"home_lock_setting_bluetooth_keys_title" = "Invitations";
+"home_lock_setting_bluetooth_keys_share_title" = "Invitations";
+"home_lock_bluetooth_fwupdate_wait" = "Updating...";
+"home_lock_bluetooth_version_new" = "The current version is the latest";
+"home_lock_error_upgrate_by_android" = "This feature requires you to upgrade the door lock version to the latest version using Android mobile phones.";
+"home_lock_bluetooth_fwupdate_timeout" = "Update timeout";
+
+//管理员密码统一叫：Master PIN
+"home_lock_setting_touch_keys_title" = "Fingerprints";
+"home_lock_setting_pin_keys_title" = "PIN Code Keys";
+"home_lock_setting_card_keys_title" = "Access Card";
+"home_lock_setting_auto_unlock_title" = "One Touch Unlock";
+"home_lock_setting_name_title" = "Name";
+"home_lock_setting_rename_title" = "Rename";
+"home_lock_setting_update_firmware_title" = "Update Software";
+"home_lock_setting_delete_title" = "Delete the device";
+"home_lock_setting_leave_mode_title" = "Away Mode";
+"home_lock_setting_anti_lock_title" = "Inside Deadlock";
+"home_lock_setting_auto_lock_title" = "Auto-lock";
+"home_lock_setting_power_save_title" = "Power Save";
+
+"home_lock_setting_lock_voice_title" = "Lock voice";
+"home_lock_setting_lock_language_title" = "Language";
+"home_lock_setting_lock_language_voice_title" = "Voice and language";
+"home_lock_setting_lock_voice_title" = "Voice";
+
+"home_lock_setting_section_key_assign" = "Key assignment";
+"home_lock_setting_section_lock_mode" = "Lock mode";
+"home_lock_setting_section_device_parameters" = "Device parameters";
+"home_lock_setting_change_admin_password" = "Change Mastercode";
+"home_lock_setting_head_basic_settings" = "Basic Settings";
+
+"home_lock_setting_change_admin_password_old" = "Old mastercode";
+"home_lock_setting_change_admin_password_new" = "New mastercode";
+"home_share_lock_setting_info" = "Device parameters";
+
+"home_share_lock_setting_fail_dooropen" = "Can't be set in open state";
+"home_setting_hub_powersave_unset_tip" = "Power Save cannot be set after door lock associated Connect";
+
+"home_lock_setting_speaker_voice" = "Lock speaker voice";
+"home_lock_setting_speaker_voice_low" = "Low Volume";
+"home_lock_setting_speaker_voice_high" = "High Volume";
+"home_lock_setting_speaker_voice_silent" = "Silent Mode";
+
+"home_lock_setting_speaker_language" = "Lock speaker language";
+
+"home_lock_setting_speaker_language_english" = "English";
+"home_lock_setting_speaker_language_chinese" = "Chinese";
+"home_lock_setting_speaker_language_french" = "French";
+"home_lock_setting_speaker_language_spanish" = "Spanish";
+"home_lock_setting_speaker_language_portuguese" = "Portuguese";
+
+
+"home_lock_setting_pin_keys_list_sheet_time_plan" = "Edit time plan";
+"home_lock_setting_pin_keys_list_sheet_replace_assignee" = "Replace assignee";
+"home_lock_setting_pin_keys_list_sheet_delete_assignee" = "Delete assignee";
+"home_lock_setting_pin_keys_list_sheet_delete_key" = "Delete key";
+"home_lock_setting_pin_keys_list_sheet_delete_time_plan" = "Delete time plan";
+"home_lock_setting_pin_keys_list_sheet_assign_to_members" = "Assign to members";
+
+
+"home_lock_setting_pin_keys_create_password_placehold" = "User PIN";
+"home_lock_setting_pin_keys_create_Assign_key_title" = "Assign Key";
+"home_lock_setting_pin_keys_create_Assign_key_info" = "You'd better assign this key to a member";
+"home_lock_setting_pin_keys_create_password" = "Password";
+"home_lock_setting_pin_keys_create_password_fail_number_exist" = "Key number already exists";
+"home_lock_setting_pin_keys_create_password_fail_key_exist" = "Key already exists";
+"home_lock_setting_access_keys_create_password_create_fail" = "Access Key creation failed";
+
+"home_lock_setting_pin_keys_create_password_detail" = "Keep Bluetooth connection\n4-10 digits PIN key allowed\n4 or more Identical or continuous digits prohibited";
+"home_lock_setting_pin_keys_create_password_owner" = "Assign key to member";
+"home_lock_setting_pin_keys_create_password_error" = "Bluetooth disconnected";
+"home_lock_setting_pin_keys_unbind_owner" = "Unassign key";
+"home_lock_setting_pin_keys_create_password_new" = "NEW";
+
+"home_lock_setting_pin_keys_delete_password" = "Delete %@?";
+
+
+"home_lock_setting_pin_keys_nodata_info1" = "No PIN Code Key";
+"home_lock_setting_pin_keys_nodata_info2" = "Create a PIN Code Key";
+"home_lock_setting_pin_keys_nodata_create" = "Create";
+
+"home_lock_setting_touch_keys_nodata_info1" = "No Fingerprint";
+
+"home_lock_setting_card_keys_nodata_info1" = "No Access card";
+
+//指纹需要有入口启动采集，采集完成后刷新
+"home_lock_setting_touch_keys_nodata_info2" = "If a Fingerprint has been created,\n please open the Bluetooth - \n Touch to activate the device";
+
+
+"home_lock_setting_pin_keys_create_password_bind_owner" = "Assign";
+"home_lock_setting_pin_keys_create_password_create" = "Create";
+"home_lock_setting_pin_keys_create_password_most" = "Only 20 PIN Code Keys allowed";
+"home_lock_setting_ml2_pin_keys_create_password_most" = "Only 250 PIN Code Keys allowed";
+"home_lock_setting_pin_keys_create_password_title" = "PIN code Number Slot ";
+"home_lock_setting_pin_keys_create_password_member_title" = "Choose a member";
+"home_lock_setting_pin_keys_create_password_member_add" = "New member";
+"home_lock_setting_pin_keys_create_password_create_fail" = "PIN code Number Slot creation failed";
+
+"home_lock_setting_card_keys_create_password_title" = "Access card ";
+"home_lock_setting_touch_access_keys_create_info1" = "Click the button and follow voice guidance";
+"home_lock_setting_touch_access_keys_create_info2" = "Approach the door lock, then click the create button below and follow the voice guidance of the lock to operate.\nPlease operate on the lock";
+"home_lock_setting_access_keys_create_password_most" = "Only 250 Access keys allowed";
+"home_lock_setting_access_keys_create_ble_diconnect" = "Please approach the door lock and refresh the access cards list";
+
+
+"home_lock_setting_rename_textfield_title" = "Device Name";
+"home_lock_setting_rename_lock_textfield_title" = "Name the lock";
+"home_lock_setting_rename_connect_textfield_title" = "Name the Connect";
+
+"home_lock_setting_rename_textfield_input_title" = "Name the device";
+"home_lock_setting_bluetooth_key_head" = "Invitation was shared to %d member";
+"home_lock_setting_bluetooth_keys_head" = "Invitation was shared to %d members";
+"home_lock_setting_bluetooth_key_email" = "Email: ";
+"home_lock_setting_bluetooth_key_sheet_edit_time_plan" = "Edit time plan";
+"home_lock_setting_bluetooth_key_sheet_delete_assign" = "Delete assignee";
+"home_lock_setting_bluetooth_key_sheet_reshare" = "Reshare";
+"share_accept_key_fail" = "Share failed";
+
+//此处考虑下界面是否应该有分享和取消分享功能
+
+"home_lock_share_key" = "You got an unlock invitation from Alfred Smart Door Lock";
+"home_lock_share_key_select_bluetooth_lock" = "Choose a bluetooth lock";
+"home_lock_share_key_select_bluetooth_lock_navi" = " Lock";
+"home_lock_share_key_select_bluetooth_lock_share_button" = "Share";
+"home_lock_share_key_select_bluetooth_lock_my_door_select" = "Choose a bluetooth lock";
+
+"home_lock_share_bluetooth_key" = "Invitation";
+"home_lock_share_bluetooth_key_title" = "Choose a member";
+"home_lock_share_bluetooth_key_create_member" = "New member";
+"home_lock_Time_plan_setting_title" = "Time plan setting";
+"home_lock_Time_plan_setting_max_error" = "You can only set up five groups of time plans at most.";
+
+"home_lock_setting_autounlock_family_range" = "Family range";
+"home_lock_setting_autounlock_meters_aradius" = "%@ meters radius";
+//注意美国距离是英制
+"home_lock_setting_autounlock_title" = "One Touch Unlock";
+"home_lock_setting_autounlock_info1" = "1.One Touch Unlock(beta) allows you to unlock your door within a touch while you stand in front of the lock";
+"home_lock_setting_autounlock_info2" = "2.You should keep your Bluetooth ON and one arm distance to the lock, you will hear voice promotion while your door unlocked.";
+"home_lock_setting_autounlock_info3" = "3.Once you enter your house, One Touch Unlock will no longer be available until you leave your house again far away(>250 yards)";
+"home_lock_setting_autounlock_info4" = "4.Alfred need both you and your lock’s position to enable One Touch Unlock, to be more accurate you can calibrate your position on the map";
+"home_lock_setting_autounlock_info5" = "5.One Touch Unlock will increase power consumption of your smart phone";
+"home_lock_setting_autounlock_info6" = "6.Due to limitation of various phone version, One Touch Unlock may not work";
+"home_lock_setting_autounlock_info7" = "7.One Touch Unlock is only a beta feature of Alfred Smart Lock, please try it at your own risk";
+"home_lock_setting_autounlock_info_reason" = "Alfred always need your position to enable One Touch Unlock";
+"home_lock_setting_autounlock_info_reduced_reason" = "Alfred needs the \"Precise Location\" permission to enable One Touch Unlock";
+
+"home_lock_setting_autounlock_map_info" = "Then One Touch Unlock will not be activated until you leave your neighborhood. You can select your location by yourself.";
+"home_lock_setting_autounlock_home_location" = "Home location";
+"home_lock_setting_autounlock_open_fail" = "Only one device enable One Touch Unlock is supported at the same time";
+"home_lock_setting_autounlock_open_fail_same_area" = "Only one device enable One Touch Unlock is supported at the same Geofence area";
+
+"home_lock_setting_autounlock_overtime" = "Active time limit";
+"home_lock_setting_autounlock_overtime_errormsg" = "You have exceeded the time limit";
+"home_lock_setting_autounlock_lock_errormsg" = "You need to turn on mobile location permissions";
+"home_lock_setting_autounlock_active_time_limit" = "Active time limit";
+"home_lock_setting_autounlock_active_time_limit_head" = "Once you enter the Geofence area set around your Home location, the One Touch Unlock feature will start the count down timer. If you do not active \"One Touch Unlock\" by touching the front screen of your Alfred lock within the set timeout period, the feature will be suspended for your safety. It will be ready to re-active only once you have left the set Geofence area.";
+"home_lock_setting_autounlock_active_time_limit_minute" = "Minute";
+"home_lock_setting_autounlock_active_time_limit_min" = "min";
+"home_lock_setting_autounlock_active_cell_time_limit" = "Time limit";
+"home_lock_setting_autounlock_active_cell_always_active" = "Always active";
+"home_lock_setting_autounlock_active_cell_timeout_suspended" = "Timeout will be suspended";
+
+"home_lock_setting_away_mode_info1" = "Enabling this feature restricts all user PIN code access, except Master Pin Code and App Access. The featured is designed to be used when all occupants are out of the house and no entry into the home should be made until the Master Pin code user returns to the home.";
+"home_lock_setting_away_mode_info2" = "Away mode will be disabled automatically after entering either the Master Pin code at the lock or by unlocking the door in the Alfred App. If someone unlocks the deadbolt lock by using the inside thumb turn or Key Override (Select Models Only), the lock will sound an audible alarm for 1 min. Additionally if an Alfred Connect module is installed in the home when alarm is activated, it will send a notification message to the account holders App to notify them of the Alarm.";
+"home_lock_setting_one_touch_unlock_info1" = "Enabling this feature will allow the User to Unlock the by simply touching the keypad to wake up the lock, no pin code or app interaction required.";
+"home_lock_setting_one_touch_unlock_info2" = "This is made possible by using a Geofence signal around the lock location (set by user) and the Alfred App on the users Phone.";
+"home_lock_setting_one_touch_unlock_info3" = "When this feature is enabled, once the users Phone with Alfred App enters inside the set Geofence location, the Alfred Lock will be primed to unlock once users Phone comes into Bluetooth range of lock.";
+"home_lock_setting_one_touch_unlock_info4" = "The user then simply just needs to walk up to the lock and wake up the key pad with their hand (phone can remain in your pocket or purse as it is not required to be touched for this to work).";
+"home_lock_setting_one_touch_unlock_info5" = "One Touch is designed for 1 time use and the feature will not be able to be reactivated until the user leaves the Geofence area.";
+"home_lock_setting_auto_relock_info" = "Enabling this feature will automatically relock the deadbolt after 30 seconds of being unlocked.";
+"home_lock_setting_inside_deadlock_info1" = "Enabling this feature restricts all user PIN code access, except Master Pin Code and App Access. Inside Deadlock is similar to Away Mode with the exception that when the lock is opened from the inside with the thumb turn no alarm WILL SOUND.";
+"home_lock_setting_inside_deadlock_info2" = "This feature is designed to be used when the User is home and within the house but wants to restrict any Pin Codes assigned to other users (other than Master Pin Code) from being able to open the deadbolt lock, for example when sleeping at night once everyone that is supposed to be home is within the house.";
+"home_lock_setting_bluetooth_energy_saving_info1" = "Enabling Bluetooth energy savings mode will restrict the time that the locks Bluetooth connection will remain active. When Bluetooth Energy savings mode is active, Bluetooth will continue to broadcast signal for only 2 min after the keypad lights on the lock have turned off, After this the Bluetooth feature will go to sleep to preserve battery life.";
+"home_lock_setting_bluetooth_energy_saving_info2" = "The Bluetooth connection will be reactivate once the lock has been woken up by touching the front of the keypad. By enabling Bluetooth Energy Savings mode there may be a small connection lag time when connecting to lock as it will need to reconnect to the signal.";
+"home_lock_setting_bluetooth_energy_saving_info3" = "** If user has enabled One Touch Unlock feature, Bluetooth Energy Savings mode cannot be enabled as the One Touch Lock feature requires constant Bluetooth connect availability to function.";
+
+"home_lock_setting_about_awaymode" = "About Away Mode";
+"home_lock_setting_about_auto-lock" = "About Auto-lock";
+"home_lock_setting_about_power_save" = "About Power Save";
+"home_lock_setting_autounlock_about" = "About One Touch Unlock";
+"home_lock_setting_about_anti_lock" = "About Inside Deadlock";
+
+//one touch Unlock
+"left_on_touch_unlock_area" = "Left One-Touch Unlock area of ";
+"arrived_on_touch_unlock_area" = "Arrived One-Touch Unlock area of ";
+"home_lock_setting_autounlock_will_opendoor" = "Touch the keypad of %@ to unlock";
+"home_lock_setting_autounlock_did_opendoor" = " was unlocked by One Touch Unlock!";
+"home_lock_setting_autounlock_timeout" = "One Touch time limit has been exceeded";
+"home_lock_setting_autounlock_opendoor_fail" = " was unlocked failed by One Touch Unlock!";
+"home_lock_setting_autounlock_sharedev_open_fail" = "Sharer devices are required to turn on One-Touch Unlock so that the sharee can use this function.";
+"home_lock_one_touch_uuid_fail_reason" = "One Touch Unlock failed. Use Alfred app to connect the lock of %@ again by Bluetooth";
+"home_lock_one_touch_uuid_update_success" = "One Touch Unlock update successful";
+
+// home gateway setting
+"home_gateway_basic_settings" = "Basic Settings";
+"home_gateway_setting_child_devices_title" = "Child devices";
+"home_gateway_setting_time_zone_title" = "Time zone";
+"home_gateway_setting_network_title" = "Network";
+"home_gateway_setting_section_gateway_setting" = "Connect setting";
+"home_gateway_setting_title" = "Connect WiFi Pairing";
+"home_gateway_setting_child_devices_check_device" = "Check the device";
+"home_gateway_setting_child_devices_removing_assignment" = "Removing assignment";
+"home_gateway_setting_child_devices_no_lock_info" = "No lock in your account";
+"home_gateway_setting_child_devices_unbind_button" = "Add lock";
+"home_gateway_setting_child_devices_unbind_info" = "The device is not yet assign to a lock.\n There are locks that can be assign";
+"home_gateway_setting_child_devices_unbind_button" = "go to assign";
+"home_gateway_setting_child_devices_bind_three_most" = "Only three locks can be bound at most.";
+
+"home_gateway_setting_child_devices_bindlock_tip" = "Please make sure your WiFi Bridge is close enough to your door lock, connection may gets weaker due to objects between WiFi Bridge and your lock.";
+"home_gateway_setting_child_devices_bind_first_lock_tip" = "For best performance, to assign ONE lock to each WiFi Bridge is recommended.";
+"home_gateway_setting_child_devices_bind_sec_lock_tip" = "Warning: To assign multiple locks to one WiFi Bridge may affect performance.";
+
+
+"home_gateway_setting_child_devices_bind_error" = "Connect could not find the lock";
+"home_gateway_setting_del_gateway_title" = "Delete the Connect?";
+"home_gateway_setting_remove_tip" = "If the Connect is deleted, the mobile phone will not be able to control the door lock through the Connect";
+"home_gateway_set_time_zone"= "Time Zone";
+"set_some_situation" = "Some situation";
+"set_change_time_zone_tips" = "Time zone is an important setting that will take effect immediately after the modification, but some previous recordings may be displayed wrongly in calendar, including alerts, cloud storage, local storage. Do you confirm the change?";
+"set_change_time_zone" = "Change time zone";
+"set_change_timezone" = "Change Connect time zone to %@";
+
+"home_gateway_info_hub_id"= "Connect ID";
+"home_gateway_info_hub_firmware_version"= "Firmware Version";
+"home_gateway_info_hub_ip_address"= "IP Address";
+"home_gateway_info_hub_Wifi_mac"= "Wi-Fi MAC";
+
+"home_gateway_update_fail"= "Upgrade failure";
+"home_gateway_update_success"= "Upgrade successful";
+
+//share
+"share_bluetooth_key_info" = "How often does the guest need to access the door";
+"share_time_plan_setting_head" = "How often does the guest need to use this key?";
+
+"share_bluetooth_key_always" = "Always";
+"share_bluetooth_key_recurring" = "Recurring";
+"share_bluetooth_key_temporary" = "Temporary";
+"share_bluetooth_key_sun" = "Sun";
+"share_bluetooth_key_mon" = "Mon";
+"share_bluetooth_key_tues" = "Tues";
+"share_bluetooth_key_wed" = "Wed";
+"share_bluetooth_key_thur" = "Thur";
+"share_bluetooth_key_fri" = "Fri";
+"share_bluetooth_key_sat" = "Sat";
+"share_bluetooth_key_every_day" = "Everyday";
+"share_bluetooth_key_workday" = "Workday";
+"share_bluetooth_key_weekday"="Weekend";
+
+"share_bluetooth_key_invitation_edit_title" = "Invitation edit";
+"share_bluetooth_key_invitation_edit_sheet" = "Edit Invitation";
+"share_bluetooth_key_start_time" = "Start time";
+"share_bluetooth_key_end_time" = "End time";
+"share_bluetooth_key_edit_time_open_title" = "Allow Bluetooth to unlock";
+"share_bluetooth_key_edit_time_title" = "Invitation setting";
+"share_bluetooth_key_resend_title" = "Whether to resend the share link";
+"share_bluetooth_reshare" = "Reshare";
+"share_bluetooth_reshare_info" = "The share link has expired, re-shared?";
+"share_bluetooth_time_save_type_tip" = "Please select Invitation time type";
+"share_bluetooth_time_save_week_tip" = "Please select week";
+"share_bluetooth_time_save_time_tip" = "Please select time";
+
+"share_bluetooth_accept_tip" = "Accept Bluetooth Key Invitation for %@ Lock";
+"share_bluetooth_accept_sure_title" = "Accept";
+
+"share_limit_share_lock_title" = "Share lock";
+"share_limit_share_lock_headtitle" = "You will invite this member to use the door lock";
+"share_limit_name" = "Invitee of lock ";
+"share_limit_level_title" = "The permissions level of this member";
+"share_limit_time_title" = "How often does the member need to access the door";
+"share_limit_level_master" = "Family";
+"share_limit_level_guest" = "Guest";
+"share_limit_switch_title" = "You can turn the user's app access to this lock on or off.";
+"share_limit_switch_allowed_to_use" = "Allowed to use";
+
+"share_permission_level_title" = "Permission level";
+"share_permission_level_headtitle" = "The permissions level of this member is";
+"share_permission_level_foottitle" = "Permissions including";
+"share_permission_level_foot1" = "Lock and unlock the door via Bluetooth";
+"share_permission_level_foot2" = "Door lock settings";
+"share_permission_level_foot3" = "One Touch Unlock";
+"share_permission_level_foot4" = "PIN Code managerment";
+"share_permission_level_foot5" = "View activities";
+
+
+
+// Add -Lock
+"add_lock_Pair_lock_to_app" = "Pair lock";
+"add_lock_been_bound" = "Paired";
+"add_lock_Pair_message1" = "Please palm over keypad to activate lock";
+"add_lock_Pair_message2" = "Please keep your phone's Bluetooth ON";
+"add_lock_Pair_select_message" = "Choose a lock to be paired with";
+"add_lock_Pair3_title_info" = "Enter the mastercode of the lock to verify your identity";
+"add_lock_Pair3_title_load_info" = "Lock is being paired,\n please keep Bluetooth connection";
+
+"add_lock_Pair3_admin_password" = "Mastercode";
+"add_lock_Pair3_info1" = "If you are pairing for the first time, you can find the inital mastercode in the instructions.";
+"add_lock_Pair3_info2" = "Please wait about 20 seconds";
+"add_lock_Pair3_admin_password_error" = "Incorrect mastercode";
+
+"add_lock_Pair2_nodata_info1" = "No device was found";
+"add_lock_Pair2_nodata_info2" = "Please check your cell phone‘s bluetooth on and close to the device";
+
+"add_lock_Pair_lock_failure" = "failure";
+"add_lock_Pair_lock_failure_info" = "Please refresh the page";
+"add_lock_Pair_lock_search" = "Connecting network";
+"add_lock_Pair_lock_can_pair" = "Ready to Pair";
+"add_lock_Pair_lock_default_type" = "Smart lock";
+
+"add_lock_Pair_lock_to_app_step_1" = "Pair lock";
+"add_lock_Pair_lock_to_app_step_2" = "Pair lock";
+"add_lock_Pair_lock_to_app_step_3" = "Pair lock";
+"add_lock_Pair_bind_lock_step5_solve_btn" = "How to solve";
+"add_lock_Pair_bind_lock_step5_back_btn" = "Back to step 1";
+
+"add_lock_Pair_bind_lock_bluetooth_disconnect_title" = "Opps! Bluetooth disconnected";
+"add_lock_Pair_bind_lock_bluetooth_disconnect_info" = "Keep your phone next to the lock, palm the panel, and retry, or go back to step 1";
+"add_lock_Pair_bind_lock_bluetooth_disconnect_try_btn" = "Retry";
+"add_lock_Pair_bind_lock_bluetooth_disconnect_try_info" = "Please retry again";
+
+"add_lock_Pair_bind_lock_loadstr" = "Pairing";
+"add_lock_Pair_bind_lock_success" = "Pair succeded";
+"add_lock_Pair_bind_lock_failed" = "Pair failed";
+"add_lock_Pair_bind_lock_success_info" = "Lock paired";
+"add_lock_Pair_bind_lock_input_name" = "Name your lock";
+"add_lock_Pair_bind_lock_name" = "Name your lock";
+
+"add_lock_Pair_bind_unsuccess_title" = "pair failed";
+"add_lock_Pair_bind_unsuccess_info1" = "1.Please put the phone next to the lock and try to reconnect.";
+"add_lock_Pair_bind_unsuccess_info2" = "2.Try pressing the button on the door lock panel * three times. Or after the door lock is extinguished. Make the app exits and pair again.";
+"add_lock_Pair_bind_unsuccess_info3" = "3.Please touch the lock panel. If the panel is not light, the locked battery is dead. Please use a physical key to unlock and replace the battery";
+
+"add_lock_Pair_bind_lock_name" = "Name your lock";
+
+
+"add_device_gateway" = "Connect";
+"add_device_Lock" = "Lock";
+"add_select_device_type_nav" = "Select the device to add";
+"add_power_gateway_title" = "Pair Connect to App";
+"add_power_gateway_step1_head" = "Scan the QR code";
+"add_power_gateway_step2_head" = "Power on and confirm the LED";
+"reset_power_gateway_step2_head" = "Power on the Connect";
+
+"add_power_gateway_manual_input" = "Manual input";
+"add_power_gateway_manual_input_info"="The SN code is on the back of the Connect";
+
+"rest_gateway_network_step2_head" = "Enter pairing mode";
+
+"add_power_gateway_step3_head" = "Connecting to hotspot\n \"%@\"";
+"add_power_gateway_step4_head1" = "Choose a Network";
+"add_power_gateway_step4_head2" = "Enter password to network";
+"add_power_gateway_step5_head" = "Connect is being paired.\nPlease keep Wi-Fi connection";
+
+"add_power_gateway_step6_head" = "Pairing successful";
+"add_power_gateway_step3_manually_head" = "Connect to hotspot \"%@\"";
+"add_power_gateway_step3_manually_go_set" = "Go Settings";
+
+"add_power_gateway_step1_scan_fail" = "The QR code can not be recognized! please use Alfred Connect QR code";
+"add_power_gateway_step5_load_bound_head" = "This device is paired by other user.";
+"add_power_gateway_step2_location_info" = "To bind the Gateway, you need to use the mobile phone location permission to obtain the network. In order to bind the Gateway normally, please open the positioning permission";
+
+"add_power_gateway_step3_manually_head_hubid" = "Connect to hotspot \"Alfred_%@\"";
+"add_power_gateway_step3_manually_add_head_hubid" = "Connect to hotspot \"%@\"";
+
+"add_power_gateway_step3_connect" = "Connecting";
+"add_power_gateway_step6_assign_lock_powersave_title" = "Cannot continue";
+"add_power_gateway_step6_assign_lock_powersave_info" = "Cannot continue in Power-Saving-Mode.\nYou must touch the door lock panel toactivate the lock so that it is assigned to the Connect.";
+
+"add_power_gateway_step6_assign_lock_success_title" = "Assignment successful";
+"add_power_gateway_step6_assign_lock_fail_title" = "Assignment failed";
+
+
+"add_power_gateway_connect_alfred_wifi" =  "Connect to hotspot \"Alfred_xxx\"";
+"add_power_gateway_step5_load_bound_tip" = "If you want to add this Connect,\n please contact its owner.";
+
+"add_no_flashing_button" = "Not flashing";
+"add_not_flashing_detail" = "1. Try to reset the Connect.\n\n2. Try to contact us at support@alfredinc.com for help.";
+"add_check_gateway_LED" = "Power on and confirm the LED";
+
+
+"add_check_gateway_tips" = "1. Power on the Connect.\n2. Wait about one minute until red and blue indicators will start flashing alternately.";
+"reset_check_gateway_tips" = "1. Power on the Connect.\n2. Waiting about one minute until hear a beep sound.\n3. Tap Next.";
+"not_flashing_tips" = "Reset Connect to factory default settings.\nPress and hold together for 5 secs.";
+
+"add_gateway_pair_fail" =  "1.Incorrect Wi-Fi password.\n 2.Stay close enough to Alfred Connect.\n 3.Check home network status.";
+
+"add_power_gateway_gettoken_neterror1" =  "Invalid network";
+"add_power_gateway_gettoken_neterror2" =  "Please make sure you have access to the internet";
+"add_power_gateway_connect_error_ssid" =  "Please connect to hotspot %@";
+
+"add_blue_led" = "Blue LED";
+"add_red_led" = "Red LED";
+"add_wifi_config_mode" = "Wi-Fi configuration mode";
+"add_gateway_enter_pair_mode" = "Connect enter Pairing-Mode";
+"add_long_press_tips" = "Press and hold the \"network button\" until the red and blue indicators flash alternately and voice guide sounds.";
+"add_red_blue_LEDs" = "red and blue LEDs";
+"add_flashing_button" = "Flashing";
+"add_enter_manually" = "Connect it manually";
+"add_enter_auto" = "Connect it auto";
+"add_enter_manually_put_sn" = "Connect SN";
+
+"add_flash_light_close" = "Tap to turn light off";
+"add_flash_light_open" = "Tap to turn light on";
+"add_connect_failed" = "Connect failed";
+"add_scan_wansview_gateway" = "Please scan Alfred Connect.";
+"add_connect_hotspot" = "Connect device hotspot";
+"add_scan_qr_tips" = "Scan the QR code on the back of the Connect.";
+
+"gateway_autoconnect_fail" = "We tried to connect to the hotspot of the Connect device automatically, but failed. Please help us to try it manually.\n\nMake sure the red and blue LED lights flash alternately, grant location permissions, and enable location services, connect to the Connect device rely on these settings.\n\nAfter the connection is successfully,\nreturn to the Alfred APP.";
+
+"add_return_to_alfred" = "When hotspot is connected,\n return to the Alfred App.";
+"add_not_find_hotspot" = "Did not find the hotspot?";
+"add_go_to_settings" = "Go set";
+"add_choose_network" = "Choose a network";
+"add_wifi_setting" = "Wi-Fi Setting";
+"add_network_user_holder" = "Wi-Fi";
+"add_enter_ssid" = "Wi-Fi can not be empty";
+"add_5g_tips_title" = "Your Wi-Fi could be 5G";
+"add_5G_not_support_tips" = "NOTE: 5Ghz Wi-Fi is not supported.";
+"add_5G_not_support_tips1" = "NOTE: only supports 2.4G, not support 5G WiFi.";
+"common_continue" = "Continue";
+"add_change_wifi" = "Change";
+"add_wifi_set_nav" = "Wi-Fi setup";
+"add_5G_not_support_tips" = "NOTE: 5Ghz Wi-Fi is not supported.";
+"add_seconds_left" = "seconds left";
+"add_wireless_connecting_nav" = "Wait for connection";
+"add_wireless_wait" = "Please wait...";
+"add_wait_after_tips" = "Pairing process takes about 1-2 minutes.";
+"add_already_bound_nav" = "Already paired";
+"add_bound_by_other_tips" = "This Connect is already bound by \n %@";
+"add_contact_owner" = "If you want to add this Connect, please contact its owner.";
+"add_bind_fail_nav" = "Problems with setup";
+"add_bind_gateway_assign_lock_to_hub_fail" = "Failed to assign lock to Connect";
+
+"add_bind_gateway_fail_title" = "Unsuccessful pairing";
+"add_bind_gateway_fail_1" = "1.If you hear the \"Failed to Connect Router\" voice prompt,Wi-Fi password may entered incorrectly.Please try to reconnect.";
+"add_bind_gateway_fail_2" = "2.If you hear the \"Sync Time Out\" voice prompt. Please ensure that the sound wave configuration Wi-Fi process does not take more than 180 seconds";
+"add_bind_gateway_fail_3" = "The router is not properly connected. Please check if the wireless network is normal.";
+"add_i_know" = "I know";
+"add_reconnect" = "Reconnect";
+"add_assign_lock_to_gatway_title" = "Assign lock to Connect";
+"add_assign_lock_to_gatway_head" = "Assign locks to Connect,you will know every situation about your home wherever you are.";
+"add_assign_lock_to_gatway_select_device_error" = "Please select a device";
+
+"add_assign_button" = "Assign";
+"add_gateway_Pair_load_count" = "Wait about %@ seconds";
+
+
+"add_power_gateway_step5_network" = "Network";
+"add_power_gateway_step5_wifi_password" = "Wi-Fi password";
+"add_power_gateway_step5_join" = "Join";
+"add_gateway_Pair_success" = "Pair successful";
+"add_gateway_Pair_input_name" = "Please Name your Connect";
+"add_gateway_Pair_input_name_placehold" = "Connect name";
+
+"add_device_ssid_password_error" = "Pair failed,Wi-Fi password error";
+
+//record
+"lock_opendoor_record_open_door" = "Door unlocked by ";
+"lock_opendoor_record_open_door_manually" = "Door unlocked ";
+"lock_opendoor_record_name_open_door" = "Door unlocked by ";
+"lock_record_open_door_i" = "Alfred App";
+"lock_record_open_door_app" = "APP";
+"lock_record_open_door_pinkey" = "PIN code Number Slot ";
+"lock_record_open_door_touchkey" = "Fingerprint ";
+"lock_record_open_door_cardkey" = "Access card ";
+
+"lock_record_open_door_bluetoothkey" = "Invitation";
+"lock_record_open_door_administratorkey" = "Mastercode";
+"lock_record_open_door_mechanical" = "manually";
+"lock_record_open_door_zwave" = "Z-wave";
+"lock_record_open_door_zwave_name" = "remotely";
+"lock_record_open_door_app_one_touch_unlock" = "One Touch";
+
+"lock_record_hub_door_close" = "Door locked";
+"lock_record_hub_door_senor_close" = "Door sensor close";
+"lock_record_hub_door_senor_open" = "Door sensor open";
+"lock_record_hub_insideDeadlock_close" = "Inside Deadlock closed";
+"lock_record_hub_insideDeadlock_open" = "Inside Deadlock opened";
+"lock_record_hub_awayMode_close" = "Away Mode closed";
+"lock_record_hub_awayMode_open" = "Away Mode opened";
+"lock_record_hub_safeMode_close" = "Safe Mode closed";
+"lock_record_hub_safeMode_open" = "Safe Mode opened";
+
+"lock_record_hub_del_pinKey" = "Delete PIN code Number Slot %@";
+"lock_record_hub_add_pinKey" = "Add PIN code Number Slot %@";
+"lock_record_hub_del_all_pinKey" = "Delete all PIN Code Keys";
+
+"lock_record_hub_del_touchKey" = "Delete Touch key %@";
+"lock_record_hub_add_touchKey" = "Add Touch key %@";
+"lock_record_hub_del_all_touchKey" = "Delete all Touch keys";
+
+"lock_record_hub_del_card" = "Delete Access card %@";
+"lock_record_hub_add_card" = "Add Access card %@";
+"lock_record_hub_del_all_card" = "Delete all Access cards";
+
+"lock_record_hub_autoLock_close" = "Auto-lock closed";
+"lock_record_hub_autoLock_open" = "Auto-lock opened";
+"lock_record_hub_restore" = "Restore";
+"lock_record_hub_adminPwdChanged" = "Mastercode changed";
+"lock_record_hub_powersave_close" = "Power Save closed";
+"lock_record_hub_powersave_open" = "Power Save opened";
+"lock_record_hub_voice_Changed" = "Voice changed";
+"lock_record_hub_language_Changed" = "Language changed";
+"lock_record_hub_doorbell" = "Doorbell";
+"lock_record_hub_keyModify" = "Modify key notification";
+"lock_record_hub_infrared_close" = "Infrared close";
+"lock_record_hub_infrared_open" = "Infrared open";
+"lock_record_hub_lockadmin_close" = "Exit lock administrator mode";
+"lock_record_hub_lockadmin_open" = "Entry lock administrator mode";
+
+"lock_record_hub_unknow_event" = "Unknow event";
+"lock_record_hub_unknow_warning" = "Unknow warning";
+"lock_record_hub_low_battery_warning" = "Low battery warning";
+"lock_record_hub_lockin_warning" = "Lock-in warning";
+"lock_record_hub_anti_warning" = "Anti-prying warning";
+"lock_record_hub_awaymode_warning" = "Away Mode warning";
+"lock_record_hub_coercive_warning" = "Coercive warning";
+"lock_record_hub_mechanical_warning" = "Mechanical key warning";
+"lock_record_hub_mechanical_failure_warning" = "Mechanical failure warning";
+"lock_record_hub_put_pwd_error_warning" = "Put password error warning";
+"lock_record_hub_unknow_default_error" = "Unknow event or warning";
+
+
+//Family
+"family_title" = "Members";
+"family_no_members_been_create" = "No member has been created";
+"family_no_members_been_create_add_button" = "New member";
+
+"family_member_detail_head_edit" = "Edit";
+"family_member_detail_head_down" = "Done";
+"family_member_detail_title" = "Member profile";
+"family_member_detail_bluetooth_keys_title" = "Invitation";
+"family_member_detail_pin_key_title" = "PIN code Number Slot";
+"family_member_detail_touch_key_title" = "Fingerprint";
+"family_member_detail_card_key_title" = "Access card";
+
+"family_member_detail_received_title" = "Received";
+"family_member_create_title" = "New member";
+"family_member_create_textfield_placehold" = "Name the member";
+"family_member_create_select_pin_key" = "Choose PIN Code Keys";
+"family_member_create_button" = "Create";
+"family_member_create_name_ipunt" = "Name the member";
+"family_member_create_select_keys_count" = " keys";
+"family_member_create_select_key_count" = " key";
+
+"family_member_detail_share_always_open" = "Always open";
+"family_member_detail_share_recurring_open" = "Recurring open";
+"family_member_detail_share_temporary_open" = "Temporary open";
+
+
+"family_member_sharekey_received" = "Received";
+"family_member_sharekey_wait" = "Waiting for acceptance";
+"family_member_sharekey_delete" = "Been deleted";
+"family_member_sharekey_fail" = "Sharing expired";
+"family_member_sharekey_set_time_expired" = "Sharing time expired";
+
+"family_delete_the_member" = "Delete the member";
+"family_delete_member_tip" = "Delete member?";
+"family_delete_member_info" = "All keys assigned to ths member will NOT be erased, you should manually erase those keys";
+"family_delete_bluetooth_key_tip" = "Delete Invitation?";
+"family_delete_pin_key_tip" = "Delete PIN key?";
+"family_delete_touch_key_tip" = "Delete Fingerprint?";
+
+"family_member_new_member_title_info" = "You can assign keys on the lock to the member";
+"family_member_assign_lock_key_title_info" = "Select the key from this lock to be assigned to the member";
+"family_member_assign_lock_key_title" = "Assign ";
+
+"family_member_edit_title" = "Edit member";
+"family_member_no_thanks_title" = "No thanks";
+"family_member_create_assign_keys_title" = "Assign keys";
+
+"member_detail_select_key_title" = "Choose keys for member";
+"member_detail_select_key_assign_no_addiliation" = "Unassigned";
+"member_detail_select_key_assign_myself" = "Already assigned to this member";
+"member_detail_select_key_assign_other_tip" = "This key was assigned to %@, reassign to this member?";
+"member_detail_select_key_assign_touch_key" = "Assign Fingerprints";
+"member_detail_select_key_assign_pin_key" = "Assign PIN Code Keys";
+"member_detail_select_share_key_title" = "Choose a lock";
+"member_detail_select_share_key_assigned_btn" = "Assigned";
+
+//Inbox
+"inbox_title" = "Inbox";
+"inbox_no_message" = "No message";
+"alert_view" = "View";
+"alert_ignore" = "Ignore";
+
+"inbox_no_message_info" = "Pull down to refresh";
+"me_inside_message_title" = "Inside message";
+"inbox_lock_message_more" = "More";
+//有问题
+
+//Me
+"me_title" = "Me";
+"me_account_security_title" = "Account security";
+"me_help_center_title" = "Help center";
+"me_version_title" = "APP version";
+"me_about_title" = "About";
+"me_logout_title" = "Sign out";
+"me_own_devices_title" = "My devices";
+"me_guest_device_title" = "Guest devices";
+"me_setting_rename_title" = "Rename";
+"me_rename_placehold" = "Nickname";
+
+"me_account_security_change_password" = "Change password";
+"me_account_security_fingerprint_login" = "Touch ID";
+"me_account_security_face_login" = "Face ID";
+"me_account_security_gesture_login" = "Gesture";
+"me_account_security_change_gesture_image" = "Change gesture pattern";
+"me_account_security_log_off_account" = "Delete account";
+"me_account_security_log_off_account_title" = "Delete account?";
+"me_account_security_log_off_account_info" = "WARNING! ALL your information will be lost, ALL devices under your account will become pairable for others! \nDo you still want to proceed?";
+"me_account_security_log_off_account_sure" = "Delete";
+"me_account_security_log_off_account_tip" = "You Should unbind your devices before";
+
+"me_about_Info1" = "Alfred team is focused\n on smart home services.";
+"me_about_Info2" = "If you have any problems during operation,\n please contact us.";
+"me_about_our_email_title" = "Our email";
+"me_about_term_of_use_title" = "Term of Use";
+"me_about_privacy_policy_title" = "Privacy Policy";
+"me_about_all_right" = "@2019 Alfred International Inc.   All rights reserved.";
+
+"me_confirm_to_logout" = "Sign out?";
+
+"me_enter_current_password" = "Old password can not be empty";
+"me_modify_success" = "Password changed.";
+"me_current_password" = "Old password";
+"me_new_password" = "New password";
+"me_not_set_system_password_tips" = "Enable password unlock on your phone";//弹出系统设置提示
+"me_not_set_auth_id_tips" = "Enable Touch ID/Face ID unlock on your phone";//弹出系统设置提示
+
+"me_enter_email" = "Enter your email";
+"me_enter_password" = "Enter Password";
+"me_log_off_confirmation" = "Delete confirmation";
+"me_delete_account_success" = "Account deleted, see you again";
+"me_log_off_button_title" = "Delete";
+
+"me_account_security_push_set" = "Push setting";
+"me_account_security_push_set_tip_title" = "The notification switch of the mobile phone system is not turned on";
+"me_account_security_push_set_tip_msg" = "Is it open?";
+
+"oad_file_download_failed" = "Version file download failed, please confirm the network";

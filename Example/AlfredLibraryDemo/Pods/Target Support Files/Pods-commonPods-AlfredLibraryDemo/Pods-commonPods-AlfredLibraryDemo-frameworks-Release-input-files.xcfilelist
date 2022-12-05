@@ -1,0 +1,11 @@
+${PODS_ROOT}/Target Support Files/Pods-commonPods-AlfredLibraryDemo/Pods-commonPods-AlfredLibraryDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework
+${BUILT_PRODUCTS_DIR}/CocoaSecurity/CocoaSecurity.framework
+${BUILT_PRODUCTS_DIR}/FCUUID/FCUUID.framework
+${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework
+${BUILT_PRODUCTS_DIR}/NMSSH/NMSSH.framework
+${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework
+${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

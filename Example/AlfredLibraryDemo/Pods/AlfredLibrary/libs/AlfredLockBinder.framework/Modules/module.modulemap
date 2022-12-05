@@ -1,0 +1,11 @@
+framework module AlfredLockBinder {
+  umbrella header "AlfredLockBinder.h"
+
+  export *
+  module * { export * }
+}
+
+module AlfredLockBinder.Swift {
+    header "AlfredLockBinder-Swift.h"
+    requires objc
+}

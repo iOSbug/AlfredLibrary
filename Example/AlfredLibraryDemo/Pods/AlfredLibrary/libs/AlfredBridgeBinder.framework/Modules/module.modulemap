@@ -1,0 +1,11 @@
+framework module AlfredBridgeBinder {
+  umbrella header "AlfredBridgeBinder.h"
+
+  export *
+  module * { export * }
+}
+
+module AlfredBridgeBinder.Swift {
+    header "AlfredBridgeBinder-Swift.h"
+    requires objc
+}

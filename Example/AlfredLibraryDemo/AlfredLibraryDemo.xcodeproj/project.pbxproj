@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E6E5E1A2771B20E00711BEB /* GuestLockCodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E5E152771B20E00711BEB /* GuestLockCodesViewController.swift */; };
+		0E6E5E1B2771B20E00711BEB /* GuestLockCodeScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E5E162771B20E00711BEB /* GuestLockCodeScheduleViewController.swift */; };
+		0E6E5E1C2771B20E00711BEB /* GuestLockSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E5E172771B20E00711BEB /* GuestLockSetViewController.swift */; };
+		0E6E5E1D2771B20E00711BEB /* GuestLockRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E5E182771B20E00711BEB /* GuestLockRecordViewController.swift */; };
+		0E6E5E1E2771B20E00711BEB /* GuestLockCodeAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E5E192771B20E00711BEB /* GuestLockCodeAddViewController.swift */; };
+		0E7395FE277AA71700157C08 /* GuestLockAccessCodeAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7395FD277AA71700157C08 /* GuestLockAccessCodeAddViewController.swift */; };
+		0E739600277AA72200157C08 /* LockAccessCodeAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7395FF277AA72200157C08 /* LockAccessCodeAddViewController.swift */; };
+		0EC04E8E259DD2F10021894E /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC04E8D259DD2F10021894E /* NetworkExtension.framework */; };
+		0EC04EBD259DD3940021894E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04E92259DD3940021894E /* BaseViewController.swift */; };
+		0EC04EBE259DD3940021894E /* WVColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04E93259DD3940021894E /* WVColor.swift */; };
+		0EC04EBF259DD3940021894E /* DeviceEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04E94259DD3940021894E /* DeviceEmptyView.swift */; };
+		0EC04EC0259DD3940021894E /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04E95259DD3940021894E /* BaseNavigationController.swift */; };
+		0EC04EC1259DD3940021894E /* WVThinTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04E97259DD3940021894E /* WVThinTableCell.swift */; };
+		0EC04EC2259DD3940021894E /* WVSubTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04E98259DD3940021894E /* WVSubTableCell.swift */; };
+		0EC04EC3259DD3940021894E /* WVTableGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04E99259DD3940021894E /* WVTableGroup.swift */; };
+		0EC04EC4259DD3940021894E /* WVTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04E9A259DD3940021894E /* WVTableItem.swift */; };
+		0EC04EC5259DD3940021894E /* WVTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04E9B259DD3940021894E /* WVTableCell.swift */; };
+		0EC04EC6259DD3940021894E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04E9C259DD3940021894E /* Toast.swift */; };
+		0EC04EC7259DD3940021894E /* LockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04E9D259DD3940021894E /* LockCell.swift */; };
+		0EC04EC8259DD3940021894E /* BridgeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04E9E259DD3940021894E /* BridgeCell.swift */; };
+		0EC04EC9259DD3940021894E /* BridgeRenameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EA0259DD3940021894E /* BridgeRenameViewController.swift */; };
+		0EC04ECA259DD3940021894E /* BridgeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EA1259DD3940021894E /* BridgeSettingViewController.swift */; };
+		0EC04ECB259DD3940021894E /* BridegAddStep2ManuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EA3259DD3940021894E /* BridegAddStep2ManuViewController.swift */; };
+		0EC04ECC259DD3940021894E /* BridegAddStep4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EA4259DD3940021894E /* BridegAddStep4ViewController.swift */; };
+		0EC04ECD259DD3940021894E /* BridegAddStep3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EA5259DD3940021894E /* BridegAddStep3ViewController.swift */; };
+		0EC04ECE259DD3940021894E /* BridegAddStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EA6259DD3940021894E /* BridegAddStep2ViewController.swift */; };
+		0EC04ECF259DD3940021894E /* BridegAddStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EA7259DD3940021894E /* BridegAddStep1ViewController.swift */; };
+		0EC04ED0259DD3940021894E /* BridgeChildDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EA8259DD3940021894E /* BridgeChildDeviceViewController.swift */; };
+		0EC04ED1259DD3940021894E /* BridgeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EA9259DD3940021894E /* BridgeInfoViewController.swift */; };
+		0EC04ED2259DD3940021894E /* BridgeAssignLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EAA259DD3940021894E /* BridgeAssignLockViewController.swift */; };
+		0EC04ED3259DD3940021894E /* BridgeTimezoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EAB259DD3940021894E /* BridgeTimezoneViewController.swift */; };
+		0EC04ED4259DD3940021894E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EAC259DD3940021894E /* HomeViewController.swift */; };
+		0EC04ED5259DD3940021894E /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EAD259DD3940021894E /* AddDeviceViewController.swift */; };
+		0EC04ED6259DD3940021894E /* LockConfigSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EAF259DD3940021894E /* LockConfigSetViewController.swift */; };
+		0EC04ED7259DD3940021894E /* LockSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EB0259DD3940021894E /* LockSettingViewController.swift */; };
+		0EC04ED8259DD3940021894E /* LockCodeAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EB1259DD3940021894E /* LockCodeAddViewController.swift */; };
+		0EC04ED9259DD3940021894E /* SearchDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EB3259DD3940021894E /* SearchDeviceViewController.swift */; };
+		0EC04EDA259DD3940021894E /* BindLockResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EB4259DD3940021894E /* BindLockResultViewController.swift */; };
+		0EC04EDB259DD3940021894E /* BindLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EB5259DD3940021894E /* BindLockViewController.swift */; };
+		0EC04EDC259DD3940021894E /* LockAdminPwdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EB6259DD3940021894E /* LockAdminPwdViewController.swift */; };
+		0EC04EDD259DD3940021894E /* LockLanguageAndVoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EB7259DD3940021894E /* LockLanguageAndVoiceViewController.swift */; };
+		0EC04EDE259DD3940021894E /* LockCodeScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EB8259DD3940021894E /* LockCodeScheduleViewController.swift */; };
+		0EC04EDF259DD3940021894E /* LockInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EB9259DD3940021894E /* LockInformationViewController.swift */; };
+		0EC04EE0259DD3940021894E /* LockRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EBA259DD3940021894E /* LockRecordViewController.swift */; };
+		0EC04EE1259DD3940021894E /* LockRenameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EBB259DD3940021894E /* LockRenameViewController.swift */; };
+		0EC04EE2259DD3940021894E /* LockCodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC04EBC259DD3940021894E /* LockCodesViewController.swift */; };
+		0EC04EE5259DD3E10021894E /* Lock.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0EC04EE4259DD3E10021894E /* Lock.strings */; };
+		0EC63619258A16C100F4E930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC63618258A16C100F4E930 /* AppDelegate.swift */; };
+		0EC63620258A16C100F4E930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC6361E258A16C100F4E930 /* Main.storyboard */; };
+		0EC63622258A16C400F4E930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC63621258A16C400F4E930 /* Assets.xcassets */; };
+		0EC63625258A16C400F4E930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC63623258A16C400F4E930 /* LaunchScreen.storyboard */; };
+		0EEE5346259DDFA500DE4892 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE5345259DDFA500DE4892 /* TestViewController.m */; };
+		B3FEADFF4C4BEE96F53A7FC1 /* Pods_commonPods_AlfredLibraryDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35156181088802F8CE4FD90D /* Pods_commonPods_AlfredLibraryDemo.framework */; };
+		DDF7B20E263419BB00FCACAE /* GuestHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF7B20D263419BB00FCACAE /* GuestHomeViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E6E5E152771B20E00711BEB /* GuestLockCodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestLockCodesViewController.swift; sourceTree = "<group>"; };
+		0E6E5E162771B20E00711BEB /* GuestLockCodeScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestLockCodeScheduleViewController.swift; sourceTree = "<group>"; };
+		0E6E5E172771B20E00711BEB /* GuestLockSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestLockSetViewController.swift; sourceTree = "<group>"; };
+		0E6E5E182771B20E00711BEB /* GuestLockRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestLockRecordViewController.swift; sourceTree = "<group>"; };
+		0E6E5E192771B20E00711BEB /* GuestLockCodeAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestLockCodeAddViewController.swift; sourceTree = "<group>"; };
+		0E7395FD277AA71700157C08 /* GuestLockAccessCodeAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestLockAccessCodeAddViewController.swift; sourceTree = "<group>"; };
+		0E7395FF277AA72200157C08 /* LockAccessCodeAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAccessCodeAddViewController.swift; sourceTree = "<group>"; };
+		0EC04E8C259DD2F10021894E /* AlfredLibraryDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlfredLibraryDemo.entitlements; sourceTree = "<group>"; };
+		0EC04E8D259DD2F10021894E /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		0EC04E92259DD3940021894E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0EC04E93259DD3940021894E /* WVColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVColor.swift; sourceTree = "<group>"; };
+		0EC04E94259DD3940021894E /* DeviceEmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceEmptyView.swift; sourceTree = "<group>"; };
+		0EC04E95259DD3940021894E /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		0EC04E97259DD3940021894E /* WVThinTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVThinTableCell.swift; sourceTree = "<group>"; };
+		0EC04E98259DD3940021894E /* WVSubTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVSubTableCell.swift; sourceTree = "<group>"; };
+		0EC04E99259DD3940021894E /* WVTableGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVTableGroup.swift; sourceTree = "<group>"; };
+		0EC04E9A259DD3940021894E /* WVTableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVTableItem.swift; sourceTree = "<group>"; };
+		0EC04E9B259DD3940021894E /* WVTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WVTableCell.swift; sourceTree = "<group>"; };
+		0EC04E9C259DD3940021894E /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		0EC04E9D259DD3940021894E /* LockCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockCell.swift; sourceTree = "<group>"; };
+		0EC04E9E259DD3940021894E /* BridgeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeCell.swift; sourceTree = "<group>"; };
+		0EC04EA0259DD3940021894E /* BridgeRenameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeRenameViewController.swift; sourceTree = "<group>"; };
+		0EC04EA1259DD3940021894E /* BridgeSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSettingViewController.swift; sourceTree = "<group>"; };
+		0EC04EA3259DD3940021894E /* BridegAddStep2ManuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridegAddStep2ManuViewController.swift; sourceTree = "<group>"; };
+		0EC04EA4259DD3940021894E /* BridegAddStep4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridegAddStep4ViewController.swift; sourceTree = "<group>"; };
+		0EC04EA5259DD3940021894E /* BridegAddStep3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridegAddStep3ViewController.swift; sourceTree = "<group>"; };
+		0EC04EA6259DD3940021894E /* BridegAddStep2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridegAddStep2ViewController.swift; sourceTree = "<group>"; };
+		0EC04EA7259DD3940021894E /* BridegAddStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridegAddStep1ViewController.swift; sourceTree = "<group>"; };
+		0EC04EA8259DD3940021894E /* BridgeChildDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeChildDeviceViewController.swift; sourceTree = "<group>"; };
+		0EC04EA9259DD3940021894E /* BridgeInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeInfoViewController.swift; sourceTree = "<group>"; };
+		0EC04EAA259DD3940021894E /* BridgeAssignLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeAssignLockViewController.swift; sourceTree = "<group>"; };
+		0EC04EAB259DD3940021894E /* BridgeTimezoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeTimezoneViewController.swift; sourceTree = "<group>"; };
+		0EC04EAC259DD3940021894E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0EC04EAD259DD3940021894E /* AddDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
+		0EC04EAF259DD3940021894E /* LockConfigSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockConfigSetViewController.swift; sourceTree = "<group>"; };
+		0EC04EB0259DD3940021894E /* LockSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockSettingViewController.swift; sourceTree = "<group>"; };
+		0EC04EB1259DD3940021894E /* LockCodeAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockCodeAddViewController.swift; sourceTree = "<group>"; };
+		0EC04EB3259DD3940021894E /* SearchDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDeviceViewController.swift; sourceTree = "<group>"; };
+		0EC04EB4259DD3940021894E /* BindLockResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindLockResultViewController.swift; sourceTree = "<group>"; };
+		0EC04EB5259DD3940021894E /* BindLockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindLockViewController.swift; sourceTree = "<group>"; };
+		0EC04EB6259DD3940021894E /* LockAdminPwdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockAdminPwdViewController.swift; sourceTree = "<group>"; };
+		0EC04EB7259DD3940021894E /* LockLanguageAndVoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockLanguageAndVoiceViewController.swift; sourceTree = "<group>"; };
+		0EC04EB8259DD3940021894E /* LockCodeScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockCodeScheduleViewController.swift; sourceTree = "<group>"; };
+		0EC04EB9259DD3940021894E /* LockInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockInformationViewController.swift; sourceTree = "<group>"; };
+		0EC04EBA259DD3940021894E /* LockRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockRecordViewController.swift; sourceTree = "<group>"; };
+		0EC04EBB259DD3940021894E /* LockRenameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockRenameViewController.swift; sourceTree = "<group>"; };
+		0EC04EBC259DD3940021894E /* LockCodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockCodesViewController.swift; sourceTree = "<group>"; };
+		0EC04EE4259DD3E10021894E /* Lock.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Lock.strings; sourceTree = "<group>"; };
+		0EC63615258A16C100F4E930 /* AlfredLibraryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlfredLibraryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EC63618258A16C100F4E930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0EC6361F258A16C100F4E930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0EC63621258A16C400F4E930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0EC63624258A16C400F4E930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0EC63626258A16C400F4E930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EEE5343259DDFA500DE4892 /* AlfredLibraryDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlfredLibraryDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		0EEE5344259DDFA500DE4892 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		0EEE5345259DDFA500DE4892 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		35156181088802F8CE4FD90D /* Pods_commonPods_AlfredLibraryDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_commonPods_AlfredLibraryDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39160701EF24E3A1E8E43410 /* Pods-commonPods-AlfredLibraryDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commonPods-AlfredLibraryDemo.release.xcconfig"; path = "Target Support Files/Pods-commonPods-AlfredLibraryDemo/Pods-commonPods-AlfredLibraryDemo.release.xcconfig"; sourceTree = "<group>"; };
+		CCB93950C2F3211F06A04D82 /* Pods-commonPods-AlfredLibraryDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commonPods-AlfredLibraryDemo.debug.xcconfig"; path = "Target Support Files/Pods-commonPods-AlfredLibraryDemo/Pods-commonPods-AlfredLibraryDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		DDF7B20D263419BB00FCACAE /* GuestHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestHomeViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EC63612258A16C100F4E930 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FEADFF4C4BEE96F53A7FC1 /* Pods_commonPods_AlfredLibraryDemo.framework in Frameworks */,
+				0EC04E8E259DD2F10021894E /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E6E5E142771B20E00711BEB /* GuestLock */ = {
+			isa = PBXGroup;
+			children = (
+				0E7395FD277AA71700157C08 /* GuestLockAccessCodeAddViewController.swift */,
+				0E6E5E152771B20E00711BEB /* GuestLockCodesViewController.swift */,
+				0E6E5E162771B20E00711BEB /* GuestLockCodeScheduleViewController.swift */,
+				0E6E5E172771B20E00711BEB /* GuestLockSetViewController.swift */,
+				0E6E5E182771B20E00711BEB /* GuestLockRecordViewController.swift */,
+				0E6E5E192771B20E00711BEB /* GuestLockCodeAddViewController.swift */,
+			);
+			path = GuestLock;
+			sourceTree = "<group>";
+		};
+		0EC04E91259DD3940021894E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0EC04E92259DD3940021894E /* BaseViewController.swift */,
+				0EC04E93259DD3940021894E /* WVColor.swift */,
+				0EC04E94259DD3940021894E /* DeviceEmptyView.swift */,
+				0EC04E95259DD3940021894E /* BaseNavigationController.swift */,
+				0EC04E96259DD3940021894E /* TableViewController */,
+				0EC04E9C259DD3940021894E /* Toast.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0EC04E96259DD3940021894E /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0EC04E97259DD3940021894E /* WVThinTableCell.swift */,
+				0EC04E98259DD3940021894E /* WVSubTableCell.swift */,
+				0EC04E99259DD3940021894E /* WVTableGroup.swift */,
+				0EC04E9A259DD3940021894E /* WVTableItem.swift */,
+				0EC04E9B259DD3940021894E /* WVTableCell.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
+		0EC04E9F259DD3940021894E /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				0EC04EA0259DD3940021894E /* BridgeRenameViewController.swift */,
+				0EC04EA1259DD3940021894E /* BridgeSettingViewController.swift */,
+				0EC04EA2259DD3940021894E /* Binder */,
+				0EC04EA8259DD3940021894E /* BridgeChildDeviceViewController.swift */,
+				0EC04EA9259DD3940021894E /* BridgeInfoViewController.swift */,
+				0EC04EAA259DD3940021894E /* BridgeAssignLockViewController.swift */,
+				0EC04EAB259DD3940021894E /* BridgeTimezoneViewController.swift */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		0EC04EA2259DD3940021894E /* Binder */ = {
+			isa = PBXGroup;
+			children = (
+				0EC04EA3259DD3940021894E /* BridegAddStep2ManuViewController.swift */,
+				0EC04EA4259DD3940021894E /* BridegAddStep4ViewController.swift */,
+				0EC04EA5259DD3940021894E /* BridegAddStep3ViewController.swift */,
+				0EC04EA6259DD3940021894E /* BridegAddStep2ViewController.swift */,
+				0EC04EA7259DD3940021894E /* BridegAddStep1ViewController.swift */,
+			);
+			path = Binder;
+			sourceTree = "<group>";
+		};
+		0EC04EAE259DD3940021894E /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				0E7395FF277AA72200157C08 /* LockAccessCodeAddViewController.swift */,
+				0EC04EAF259DD3940021894E /* LockConfigSetViewController.swift */,
+				0EC04EB0259DD3940021894E /* LockSettingViewController.swift */,
+				0EC04EB1259DD3940021894E /* LockCodeAddViewController.swift */,
+				0EC04EB2259DD3940021894E /* Binder */,
+				0EC04EB6259DD3940021894E /* LockAdminPwdViewController.swift */,
+				0EC04EB7259DD3940021894E /* LockLanguageAndVoiceViewController.swift */,
+				0EC04EB8259DD3940021894E /* LockCodeScheduleViewController.swift */,
+				0EC04EB9259DD3940021894E /* LockInformationViewController.swift */,
+				0EC04EBA259DD3940021894E /* LockRecordViewController.swift */,
+				0EC04EBB259DD3940021894E /* LockRenameViewController.swift */,
+				0EC04EBC259DD3940021894E /* LockCodesViewController.swift */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
+		0EC04EB2259DD3940021894E /* Binder */ = {
+			isa = PBXGroup;
+			children = (
+				0EC04EB3259DD3940021894E /* SearchDeviceViewController.swift */,
+				0EC04EB4259DD3940021894E /* BindLockResultViewController.swift */,
+				0EC04EB5259DD3940021894E /* BindLockViewController.swift */,
+			);
+			path = Binder;
+			sourceTree = "<group>";
+		};
+		0EC6360C258A16C100F4E930 = {
+			isa = PBXGroup;
+			children = (
+				0EC63617258A16C100F4E930 /* AlfredLibraryDemo */,
+				0EC63616258A16C100F4E930 /* Products */,
+				7972CB4E17E6D92D5E525B28 /* Pods */,
+				17429B9643D13BADE089B29E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0EC63616258A16C100F4E930 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0EC63615258A16C100F4E930 /* AlfredLibraryDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0EC63617258A16C100F4E930 /* AlfredLibraryDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0EC63618258A16C100F4E930 /* AppDelegate.swift */,
+				0EC04EAC259DD3940021894E /* HomeViewController.swift */,
+				DDF7B20D263419BB00FCACAE /* GuestHomeViewController.swift */,
+				0EC04EAD259DD3940021894E /* AddDeviceViewController.swift */,
+				0E6E5E142771B20E00711BEB /* GuestLock */,
+				0EC04E91259DD3940021894E /* Base */,
+				0EC04E9F259DD3940021894E /* Bridge */,
+				0EC04E9E259DD3940021894E /* BridgeCell.swift */,
+				0EC04EAE259DD3940021894E /* Lock */,
+				0EC04E9D259DD3940021894E /* LockCell.swift */,
+				0EC04E8C259DD2F10021894E /* AlfredLibraryDemo.entitlements */,
+				0EC6361E258A16C100F4E930 /* Main.storyboard */,
+				0EC63621258A16C400F4E930 /* Assets.xcassets */,
+				0EC63623258A16C400F4E930 /* LaunchScreen.storyboard */,
+				0EC63626258A16C400F4E930 /* Info.plist */,
+				0EC04EE4259DD3E10021894E /* Lock.strings */,
+				0EEE5344259DDFA500DE4892 /* TestViewController.h */,
+				0EEE5345259DDFA500DE4892 /* TestViewController.m */,
+				0EEE5343259DDFA500DE4892 /* AlfredLibraryDemo-Bridging-Header.h */,
+			);
+			path = AlfredLibraryDemo;
+			sourceTree = "<group>";
+		};
+		17429B9643D13BADE089B29E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EC04E8D259DD2F10021894E /* NetworkExtension.framework */,
+				35156181088802F8CE4FD90D /* Pods_commonPods_AlfredLibraryDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7972CB4E17E6D92D5E525B28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCB93950C2F3211F06A04D82 /* Pods-commonPods-AlfredLibraryDemo.debug.xcconfig */,
+				39160701EF24E3A1E8E43410 /* Pods-commonPods-AlfredLibraryDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0EC63614258A16C100F4E930 /* AlfredLibraryDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EC63629258A16C400F4E930 /* Build configuration list for PBXNativeTarget "AlfredLibraryDemo" */;
+			buildPhases = (
+				AC7C244C6FC8880D23831018 /* [CP] Check Pods Manifest.lock */,
+				0EC63611258A16C100F4E930 /* Sources */,
+				0EC63612258A16C100F4E930 /* Frameworks */,
+				0EC63613258A16C100F4E930 /* Resources */,
+				6296E21A08FFF9313689DBA3 /* [CP] Embed Pods Frameworks */,
+				F95CAF41F5E343B6908D8975 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlfredLibraryDemo;
+			productName = AlfredLibraryDemo;
+			productReference = 0EC63615258A16C100F4E930 /* AlfredLibraryDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0EC6360D258A16C100F4E930 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					0EC63614258A16C100F4E930 = {
+						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
+					};
+				};
+			};
+			buildConfigurationList = 0EC63610258A16C100F4E930 /* Build configuration list for PBXProject "AlfredLibraryDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0EC6360C258A16C100F4E930;
+			productRefGroup = 0EC63616258A16C100F4E930 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0EC63614258A16C100F4E930 /* AlfredLibraryDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EC63613258A16C100F4E930 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EC63625258A16C400F4E930 /* LaunchScreen.storyboard in Resources */,
+				0EC04EE5259DD3E10021894E /* Lock.strings in Resources */,
+				0EC63622258A16C400F4E930 /* Assets.xcassets in Resources */,
+				0EC63620258A16C100F4E930 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6296E21A08FFF9313689DBA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-commonPods-AlfredLibraryDemo/Pods-commonPods-AlfredLibraryDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-commonPods-AlfredLibraryDemo/Pods-commonPods-AlfredLibraryDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-commonPods-AlfredLibraryDemo/Pods-commonPods-AlfredLibraryDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC7C244C6FC8880D23831018 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-commonPods-AlfredLibraryDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F95CAF41F5E343B6908D8975 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-commonPods-AlfredLibraryDemo/Pods-commonPods-AlfredLibraryDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-commonPods-AlfredLibraryDemo/Pods-commonPods-AlfredLibraryDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-commonPods-AlfredLibraryDemo/Pods-commonPods-AlfredLibraryDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EC63611258A16C100F4E930 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EC04EC8259DD3940021894E /* BridgeCell.swift in Sources */,
+				0EC04EC4259DD3940021894E /* WVTableItem.swift in Sources */,
+				0EC04ECA259DD3940021894E /* BridgeSettingViewController.swift in Sources */,
+				0EC04EDF259DD3940021894E /* LockInformationViewController.swift in Sources */,
+				0EC04ED3259DD3940021894E /* BridgeTimezoneViewController.swift in Sources */,
+				0E6E5E1E2771B20E00711BEB /* GuestLockCodeAddViewController.swift in Sources */,
+				0EC04EC7259DD3940021894E /* LockCell.swift in Sources */,
+				0E6E5E1C2771B20E00711BEB /* GuestLockSetViewController.swift in Sources */,
+				0EC04EE1259DD3940021894E /* LockRenameViewController.swift in Sources */,
+				0EC04EE0259DD3940021894E /* LockRecordViewController.swift in Sources */,
+				0EC04EDA259DD3940021894E /* BindLockResultViewController.swift in Sources */,
+				0EC04ECE259DD3940021894E /* BridegAddStep2ViewController.swift in Sources */,
+				0EC04EDE259DD3940021894E /* LockCodeScheduleViewController.swift in Sources */,
+				0EC04ED1259DD3940021894E /* BridgeInfoViewController.swift in Sources */,
+				0EC04ED5259DD3940021894E /* AddDeviceViewController.swift in Sources */,
+				0E6E5E1D2771B20E00711BEB /* GuestLockRecordViewController.swift in Sources */,
+				0EC04EC9259DD3940021894E /* BridgeRenameViewController.swift in Sources */,
+				0EEE5346259DDFA500DE4892 /* TestViewController.m in Sources */,
+				0EC04ECB259DD3940021894E /* BridegAddStep2ManuViewController.swift in Sources */,
+				0EC04ED6259DD3940021894E /* LockConfigSetViewController.swift in Sources */,
+				0EC04EC6259DD3940021894E /* Toast.swift in Sources */,
+				0E6E5E1B2771B20E00711BEB /* GuestLockCodeScheduleViewController.swift in Sources */,
+				0EC04EBF259DD3940021894E /* DeviceEmptyView.swift in Sources */,
+				0E7395FE277AA71700157C08 /* GuestLockAccessCodeAddViewController.swift in Sources */,
+				0E6E5E1A2771B20E00711BEB /* GuestLockCodesViewController.swift in Sources */,
+				0EC04ED4259DD3940021894E /* HomeViewController.swift in Sources */,
+				0EC04EC1259DD3940021894E /* WVThinTableCell.swift in Sources */,
+				0EC04EC3259DD3940021894E /* WVTableGroup.swift in Sources */,
+				0EC04EBE259DD3940021894E /* WVColor.swift in Sources */,
+				0EC04ED0259DD3940021894E /* BridgeChildDeviceViewController.swift in Sources */,
+				0EC04EC0259DD3940021894E /* BaseNavigationController.swift in Sources */,
+				0EC04EDB259DD3940021894E /* BindLockViewController.swift in Sources */,
+				0EC04ECF259DD3940021894E /* BridegAddStep1ViewController.swift in Sources */,
+				0EC04ED9259DD3940021894E /* SearchDeviceViewController.swift in Sources */,
+				0EC04EC5259DD3940021894E /* WVTableCell.swift in Sources */,
+				0EC04ED2259DD3940021894E /* BridgeAssignLockViewController.swift in Sources */,
+				0EC04EE2259DD3940021894E /* LockCodesViewController.swift in Sources */,
+				0EC63619258A16C100F4E930 /* AppDelegate.swift in Sources */,
+				0EC04EC2259DD3940021894E /* WVSubTableCell.swift in Sources */,
+				0EC04ECC259DD3940021894E /* BridegAddStep4ViewController.swift in Sources */,
+				0EC04ED8259DD3940021894E /* LockCodeAddViewController.swift in Sources */,
+				DDF7B20E263419BB00FCACAE /* GuestHomeViewController.swift in Sources */,
+				0EC04EDD259DD3940021894E /* LockLanguageAndVoiceViewController.swift in Sources */,
+				0EC04ECD259DD3940021894E /* BridegAddStep3ViewController.swift in Sources */,
+				0EC04ED7259DD3940021894E /* LockSettingViewController.swift in Sources */,
+				0EC04EDC259DD3940021894E /* LockAdminPwdViewController.swift in Sources */,
+				0E739600277AA72200157C08 /* LockAccessCodeAddViewController.swift in Sources */,
+				0EC04EBD259DD3940021894E /* BaseViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0EC6361E258A16C100F4E930 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EC6361F258A16C100F4E930 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0EC63623258A16C400F4E930 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EC63624258A16C400F4E930 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0EC63627258A16C400F4E930 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0EC63628258A16C400F4E930 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0EC6362A258A16C400F4E930 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCB93950C2F3211F06A04D82 /* Pods-commonPods-AlfredLibraryDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AlfredLibraryDemo/AlfredLibraryDemo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLMC3D64A8;
+				INFOPLIST_FILE = AlfredLibraryDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alfred.sdkDemo2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlfredLibraryDemo/AlfredLibraryDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0EC6362B258A16C400F4E930 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39160701EF24E3A1E8E43410 /* Pods-commonPods-AlfredLibraryDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AlfredLibraryDemo/AlfredLibraryDemo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NLMC3D64A8;
+				INFOPLIST_FILE = AlfredLibraryDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alfred.sdkDemo2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlfredLibraryDemo/AlfredLibraryDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EC63610258A16C100F4E930 /* Build configuration list for PBXProject "AlfredLibraryDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EC63627258A16C400F4E930 /* Debug */,
+				0EC63628258A16C400F4E930 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EC63629258A16C400F4E930 /* Build configuration list for PBXNativeTarget "AlfredLibraryDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EC6362A258A16C400F4E930 /* Debug */,
+				0EC6362B258A16C400F4E930 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0EC6360D258A16C100F4E930 /* Project object */;
+}

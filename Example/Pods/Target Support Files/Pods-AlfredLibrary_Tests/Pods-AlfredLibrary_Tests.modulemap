@@ -1,6 +1,0 @@
-framework module Pods_AlfredLibrary_Tests {
-  umbrella header "Pods-AlfredLibrary_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
