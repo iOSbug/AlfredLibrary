@@ -5,9 +5,14 @@
 [![License](https://img.shields.io/cocoapods/l/AlfredLibrary.svg?style=flat)](https://cocoapods.org/pods/AlfredLibrary)
 [![Platform](https://img.shields.io/cocoapods/p/AlfredLibrary.svg?style=flat)](https://cocoapods.org/pods/AlfredLibrary)
 
-## Example
+## Example App
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+You can follow the Example App to learn how to use it. But we need to make the Example App works fisrt:
+
+$ cd Examples
+
+$ pod install
+Then, open the Example.xcworkspace/ by Xcode and start it!
 
 ## Requirements
 
