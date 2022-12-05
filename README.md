@@ -8,10 +8,12 @@
 ## Example App
 
 You can follow the Example App to learn how to use it. But we need to make the Example App works fisrt:
-
+```
 $ cd Examples
 
 $ pod install
+
+```
 Then, open the Example.xcworkspace/ by Xcode and start it!
 
 ## Requirements
@@ -30,7 +32,7 @@ To use with iOS15, Xcode13.3
 pod 'AlfredLibrary','13.3.02'
 
 To use with iOS15, Xcode13.2.1
-pod 'AlfredLibrary','13.2.17'
+pod 'AlfredLibrary','13.2.18'
 
 To use with iOS15, Xcode13
 pod 'AlfredLibrary','13.1.03'
