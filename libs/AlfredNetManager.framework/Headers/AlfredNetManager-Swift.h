@@ -290,7 +290,6 @@ SWIFT_CLASS("_TtC16AlfredNetManager11AFNetClient")
 @end
 
 @class NSString;
-@class NetErrorModel;
 
 /// sdk 初始化
 SWIFT_CLASS("_TtC16AlfredNetManager16AlfredLibManager")
@@ -299,7 +298,7 @@ SWIFT_CLASS("_TtC16AlfredNetManager16AlfredLibManager")
 /// 登录
 + (void)signIn:(NSString * _Nonnull)allyName allyToken:(NSString * _Nonnull)allyToken success:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
 /// 退出
-+ (void)logout:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(NetErrorModel * _Nonnull))failure;
++ (void)logout:(void (^ _Nonnull)(void))success failure:(AlfredErrorCallback _Nonnull)failure;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -340,6 +339,7 @@ SWIFT_CLASS("_TtC16AlfredNetManager6NetAPI")
 @end
 
 @class AlfredDevices;
+@class NetErrorModel;
 @class AlfredLockRecords;
 
 SWIFT_CLASS("_TtC16AlfredNetManager15NetSwiftManager")

@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger,AlfredError) {
     LIBRARY_INIT_ERROR, //sdk初始化失败
     LIBRARY_SDC_ERROR, //Sdc失败
     LIBRARY_SIGNIN_ERROR, //登录失败
+    LIBRARY_SIGNOUT_ERROR, //登出失败
     SYSTEM_BLE_PoweredOff, //手机系统蓝牙未打开
     PASSWORD1_MISSING, //鉴权码1丢失
     ACCESS_DATA_MISSING, //鉴权数据丢失

@@ -41,6 +41,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
+ *    SDK切换用户之前，用来清除上一个用户的数据
+ *
+ */
++ (void)signOut:(nullable void (^)(void))success
+        failure:(nullable AlfredErrorCallback)failure;
+
+
+/**
  *    日志显示
  */
 + (void)setDeubugLog:(BOOL)open;
