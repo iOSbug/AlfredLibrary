@@ -1,7 +1,7 @@
 framework module AlfredCore {
   umbrella header "AlfredCore.h"
-
   export *
+
   module * { export * }
 }
 
