@@ -101,6 +101,14 @@ notifyCallback:(nullable void (^)(AlfredLock *device, AlfredLockRecord *__nullab
 - (void)getLockInfo:(AlfredBLECallback)callback;
 
 
+
+/**
+ 读取门锁ML2 autotime基本信息
+ 
+ */
+
+- (void)getML2lockInfoAutotime:(AlfredBLECallback)callback;
+
 /**
  读取指定门锁的基本参数信息，需先接入鉴权成功
  

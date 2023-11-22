@@ -262,6 +262,7 @@ typedef NS_ENUM(NSInteger,LockCmd) {
     LockCmd_InfoQuery = 0x12, //查询门锁基本信息
     LockCmd_BindCheck = 0x13, //绑定请求帧（管理员密码校验）
     LockCmd_NewRecord = 0x14, //锁记录查询
+    LockCmd_ML2InfoQuery = 0x17, //查询门锁基本信息
     LockCmd_ML2NewRecord = 0x19, //锁记录查询
 
     LockCmd_WeekScheduleSet = 0x0B, //周计划设置
