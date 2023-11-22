@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AlfredLibrary'
-  s.version          = '14.3.13'
+  s.version          = '14.3.14'
   s.summary          = 'A short description of AlfredLibrary.'
 
 # This description is used to generate tags and improve search results.
