@@ -1,7 +1,7 @@
 framework module AlfredLockBinder {
   umbrella header "AlfredLockBinder.h"
-  export *
 
+  export *
   module * { export * }
 }
 
