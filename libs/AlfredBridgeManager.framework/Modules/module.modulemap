@@ -1,7 +1,7 @@
 framework module AlfredBridgeManager {
   umbrella header "AlfredBridgeManager.h"
-
   export *
+
   module * { export * }
 }
 
