@@ -1,7 +1,7 @@
 framework module AlfredNetManager {
   umbrella header "AlfredNetManager.h"
-  export *
 
+  export *
   module * { export * }
 }
 
