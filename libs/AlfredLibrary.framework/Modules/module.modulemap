@@ -1,6 +1,6 @@
 framework module AlfredLibrary {
   umbrella header "AlfredLibrary.h"
-
   export *
+
   module * { export * }
 }
