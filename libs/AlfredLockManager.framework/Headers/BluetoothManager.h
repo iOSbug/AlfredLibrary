@@ -9,9 +9,32 @@
 #import <Foundation/Foundation.h>
 #import <AlfredCore/AlfredCore.h>
 
-typedef void(^BleOpendoorRecordBlock)(NSArray * _Nullable records, int totalCount); //所有开门消息
-
 NS_ASSUME_NONNULL_BEGIN
+
+typedef NS_ENUM(NSInteger, OADReturnValues) {
+    OAD_SUCCESS = 0,
+    OAD_CRC_ERR = 1,
+    OAD_FLASH_ERR = 2,
+    OAD_BUFFER_OFL = 3,
+    OAD_ALREADY_STARTED = 4,
+    OAD_NOT_STARTED = 5,
+    OAD_DL_NOT_COMPLETE = 6,
+    OAD_NO_RESOURCES = 7,
+    OAD_IMAGE_TOO_BIG = 8,
+    OAD_INCOMPATIBLE_IMAGE = 9,
+    OAD_INVALID_FILE = 10,
+    OAD_INCOMPATIBLE_FILE = 11,
+    OAD_AUTH_FAIL = 12,
+    OAD_EXT_NOT_SUPPORTED = 13,
+    OAD_DL_COMPLETE = 14,
+    OAD_CCCD_NOT_ENABLED = 15,
+    OAD_IMG_ID_TIMEOUT = 16,
+    OAD_UNKNOWN_ERROR = 17,
+};
+
+
+typedef void(^BleOpendoorRecordBlock)(NSArray * _Nullable records, int totalCount); //所有开门消息
+typedef void(^BleOADResultBlock)(OADReturnValues code, NSString *errorMsg); //OAD升级回调
 
 @interface BluetoothManager : NSObject
 
@@ -24,6 +47,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableArray *unexistCardPwds;
 
 @property (nonatomic, assign, readonly) BOOL systemBLEStatus; //手机系统蓝牙是否开启
+@property (nonatomic, strong) NSData *binData;
+
 
 /**
  SDK 实例化
