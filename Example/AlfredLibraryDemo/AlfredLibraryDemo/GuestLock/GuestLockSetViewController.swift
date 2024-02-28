@@ -55,7 +55,7 @@ class GuestLockSetViewController: BaseViewController,UITableViewDelegate,UITable
         cardKeysItem.execute = { [weak self] in
             self?.showLockCode(.LockCodeType_RFID)
         }
-        if GuestLockManager.shared().getGuestDevice(deviceId, paramStr: paramStr)?.mode == "ML2" {
+        if GuestLockManager.shared().getGuestDevice(deviceId, paramStr: paramStr)?.mode == "ML2" || GuestLockManager.shared().getGuestDevice(deviceId, paramStr: paramStr)?.mode == "DB2S" {
             keyitems.append(cardKeysItem)
         }
         

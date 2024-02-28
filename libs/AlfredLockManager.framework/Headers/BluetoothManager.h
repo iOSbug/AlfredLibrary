@@ -120,6 +120,13 @@ notifyCallback:(nullable void (^)(AlfredLock *device, AlfredLockRecord *__nullab
 
 
 /**
+ 根据设备获取连接状态
+ 
+ */
+- (AlfredLockConnectState)deviceContectStateBy:(AlfredLock *)device;
+
+
+/**
  读取门锁基本信息
  
  */

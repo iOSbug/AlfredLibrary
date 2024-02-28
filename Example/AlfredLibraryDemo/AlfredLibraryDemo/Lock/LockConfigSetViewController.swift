@@ -113,7 +113,7 @@ class LockConfigSetViewController: BaseViewController, UITableViewDelegate, UITa
             if let antilockState = device?.extend?.insidelock {
                 configSetItem.matSwitchOn = (antilockState == "0") ? true : false
             }
-            if device?.mode == "ML2" {
+            if device?.mode == "ML2" || device?.mode == "DB2S" {
                 configSetItem.switchEnable = false
             }
         } else if viewType == .LockRequestConfig_Auto {
@@ -128,7 +128,7 @@ class LockConfigSetViewController: BaseViewController, UITableViewDelegate, UITa
             if let armingState = device?.extend?.leavemode {
                 configSetItem.matSwitchOn = (armingState == "1") ? true : false
             }
-            if device?.mode == "ML2" {
+            if device?.mode == "ML2" || device?.mode == "DB2S" {
                 configSetItem.switchEnable = false
             }
         } else if viewType == .LockRequestConfig_PowerSafe {

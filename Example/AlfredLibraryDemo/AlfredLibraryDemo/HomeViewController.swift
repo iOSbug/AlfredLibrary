@@ -71,12 +71,17 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
             //开门
             lockOperate = .LockOperation_UnLock
         }
-        LockManager.shared().setOperation(model.deviceid ?? "" , operation: lockOperate) { (model, error) in
-            if error == .CONNECTION_NOT_CREATED {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                    Toast.promptMessage("operation Disconnect")
+        LockManager.shared().setOperation(model.deviceid ?? "" , operation: lockOperate) { (device, error) in
+            if error == .NONE_ERROR {
+                if let dev = device as? AlfredLock {
+                    model.lockState = dev.lockState
+                }
+            } else {
+                if error == .CONNECTION_NOT_CREATED {
+                    Toast.promptMessage("Disconnect")
                 }
             }
+
             self.isoperate = false
             self.tableView.reloadData()
         }
@@ -105,6 +110,7 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     
     //MARK: -- 获取设备列表
     @objc func getData() {
+        LockManager.shared().disconnect()
         NetManager.shared().queryDevices { (alfredDevices) in
             self.tableView.mj_header?.endRefreshing()
             if let locks = alfredDevices.locks {
@@ -118,7 +124,6 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
             } else {
                 self.removeNodevice()
             }
-            LockManager.shared().disconnect()
             self.bridgeStatus()
             self.tableView.reloadData()
         } failure: { (error) in
@@ -142,12 +147,19 @@ class HomeViewController: BaseViewController,UITableViewDelegate,UITableViewData
     func connectLock(_ model: AlfredLock) {
         LockManager.shared().access(model.deviceid ?? "", timeout: 10) { (device, connectState, error) in
             if connectState == .LockConnectState_Disconnect {
-                Toast.promptMessage("access Disconnect")
+                Toast.promptMessage("Disconnect")
             } else if connectState == .LockConnectState_Connected {
                 Toast.promptMessage("Connected")
+                //默认管理密码 =0:出厂密码 =1:已修改
+                if device.lockInfo?.adminPwdState == "0" {
+                    
+                }
+                
             } else if connectState == .LockConnectState_ConnectFailed {
                 Toast.promptMessage("Connect Failed")
             }
+            model.connectState = device.connectState
+            model.lockState = device.lockState
             self.isoperate = false
             self.tableView.reloadData()
         } notifyCallback: { (device, obj) in

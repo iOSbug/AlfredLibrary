@@ -53,7 +53,7 @@ class GuestLockCodeAddViewController: BaseViewController,UITextFieldDelegate {
                 }
             }
         }
-        if GuestLockManager.shared().getGuestDevice(deviceId, paramStr: paramStr)?.mode == "ML2" {
+        if GuestLockManager.shared().getGuestDevice(deviceId, paramStr: paramStr)?.mode == "ML2" || GuestLockManager.shared().getGuestDevice(deviceId, paramStr: paramStr)?.mode == "DB2S" {
             error = LockLocalizedString("home_lock_setting_ml2_pin_keys_create_password_most")
             for i in 1...250 {
                 if existcodeIndexs.contains(i) {

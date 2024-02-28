@@ -117,7 +117,7 @@ class LockSettingViewController: BaseViewController,UITableViewDelegate,UITableV
         cardKeysItem.execute = { [weak self] in
             self?.showLockCode(.LockCodeType_RFID)
         }
-        if device?.mode == "ML2" {
+        if device?.mode == "ML2" || device?.mode == "DB2S" {
             keyitems.append(cardKeysItem)
         }
         
@@ -281,7 +281,7 @@ class LockSettingViewController: BaseViewController,UITableViewDelegate,UITableV
             powersaveItem.comment = (powersave == "1") ? "On" : "Off"
         }
         
-        if device?.mode == "ML2" {
+        if device?.mode == "ML2" || device?.mode == "DB2S" {
             leavemodeItem.switchEnable = false
             leavemodeItem.accessoryCustomImage = UIImage(named: "arrow_right_white")
             leavemodeItem.execute = nil

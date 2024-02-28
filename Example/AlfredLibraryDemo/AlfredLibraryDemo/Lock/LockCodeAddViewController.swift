@@ -71,7 +71,7 @@ class LockCodeAddViewController: BaseViewController,UITextFieldDelegate {
                 }
             }
         }
-        if device?.mode == "ML2" {
+        if device?.mode == "ML2" || device?.mode == "DB2S" {
             error = LockLocalizedString("home_lock_setting_ml2_pin_keys_create_password_most")
             for i in 1...250 {
                 if existcodeIndexs.contains(i) {

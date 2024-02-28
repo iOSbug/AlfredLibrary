@@ -49,19 +49,13 @@ class GuestHomeViewController: BaseViewController,UITableViewDelegate,UITableVie
     }
 
     func getTestData() {
+        myLockList.removeAll()
         //对每个访客门锁，先设置门锁型号
         if let lock = GuestLockManager.shared().getGuestDevice(deviceId, paramStr: paramStr) {
-            GuestLockManager.shared().setDeviceMode(deviceId, mode:ML2)
+            GuestLockManager.shared().setDeviceMode(deviceId, mode: ML2)
             lock.extend?.name = "Test guest lock"
             myLockList.append(lock)
         }
-        
-        //多把访客门锁
-//        if let lock2 = GuestLockManager.shared().getGuestDevice(deviceId2, paramStr: paramStr2) {
-//            GuestLockManager.shared().setDeviceMode(deviceId2, mode:ML2)
-//            lock2.extend?.name = "Test guest lock"
-//            myLockList.append(lock2)
-//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,7 +65,6 @@ class GuestHomeViewController: BaseViewController,UITableViewDelegate,UITableVie
     
     //MARK: -- 开关门操作(蓝牙)
     func operateLockByBLE(_ model: AlfredLock) {
-        GuestLockManager.shared().setVerifyLevel(LOW)
         //关门
         var lockOperate = AlfredLockOperation.LockOperation_Lock
         if model.lockState == .LockState_Locked {
@@ -80,28 +73,61 @@ class GuestHomeViewController: BaseViewController,UITableViewDelegate,UITableVie
         }
         GuestLockManager.shared().setOperation(model.deviceid ?? "", paramStr: paramStr, operation: lockOperate) { (device, error) in
             self.isoperate = false
-            if error == .ACCESS_DATA_EXPIRED {
-                
-            } else if error == .ACCESS_DATA_MISSING {
-                
-            } else if error == .NONE_ERROR {
+            if error == .NONE_ERROR {
                 if let dev = device as? AlfredLock {
                     model.lockState = dev.lockState
                 }
+            } else {
+                if error == .ACCESS_DATA_EXPIRED {
+                    
+                } else if error == .ACCESS_DATA_MISSING {
+                    
+                } else if error == .CONNECTION_NOT_CREATED {
+//                    GuestLockManager.shared().access(model.deviceid ?? "", paramStr: paramStr, timeout: 5) { (device, connectState, error) in
+//                        self.isoperate = false
+//
+//                        if connectState == .LockConnectState_Disconnect {
+//                            Toast.promptMessage("Disconnect")
+//                        } else if connectState == .LockConnectState_Connected {
+//                            Toast.promptMessage("Connected")
+//                        } else if connectState == .LockConnectState_ConnectFailed {
+//                            Toast.promptMessage("Connect Failed")
+//                        }
+//                        if error == .ACCESS_DATA_EXPIRED {
+//
+//                        } else if error == .ACCESS_DATA_MISSING {
+//
+//                        }
+//                        if device != nil {
+//                            model.connectState = device!.connectState
+//                            model.lockState = device!.lockState
+//                        }
+//                        self.tableView.reloadData()
+//                    } notifyCallback: { (device, obj) in
+//                        self.tableView.reloadData()
+//                    }
+                }
             }
+
             self.tableView.reloadData()
         }
     }
     
     //连接门锁蓝牙
     func connectLock(_ model: AlfredLock) {
-        GuestLockManager.shared().setVerifyLevel(HIGH)
-        GuestLockManager.shared().access(model.deviceid ?? "", paramStr: paramStr, timeout: 10) { (device, connectState, error) in
+        //强校验时间
+//        GuestLockManager.shared().setVerifyLevel(HIGH)
+        GuestLockManager.shared().access(model.deviceid ?? "", paramStr: paramStr, timeout: 5) { (device, connectState, error) in
             self.isoperate = false
+
             if connectState == .LockConnectState_Disconnect {
                 Toast.promptMessage("Disconnect")
             } else if connectState == .LockConnectState_Connected {
                 Toast.promptMessage("Connected")
+                //Default management password = 0: Factory password = 1: Modified(默认管理密码 =0:出厂密码 =1:已修改)
+                if device?.lockInfo?.adminPwdState == "0" {
+                    
+                }
             } else if connectState == .LockConnectState_ConnectFailed {
                 Toast.promptMessage("Connect Failed")
             }
@@ -117,6 +143,14 @@ class GuestHomeViewController: BaseViewController,UITableViewDelegate,UITableVie
             self.tableView.reloadData()
         } notifyCallback: { (device, obj) in
             self.tableView.reloadData()
+        }
+    }
+    
+    func getconfig(_ model: AlfredLock) {
+        GuestLockManager.shared().getConfig(model.deviceid ?? "", paramStr: paramStr) { device, error in
+            if let dev = device as? AlfredLock {
+                
+            }
         }
     }
     
@@ -177,13 +211,13 @@ class GuestHomeViewController: BaseViewController,UITableViewDelegate,UITableVie
         //我的门锁
         let device = myLockList[indexPath.section]
         cell.setData(model: device)
-        cell.openDoorBlock = {
-            //开门
-            self.openDoorAction(device)
-        }
         cell.messageBlock = {
             //消息
             self.messageAction(device)
+        }
+        cell.openDoorBlock = {
+            //开门
+            self.openDoorAction(device)
         }
         cell.settingBlock = {
             //设置
