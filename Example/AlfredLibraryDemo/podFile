@@ -2,6 +2,9 @@ platform :ios, '10.0'
 use_frameworks!
 
 abstract_target 'commonPods' do
+  
+  #To use with iOS17, Xcode15.0
+  pod 'AlfredLibrary','15.0.05'
 
   #To use with iOS16, Xcode14.0
   #pod 'AlfredLibrary','14.0.04'
@@ -10,7 +13,7 @@ abstract_target 'commonPods' do
   #pod 'AlfredLibrary','13.3.02'
 
   #To use with iOS15, Xcode13.2.1
-  pod 'AlfredLibrary','13.2.18'
+#  pod 'AlfredLibrary','13.2.18'
 
   #To use with iOS15, Xcode13
   #pod 'AlfredLibrary','13.1.03'

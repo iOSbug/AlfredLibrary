@@ -1,11 +1,11 @@
 framework module AlfredNetManager {
   umbrella header "AlfredNetManager.h"
-
   export *
+
   module * { export * }
 }
 
 module AlfredNetManager.Swift {
-    header "AlfredNetManager-Swift.h"
-    requires objc
+  header "AlfredNetManager-Swift.h"
+  requires objc
 }

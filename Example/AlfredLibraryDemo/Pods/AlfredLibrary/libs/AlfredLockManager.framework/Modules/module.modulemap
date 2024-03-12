@@ -1,11 +1,11 @@
 framework module AlfredLockManager {
   umbrella header "AlfredLockManager.h"
-
   export *
+
   module * { export * }
 }
 
 module AlfredLockManager.Swift {
-    header "AlfredLockManager-Swift.h"
-    requires objc
+  header "AlfredLockManager-Swift.h"
+  requires objc
 }

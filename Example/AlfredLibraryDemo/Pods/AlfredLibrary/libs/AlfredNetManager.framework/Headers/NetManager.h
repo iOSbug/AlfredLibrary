@@ -7,8 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AlfredCore/AlfredCore.h>
-//#import <AlfredCore/AlfredCore-Swift.h>
-@import AlfredCore;
+#import <AlfredCore/AlfredCore-Swift.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -33,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- *    获取当前账户下指定设备的详细信息数据
+ *    获取当前账户下指定门锁设备的详细信息数据
  *
  *    @param     deviceID          指定设备的SN
  *    @param     deviceType       指定设备的类型
@@ -44,6 +43,20 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)fetchDevice:(NSString*)deviceID
          deviceType:(AlfredDeviceType)deviceType
             success:(nullable void (^)(AlfredLock *device))success
+            failure:(nullable void (^)(NetErrorModel *error))failure;
+
+
+
+/**
+ *    获取当前账户下指定网关设备的详细信息数据
+ *
+ *    @param     deviceID          指定设备的SN
+ *    @param     success              成功回调 AlfredDeviceBindStatus
+ *    @param     failure              失败回调
+
+ */
+- (void)fetchBridge:(NSString*)deviceID
+            success:(nullable void (^)(AlfredBridge *device))success
             failure:(nullable void (^)(NetErrorModel *error))failure;
 
 /**

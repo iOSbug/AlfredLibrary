@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger,AlfredError) {
     LIBRARY_INIT_ERROR, //sdk初始化失败
     LIBRARY_SDC_ERROR, //Sdc失败
     LIBRARY_SIGNIN_ERROR, //登录失败
+    LIBRARY_SIGNOUT_ERROR, //登出失败
     SYSTEM_BLE_PoweredOff, //手机系统蓝牙未打开
     PASSWORD1_MISSING, //鉴权码1丢失
     ACCESS_DATA_MISSING, //鉴权数据丢失
@@ -261,6 +262,7 @@ typedef NS_ENUM(NSInteger,LockCmd) {
     LockCmd_InfoQuery = 0x12, //查询门锁基本信息
     LockCmd_BindCheck = 0x13, //绑定请求帧（管理员密码校验）
     LockCmd_NewRecord = 0x14, //锁记录查询
+    LockCmd_ML2InfoQuery = 0x17, //查询门锁基本信息
     LockCmd_ML2NewRecord = 0x19, //锁记录查询
 
     LockCmd_WeekScheduleSet = 0x0B, //周计划设置

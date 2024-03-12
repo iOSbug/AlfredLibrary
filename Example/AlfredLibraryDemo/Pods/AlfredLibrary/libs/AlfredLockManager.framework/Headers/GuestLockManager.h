@@ -47,6 +47,18 @@ notifyCallback:(nullable void (^)(AlfredLock *_Nullable device, AlfredLockRecord
 
 
 /**
+ *    读取门锁设备基本参数信息，需先接入鉴权成功
+ *
+ *    @param     deviceId 指定门锁对象SN
+ *    @param     callback 回调
+
+ */
+- (void)getConfig:(NSString *)deviceId
+         paramStr:(NSString *)paramStr
+         callback:(AlfredBLECallback)callback;
+
+
+/**
  *    门锁操作控制
  *    @param     deviceId 指定门锁对象SN
  *    @param     paramStr URLSAFE_BASE64({password1}.{password2}.{systemId}.{expire_ts}) +"." +URLSAFE_BASE64({verify})

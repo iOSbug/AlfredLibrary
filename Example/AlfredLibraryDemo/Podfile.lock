@@ -1,8 +1,8 @@
 PODS:
-  - Alamofire (5.6.4)
-  - AlfredLibrary (13.2.18):
-    - AlfredLibrary/Core (= 13.2.18)
-  - AlfredLibrary/Core (13.2.18):
+  - Alamofire (5.8.1)
+  - AlfredLibrary (15.0.05):
+    - AlfredLibrary/Core (= 15.0.05)
+  - AlfredLibrary/Core (15.0.05):
     - Alamofire
     - CocoaAsyncSocket
     - CocoaSecurity
@@ -21,7 +21,7 @@ PODS:
   - UICKeyChainStore (2.1.2)
 
 DEPENDENCIES:
-  - AlfredLibrary (= 13.2.18)
+  - AlfredLibrary (= 15.0.05)
   - MBProgressHUD
   - MJRefresh
   - SnapKit
@@ -41,8 +41,8 @@ SPEC REPOS:
     - UICKeyChainStore
 
 SPEC CHECKSUMS:
-  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
-  AlfredLibrary: 95eb8034c0465f100d58816d7f61f975d8acb374
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  AlfredLibrary: 6049f31d89a33c46e10841fbdb6e78a612681ec3
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   CocoaSecurity: d288a6f87e0f363823d2cb83e753814a6944f71a
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
@@ -53,6 +53,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
 
-PODFILE CHECKSUM: 68cd520a9d95fdefcecbf4b105055aa2abf6c866
+PODFILE CHECKSUM: d7e1955630e94ac9ac440f486e4895919b5063ab
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.14.2
