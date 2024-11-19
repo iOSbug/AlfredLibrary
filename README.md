@@ -25,6 +25,11 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 
+To use with iOS18, Xcode16.1
+pod 'AlfredLibrary','16.1.03'
+pod 'HandyJSON', :git => 'https://github.com/Miles-Matheson/HandyJSON.git'
+
+
 To use with iOS17, Xcode15
 pod 'AlfredLibrary','15.0.06'
 
