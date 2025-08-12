@@ -273,4 +273,9 @@ typedef NS_ENUM(NSInteger,LockCmd) {
     LockCmd_YMDScheduleDel = 0x10, //年月日计划删除
     LockCmd_UserTypeSet = 0x09, //用户类型设置
     LockCmd_PwdInfoQUery = 0x1C, //密钥信息查询
+    
+    OTACmd_UpgradeStart = 0xA1, //db1 pro ota升级请求
+    OTACmd_Ymodem = 0xA3, //db1 pro ota升级 Y-modem使用a3指令透传
+    
+    LockCmd_DB1ProVersionQuery = 0x3A, //db1 pro版本信息请求
 };

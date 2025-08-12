@@ -19,6 +19,8 @@ typedef enum {
 
 typedef enum {
     DB1,
+    DB1S,
+    DB1_Pro,
     DB2,
     ML2,
     DB2S,
