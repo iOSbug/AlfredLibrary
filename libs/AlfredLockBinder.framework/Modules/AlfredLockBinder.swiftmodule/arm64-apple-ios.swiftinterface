@@ -1,0 +1,20 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature OpaqueTypeErasure -enable-bare-slash-regex -module-name AlfredLockBinder
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+@_exported import AlfredLockBinder
+import AlfredLockManager
+import AlfredNetManager
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers public class LockBinderManager : ObjectiveC.NSObject {
+  @objc public static let shared: AlfredLockBinder.LockBinderManager
+  @objc public func searchDeviceList(timeout: Swift.Int, name: Swift.String, success: @escaping (([AlfredCore.AlfredDeviceBindStatus]) -> ()), failure: @escaping AlfredCore.AlfredErrorCallback)
+  @objc public func bindLock(device: AlfredCore.AlfredDeviceBindStatus, mcode: Swift.String, success: @escaping ((AlfredCore.AlfredLock) -> ()), failure: @escaping AlfredCore.AlfredErrorCallback)
+  @objc public func unbindLock(deviceId: Swift.String, success: @escaping (() -> ()), failure: @escaping AlfredCore.AlfredErrorCallback)
+  @objc override dynamic public init()
+  @objc deinit
+}

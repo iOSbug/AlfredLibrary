@@ -1,0 +1,129 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AlfredNetManager
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVFoundation
+import Alamofire
+import AlfredCore
+@_exported import AlfredNetManager
+import CocoaSecurity
+import FCUUID
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public typealias RequestRetryCompletion = (_ shouldRetry: Swift.Bool, _ timeDelay: Foundation.TimeInterval) -> Swift.Void
+@objc @_inheritsConvenienceInitializers public class AlfredLibManager : ObjectiveC.NSObject {
+  @objc public static func sdkInit(_ appKey: Swift.String, appSecret: Swift.String, success: @escaping (() -> ()), failure: @escaping AlfredCore.AlfredErrorCallback)
+  @objc public static func signIn(_ allyName: Swift.String, allyToken: Swift.String, success: @escaping (() -> ()), failure: @escaping AlfredCore.AlfredErrorCallback)
+  @objc public static func logout(_ success: @escaping (() -> ()), failure: @escaping AlfredCore.AlfredErrorCallback)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class ErrorModel : ObjectiveC.NSObject {
+  public var eCode: Swift.Int?
+  @objc public var eMessage: Swift.String?
+  public init(_ eCode: Swift.Int?, eMessage: Swift.String?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class NetAPI : ObjectiveC.NSObject {
+  public var uacUrl: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias NetCompletionHandler<T> = (T.Response?, AlfredCore.NetErrorModel?) -> Swift.Void where T : AlfredNetManager.NetRequest
+public typealias ArrNetCompletionHandler<T> = ([T.Response]?, AlfredCore.NetErrorModel?) -> Swift.Void where T : AlfredNetManager.NetRequest
+@objc @_inheritsConvenienceInitializers public class CacheManager : ObjectiveC.NSObject {
+  @objc public static let shared: AlfredNetManager.CacheManager
+  @objc public var lockList: [AlfredCore.AlfredLock]
+  @objc public var bridgeList: [AlfredCore.AlfredBridge]
+  @objc public func clear()
+  @objc public func unbindDevice(deviceId: Swift.String)
+  @objc public func getLockDevice(_ deviceId: Swift.String?) -> AlfredCore.AlfredLock?
+  @objc public func updateLockCache(_ device: AlfredCore.AlfredLock)
+  @objc public func updateBridgeCache(_ device: AlfredCore.AlfredBridge)
+  @objc public func getLockBindGateway(_ device: AlfredCore.AlfredLock?) -> AlfredCore.AlfredBridge?
+  @objc public func getMygatewayByGatewayDid(_ did: Swift.String?) -> AlfredCore.AlfredBridge?
+  @objc public func getMygatewayByLockId(_ deviceId: Swift.String?) -> AlfredCore.AlfredBridge?
+  @objc public func getMyLocksByGatewayDid(_ did: Swift.String?) -> [AlfredCore.AlfredLock]
+  @objc public func saveGatewayTimezone(_ gatewayId: Swift.String, _ timezones: AlfredCore.AlfredTimeZone)
+  @objc public func getGatewayTimezone(_ gatewayId: Swift.String) -> AlfredCore.AlfredTimeZone?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class AFNetClient : ObjectiveC.NSObject {
+  public var afManager: Alamofire.Session?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class NetSwiftManager : ObjectiveC.NSObject {
+  @objc public static let shared: AlfredNetManager.NetSwiftManager
+  @objc public func queryDevices(_ success: @escaping ((AlfredCore.AlfredDevices) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func fetchDevice(_ deviceID: Swift.String, deviceType: AlfredCore.AlfredDeviceType, success: @escaping ((AlfredCore.AlfredLock) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func fetchBridge(_ deviceID: Swift.String, success: @escaping ((AlfredCore.AlfredBridge) -> ()), failure: ((AlfredCore.NetErrorModel) -> ())?)
+  @objc public func fetchLockRecords(_ deviceID: Swift.String, limit: Swift.String, page: Swift.String, success: @escaping ((AlfredCore.AlfredLockRecords) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func updateLockRecords(_ params: [Swift.String : Any], success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func renameDevice(_ deviceID: Swift.String, deviceDid: Swift.String, deviceType: AlfredCore.AlfredDeviceType, alias: Swift.String, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func unbindDevice(_ deviceID: Swift.String, deviceType: AlfredCore.AlfredDeviceType, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func timestamp(_ success: @escaping ((Swift.String) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension AlfredNetManager.NetSwiftManager {
+  @objc dynamic public func checkDeviceBindStatus(_ deviceID: Swift.String, deviceType: AlfredCore.AlfredDeviceType, success: @escaping ((AlfredCore.AlfredDeviceBindStatus) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func getDevInfo(_ deviceID: Swift.String, success: @escaping ((AlfredCore.AlfredLock) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func lockBind(_ deviceID: Swift.String, type: Swift.String, success: @escaping ((AlfredCore.AlfredLock) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func lockBindUac(_ deviceID: Swift.String, mac: Swift.String, deviceType: Swift.String, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func lockPostinfo(_ params: [Swift.String : Any], success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func updateBluetoothUuid(_ did: Swift.String, bluuid: Swift.String, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func lockPostkeys(_ params: [Swift.String : Any], success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func lockkeyschedule(_ params: [Swift.String : Any], success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+}
+extension AlfredNetManager.NetSwiftManager {
+  @objc dynamic public func fetchBridgeDevices(_ params: [Swift.String : Any], success: @escaping ((AlfredCore.AlfredBridges) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func getDevicePairToken(_ success: @escaping ((AlfredCore.DeviceToken) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func getAlfredBridgePairUrl() -> Swift.String
+  @objc dynamic public func gatewayCheckBind(_ params: [Swift.String : Any], success: @escaping ((AlfredCore.AlfredBridgeBindStatus) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func gatewayStatus(_ params: [Swift.String : Any], success: @escaping ((AlfredCore.AlfredBridgeLockStatusListModel) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func gatewayTransparent(_ params: [Swift.String : Any], success: @escaping ((AlfredCore.AlfredBridgeOperate) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func gatewayTransparentResult(_ params: [Swift.String : Any], success: @escaping ((AlfredCore.AlfredBridgeOperate) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func gatewayQueryBindReq(_ params: [Swift.String : Any], success: @escaping ((AlfredCore.AlfredBridgePair) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func gatewayQueryBindRes(_ params: [Swift.String : Any], success: @escaping ((AlfredCore.AlfredBridgePair) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func gatewayBindUacLock(_ params: [Swift.String : Any], success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func gatewayBindLock(_ params: [Swift.String : Any], success: @escaping ((AlfredCore.AlfredBridgePair) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func gatewayUnbindUacLock(_ params: [Swift.String : Any], success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func gatewayUnbindLock(_ params: [Swift.String : Any], success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func gatewayTimezones(_ params: [Swift.String : Any], success: @escaping ((AlfredCore.AlfredTimeZone) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc dynamic public func setgGatewayTimezone(_ params: [Swift.String : Any], success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+}
+public let DeviceListApi: Swift.String
+public let SmsSignUpApi: Swift.String
+public let AppStartupApi: Swift.String
+public let TimezonesApi: Swift.String
+public let SignoutApi: Swift.String
+public let LogoutApi: Swift.String
+public let ResetPassword: Swift.String
+public let SmsResetPassword: Swift.String
+public let AccountActiveApi: Swift.String
+public enum NetHTTPMethod : Swift.String {
+  case get
+  case post
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol NetRequest {
+  var host: Swift.String { get set }
+  var path: Swift.String { get }
+  var method: AlfredNetManager.NetHTTPMethod { get }
+  var parameter: [Swift.String : Any]? { get }
+  var query: [Swift.String : Swift.String] { get }
+  associatedtype Response : AlfredCore.NetDecodable
+}
+extension AlfredNetManager.NetHTTPMethod : Swift.Equatable {}
+extension AlfredNetManager.NetHTTPMethod : Swift.Hashable {}
+extension AlfredNetManager.NetHTTPMethod : Swift.RawRepresentable {}

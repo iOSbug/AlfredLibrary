@@ -1,0 +1,35 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature OpaqueTypeErasure -enable-bare-slash-regex -module-name AlfredLockManager
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AlfredCore
+@_exported import AlfredLockManager
+import AlfredNetManager
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BLEMessageStack : ObjectiveC.NSObject {
+  @objc public static let shared: AlfredLockManager.BLEMessageStack
+  @objc public func push(_ messageID: Swift.Int, timeout: Swift.Int = 10, handle: AlfredCore.AlfredBLECallback?)
+  @discardableResult
+  @objc public func pull(_ messageID: Swift.Int) -> AlfredCore.AlfredBLECallback?
+  public func clear()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class LockSwiftManager : ObjectiveC.NSObject {
+  @objc public static let shared: AlfredLockManager.LockSwiftManager
+  @objc public var guestCacheDevice: AlfredCore.AlfredLock?
+  @objc public func access(_ device: AlfredCore.AlfredLock, timeout: Swift.Int, connectCallback: @escaping ((AlfredCore.AlfredLock, AlfredCore.AlfredLockConnectState, AlfredCore.AlfredError) -> ()), notifyCallback: @escaping ((AlfredCore.AlfredLock, AlfredCore.AlfredLockRecord?) -> ()))
+  @objc public func setConfig(_ device: AlfredCore.AlfredLock, configID: AlfredCore.AlfredLockRequestConfig, values: Any, callback: @escaping AlfredCore.AlfredBLECallback)
+  @objc public func getLockCodes(_ device: AlfredCore.AlfredLock, codeType: AlfredCore.AlfredLockCodeType, callback: @escaping AlfredCore.AlfredBLECallback)
+  @objc public func deleteLockCode(_ device: AlfredCore.AlfredLock, codeType: AlfredCore.AlfredLockCodeType, codeIndex: Swift.Int, callback: @escaping AlfredCore.AlfredBLECallback)
+  @objc public func addLockCode(_ device: AlfredCore.AlfredLock, codeType: AlfredCore.AlfredLockCodeType, codeIndex: Swift.Int, value: Swift.String, callback: @escaping AlfredCore.AlfredBLECallback)
+  @objc public func setLockCodeSchedule(_ device: AlfredCore.AlfredLock, codeType: AlfredCore.AlfredLockCodeType, codeIndex: Swift.Int, startTime: Swift.String, endTime: Swift.String, timezone: Swift.String, callback: @escaping AlfredCore.AlfredBLECallback)
+  @objc public func setLockCodeWeekSchedule(_ device: AlfredCore.AlfredLock, codeType: AlfredCore.AlfredLockCodeType, codeIndex: Swift.Int, startTime: Swift.String, endTime: Swift.String, weekdays: [Any], callback: @escaping AlfredCore.AlfredBLECallback)
+  @objc public func deleteLockCodeSchedule(_ device: AlfredCore.AlfredLock, codeType: AlfredCore.AlfredLockCodeType, codeIndex: Swift.Int, callback: @escaping AlfredCore.AlfredBLECallback)
+  @objc public func syncRecords(_ device: AlfredCore.AlfredLock, page: Swift.String, limit: Swift.String, callback: @escaping AlfredCore.AlfredBLECallback)
+  @objc override dynamic public init()
+  @objc deinit
+}

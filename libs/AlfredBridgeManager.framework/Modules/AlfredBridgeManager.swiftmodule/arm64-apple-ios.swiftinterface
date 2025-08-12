@@ -1,0 +1,32 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature OpaqueTypeErasure -enable-bare-slash-regex -module-name AlfredBridgeManager
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+@_exported import AlfredBridgeManager
+import AlfredCore
+import AlfredNetManager
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers public class BridgeSwiftManager : ObjectiveC.NSObject {
+  @objc public static let shared: AlfredBridgeManager.BridgeSwiftManager
+  @objc public func bridgeSend(_ gatewayID: Swift.String, subdeviceID: Swift.String, data: Swift.String, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func devstatus(_ gateways: [AlfredCore.AlfredBridge], success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func bridgePairSubDev(_ gatewayID: Swift.String, subdeviceID: Swift.String, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func unpairSubdevice(_ gatewayID: Swift.String, subdeviceID: Swift.String, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func setLockOperation(_ gatewayID: Swift.String, subdeviceID: Swift.String, operate: AlfredCore.AlfredLockOperation, data: Swift.String, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func getLockRecords(_ gatewayID: Swift.String, subdeviceID: Swift.String, data: Swift.String, page: Swift.String, limit: Swift.String, success: @escaping (([AlfredCore.AlfredLockRecord]) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func setLockConfig(_ gatewayID: Swift.String, subdeviceID: Swift.String, configID: AlfredCore.AlfredLockRequestConfig, values: Any, data: Swift.String, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func getLockCodes(_ gatewayID: Swift.String, subdeviceID: Swift.String, codeType: AlfredCore.AlfredLockCodeType, data: Swift.String, success: @escaping (([AlfredCore.AlfredLockCode]) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func addLockCode(_ gatewayID: Swift.String, subdeviceID: Swift.String, codeType: AlfredCore.AlfredLockCodeType, codeIndex: Swift.String, data: Swift.String, success: @escaping ((AlfredCore.AlfredLockCode) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func deleteLockCode(_ gatewayID: Swift.String, subdeviceID: Swift.String, codeType: AlfredCore.AlfredLockCodeType, codeIndex: Swift.String, data: Swift.String, schedData: Swift.String?, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func setLockCodePeriodSchedule(_ gatewayID: Swift.String, subdeviceID: Swift.String, codeType: AlfredCore.AlfredLockCodeType, codeIndex: Swift.String, scheduleId: Swift.String, startTime: Swift.String?, endTime: Swift.String?, data: Swift.String, usertypeData: Swift.String, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func setLockCodeWeeklySchedule(_ gatewayID: Swift.String, subdeviceID: Swift.String, codeType: AlfredCore.AlfredLockCodeType, codeIndex: Swift.String, scheduleId: Swift.String, startTime: Swift.String?, endTime: Swift.String?, week: [Swift.Int]?, data: Swift.String, usertypeData: Swift.String, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func deleteLockCodeSchedule(_ gatewayID: Swift.String, subdeviceID: Swift.String, codeType: AlfredCore.AlfredLockCodeType, codeIndex: Swift.String, scheduleId: Swift.String, data: Swift.String, usertypeData: Swift.String, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func getTimezones(_ gatewayID: Swift.String, success: @escaping ((AlfredCore.AlfredTimeZone) -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc public func setBridgeTimezone(_ gatewayID: Swift.String, tzName: Swift.String, tzValue: Swift.String, tzDistrict: Swift.String, success: @escaping (() -> ()), failure: @escaping ((AlfredCore.NetErrorModel) -> ()))
+  @objc override dynamic public init()
+  @objc deinit
+}
