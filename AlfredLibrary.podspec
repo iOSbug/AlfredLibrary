@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AlfredLibrary'
-  s.version          = '16.2.05'
+  s.version          = '16.2.06'
   s.summary          = 'A short description of AlfredLibrary.'
 
 # This description is used to generate tags and improve search results.
@@ -45,7 +45,7 @@ TODO: Add long description of the pod here.
     ss.frameworks   = 'NetworkExtension','Foundation','CoreLocation'
 
 
-    ss.dependency 'Alamofire'
+    ss.dependency 'Alamofire', '5.5.0'
     ss.dependency 'CocoaAsyncSocket'
     ss.dependency 'FCUUID'
     ss.dependency 'CocoaSecurity'
