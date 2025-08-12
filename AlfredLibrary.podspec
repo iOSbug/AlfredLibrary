@@ -44,7 +44,6 @@ TODO: Add long description of the pod here.
 
     ss.frameworks   = 'NetworkExtension','Foundation','CoreLocation'
 
-    ss.dependency 'HandyJSON', '~> 5.0.3-beta'
 
     ss.dependency 'Alamofire'
     ss.dependency 'CocoaAsyncSocket'
