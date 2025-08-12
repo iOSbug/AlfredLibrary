@@ -25,44 +25,30 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 
-To use with iOS18, Xcode16.2
-pod 'AlfredLibrary','16.2.02'
-pod 'HandyJSON', :git => 'https://github.com/Miles-Matheson/HandyJSON.git'
-
-To use with iOS18, Xcode16.1
-pod 'AlfredLibrary','16.1.03'
-pod 'HandyJSON', :git => 'https://github.com/Miles-Matheson/HandyJSON.git'
+pod 'AlfredLibrary','16.2.07'
 
 
-To use with iOS17, Xcode15
-pod 'AlfredLibrary','15.0.06'
+podFile:
 
-To use with iOS16, Xcode14.3.1
-pod 'AlfredLibrary','14.3.15'
+platform :ios, '11.0'
+use_frameworks!
 
-To use with iOS16, Xcode14.3
-pod 'AlfredLibrary','14.3.06'
+post_install do |installer|
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+  end
+end
 
-To use with iOS16, Xcode14.2
-pod 'AlfredLibrary','14.2.01'
+abstract_target 'commonPods' do
 
-To use with iOS16, Xcode14.0
-pod 'AlfredLibrary','14.0.05'
+  pod 'AlfredLibrary','16.2.07'
 
-To use with iOS15, Xcode13.3
-pod 'AlfredLibrary','13.3.03'
+  target 'AlfredLibraryDemo' do
+      pod 'SnapKit'
+  end
+  
+end
 
-To use with iOS15, Xcode13.2.1  swift 5.5.2
-pod 'AlfredLibrary','13.2.22'
-
-To use with iOS15, Xcode13.1  swift 5.5.1
-pod 'AlfredLibrary','13.1.11'
-
-To use with iOS15, Xcode13
-pod 'AlfredLibrary','13.1.03'
-
-To use with Xcode12.4
-pod 'AlfredLibrary','12.4.03'
 
 ```
 
