@@ -20310,6 +20310,247 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AlfredNetManager",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AlfredCore",
+        "printedName": "AlfredCore",
+        "declKind": "Import",
+        "moduleName": "AlfredNetManager"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OfflineManager",
+        "printedName": "OfflineManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OfflineManager",
+                "printedName": "AlfredNetManager.OfflineManager",
+                "usr": "c:@M@AlfredNetManager@objc(cs)OfflineManager"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AlfredNetManager@objc(cs)OfflineManager(cpy)shared",
+            "mangledName": "$s16AlfredNetManager07OfflineC0C6sharedACvpZ",
+            "moduleName": "AlfredNetManager",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OfflineManager",
+                    "printedName": "AlfredNetManager.OfflineManager",
+                    "usr": "c:@M@AlfredNetManager@objc(cs)OfflineManager"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AlfredNetManager@objc(cs)OfflineManager(cm)shared",
+                "mangledName": "$s16AlfredNetManager07OfflineC0C6sharedACvgZ",
+                "moduleName": "AlfredNetManager",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "saveOfflineGuestKey",
+            "printedName": "saveOfflineGuestKey(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AlfredNetManager@objc(cs)OfflineManager(im)saveOfflineGuestKey:",
+            "mangledName": "$s16AlfredNetManager07OfflineC0C04saveD8GuestKeyyySSF",
+            "moduleName": "AlfredNetManager",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getOfflineGuestKey",
+            "printedName": "getOfflineGuestKey()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AlfredNetManager@objc(cs)OfflineManager(im)getOfflineGuestKey",
+            "mangledName": "$s16AlfredNetManager07OfflineC0C03getD8GuestKeySSSgyF",
+            "moduleName": "AlfredNetManager",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OfflineManager",
+                "printedName": "AlfredNetManager.OfflineManager",
+                "usr": "c:@M@AlfredNetManager@objc(cs)OfflineManager"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AlfredNetManager@objc(cs)OfflineManager(im)init",
+            "mangledName": "$s16AlfredNetManager07OfflineC0CACycfc",
+            "moduleName": "AlfredNetManager",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AlfredNetManager@objc(cs)OfflineManager",
+        "mangledName": "$s16AlfredNetManager07OfflineC0C",
+        "moduleName": "AlfredNetManager",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -31650,427 +31891,427 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Utils\/StringExtension.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Utils\/StringExtension.swift",
       "kind": "IntegerLiteral",
       "offset": 5654,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
       "kind": "StringLiteral",
       "offset": 418,
       "length": 13,
       "value": "\"v1\/sdk-init\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
       "kind": "StringLiteral",
       "offset": 454,
       "length": 18,
       "value": "\"v1\/refresh-token\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
       "kind": "StringLiteral",
       "offset": 493,
       "length": 16,
       "value": "\"v1\/fast-signin\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
       "kind": "StringLiteral",
       "offset": 529,
       "length": 16,
       "value": "\"v1\/app-startup\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
       "kind": "StringLiteral",
       "offset": 570,
       "length": 14,
       "value": "\"v1\/timestamp\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
       "kind": "BooleanLiteral",
       "offset": 670,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
       "kind": "BooleanLiteral",
       "offset": 715,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
       "kind": "Array",
       "offset": 790,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetRetrier.swift",
       "kind": "Array",
       "offset": 862,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Utils\/DateExtension.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Utils\/DateExtension.swift",
       "kind": "IntegerLiteral",
       "offset": 1245,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Utils\/DateExtension.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Utils\/DateExtension.swift",
       "kind": "IntegerLiteral",
       "offset": 1261,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Utils\/DateExtension.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Utils\/DateExtension.swift",
       "kind": "IntegerLiteral",
       "offset": 1276,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetInterceptor.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetInterceptor.swift",
       "kind": "StringLiteral",
       "offset": 289,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetInterceptor.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetInterceptor.swift",
       "kind": "StringLiteral",
       "offset": 323,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetInterceptor.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetInterceptor.swift",
       "kind": "Dictionary",
       "offset": 417,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/NetInterceptor.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/NetInterceptor.swift",
       "kind": "Dictionary",
       "offset": 464,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 290,
       "length": 35,
       "value": "\"https:\/\/uac-us.alfred-iot.com\/api\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 423,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 475,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 523,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 573,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 604,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 666,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 712,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 762,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 804,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 877,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 932,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/NetAPI.swift",
       "kind": "StringLiteral",
       "offset": 964,
       "length": 5,
       "value": "\"PHL\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/EMCNetManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/EMCNetManager.swift",
       "kind": "StringLiteral",
       "offset": 311,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Model\/Login.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Model\/Login.swift",
       "kind": "StringLiteral",
       "offset": 193,
       "length": 14,
       "value": "\"login_status\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Model\/Login.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Model\/Login.swift",
       "kind": "StringLiteral",
       "offset": 245,
       "length": 16,
       "value": "\"login_username\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Model\/Login.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Model\/Login.swift",
       "kind": "StringLiteral",
       "offset": 303,
       "length": 22,
       "value": "\"login_username_array\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Model\/Login.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Model\/Login.swift",
       "kind": "StringLiteral",
       "offset": 355,
       "length": 17,
       "value": "\"login_auth_data\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Model\/LockAccessModel.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Model\/LockAccessModel.swift",
       "kind": "BooleanLiteral",
       "offset": 357,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Utils\/LockUtils.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Utils\/LockUtils.swift",
       "kind": "BooleanLiteral",
       "offset": 6574,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
       "kind": "StringLiteral",
       "offset": 202,
       "length": 16,
       "value": "\"v3\/device-list\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
       "kind": "StringLiteral",
       "offset": 245,
       "length": 15,
       "value": "\"v2\/sms-signup\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
       "kind": "StringLiteral",
       "offset": 288,
       "length": 16,
       "value": "\"v1\/app-startup\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
       "kind": "StringLiteral",
       "offset": 331,
       "length": 14,
       "value": "\"v1\/timezones\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
       "kind": "StringLiteral",
       "offset": 370,
       "length": 12,
       "value": "\"v3\/signout\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
       "kind": "StringLiteral",
       "offset": 406,
       "length": 11,
       "value": "\"v3\/logout\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
       "kind": "StringLiteral",
       "offset": 445,
       "length": 19,
       "value": "\"v2\/reset-password\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
       "kind": "StringLiteral",
       "offset": 495,
       "length": 23,
       "value": "\"v2\/sms-reset-password\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Manager\/BaseNetManager.swift",
       "kind": "StringLiteral",
       "offset": 549,
       "length": 19,
       "value": "\"v2\/account-active\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "IntegerLiteral",
       "offset": 203,
       "length": 4,
       "value": "1008"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "IntegerLiteral",
       "offset": 226,
       "length": 4,
       "value": "1011"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "IntegerLiteral",
       "offset": 254,
       "length": 4,
       "value": "1100"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "Dictionary",
       "offset": 757,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "Dictionary",
       "offset": 1423,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "Dictionary",
       "offset": 2083,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "Dictionary",
       "offset": 2602,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "Dictionary",
       "offset": 3142,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "Dictionary",
       "offset": 3843,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "Dictionary",
       "offset": 4367,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "Dictionary",
       "offset": 4887,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "Dictionary",
       "offset": 5547,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "Dictionary",
       "offset": 6206,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "Dictionary",
       "offset": 6883,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Business\/RequestBusiness.swift",
       "kind": "Dictionary",
       "offset": 7439,
       "length": 3,

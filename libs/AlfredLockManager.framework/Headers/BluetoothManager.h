@@ -30,6 +30,8 @@ typedef NS_ENUM(NSInteger, OADReturnValues) {
     OAD_CCCD_NOT_ENABLED = 15,
     OAD_IMG_ID_TIMEOUT = 16,
     OAD_UNKNOWN_ERROR = 17,
+    
+    OAD_DB1PRO_SUCCESS = 100,
 };
 
 

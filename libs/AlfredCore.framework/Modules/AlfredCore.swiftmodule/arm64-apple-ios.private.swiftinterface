@@ -487,6 +487,7 @@ extension AlfredCore.NetDecodable {
   @objc public var lockInfo: AlfredCore.AlfredLockInfo?
   @objc public var ability: AlfredCore.AlfredLockAbilityModel?
   @objc public var gatewayLockBleSignal: Swift.String?
+  @objc public func isDeviceML2() -> Swift.Bool
   @objc required dynamic public init()
   @objc deinit
 }

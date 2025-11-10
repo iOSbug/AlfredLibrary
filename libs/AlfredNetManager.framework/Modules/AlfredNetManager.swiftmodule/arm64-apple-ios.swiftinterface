@@ -107,6 +107,13 @@ public let LogoutApi: Swift.String
 public let ResetPassword: Swift.String
 public let SmsResetPassword: Swift.String
 public let AccountActiveApi: Swift.String
+@objc @_inheritsConvenienceInitializers public class OfflineManager : ObjectiveC.NSObject {
+  @objc public static let shared: AlfredNetManager.OfflineManager
+  @objc public func saveOfflineGuestKey(_ key: Swift.String)
+  @objc public func getOfflineGuestKey() -> Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
 public enum NetHTTPMethod : Swift.String {
   case get
   case post

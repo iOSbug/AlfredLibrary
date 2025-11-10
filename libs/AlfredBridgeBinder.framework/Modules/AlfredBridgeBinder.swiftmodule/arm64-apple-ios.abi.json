@@ -21408,588 +21408,588 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/SSHLibrary.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/SSHLibrary.swift",
       "kind": "IntegerLiteral",
       "offset": 4797,
       "length": 2,
       "value": "80"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/SSHLibrary.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/SSHLibrary.swift",
       "kind": "IntegerLiteral",
       "offset": 4816,
       "length": 2,
       "value": "24"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "IntegerLiteral",
       "offset": 1786,
       "length": 2,
       "value": "22"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "BooleanLiteral",
       "offset": 2632,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 3794,
       "length": 53,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 3807,
       "length": 8,
       "value": "\" resolved. \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 3836,
       "length": 9,
       "value": "\" addresses\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 5472,
       "length": 41,
       "value": "\"Unknown address, it's not IPv4 or IPv6!\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "IntegerLiteral",
       "offset": 5722,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "IntegerLiteral",
       "offset": 5868,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "IntegerLiteral",
       "offset": 6115,
       "length": 4,
       "value": "1000"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 6169,
       "length": 60,
       "value": "\"Connection to \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 6196,
       "length": 2,
       "value": "\" on port \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 6217,
       "length": 10,
       "value": "\" successful\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 6357,
       "length": 56,
       "value": "\"Connection to \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 6384,
       "length": 2,
       "value": "\" on port \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 6405,
       "length": 6,
       "value": "\" failed\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "BooleanLiteral",
       "offset": 6681,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 6899,
       "length": 26,
       "value": "\"Unable to set the banner\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 7124,
       "length": 28,
       "value": "\"Handshake failed: \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 7151,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "BooleanLiteral",
       "offset": 7275,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 7415,
       "length": 34,
       "value": "\"Remote banner is \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 7448,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 7547,
       "length": 43,
       "value": "\"Fingerprint is \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Session.swift",
       "kind": "StringLiteral",
       "offset": 7589,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Model\/BridgeHotspot.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Model\/BridgeHotspot.swift",
       "kind": "StringLiteral",
       "offset": 761,
       "length": 3,
       "value": "\"0\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Model\/BridgeHotspot.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Model\/BridgeHotspot.swift",
       "kind": "StringLiteral",
       "offset": 789,
       "length": 3,
       "value": "\"1\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Model\/BridgeHotspot.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Model\/BridgeHotspot.swift",
       "kind": "StringLiteral",
       "offset": 815,
       "length": 3,
       "value": "\"2\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Model\/BridgeHotspot.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Model\/BridgeHotspot.swift",
       "kind": "StringLiteral",
       "offset": 844,
       "length": 3,
       "value": "\"3\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Model\/BridgeHotspot.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Model\/BridgeHotspot.swift",
       "kind": "StringLiteral",
       "offset": 870,
       "length": 3,
       "value": "\"4\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/BridgeSwiftBinder.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/BridgeSwiftBinder.swift",
       "kind": "BooleanLiteral",
       "offset": 324,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/BridgeSwiftBinder.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/BridgeSwiftBinder.swift",
       "kind": "BooleanLiteral",
       "offset": 502,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/BridgeSwiftBinder.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/BridgeSwiftBinder.swift",
       "kind": "IntegerLiteral",
       "offset": 668,
       "length": 2,
       "value": "90"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/BridgeSwiftBinder.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/BridgeSwiftBinder.swift",
       "kind": "BooleanLiteral",
       "offset": 802,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/BridgeSwiftBinder.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/BridgeSwiftBinder.swift",
       "kind": "BooleanLiteral",
       "offset": 4950,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/BridgeSwiftBinder.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/BridgeSwiftBinder.swift",
       "kind": "BooleanLiteral",
       "offset": 5888,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Command.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Command.swift",
       "kind": "IntegerLiteral",
       "offset": 1449,
       "length": 2,
       "value": "22"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Command.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Command.swift",
       "kind": "Array",
       "offset": 1482,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Shell.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Shell.swift",
       "kind": "BooleanLiteral",
       "offset": 1389,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Shell.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Shell.swift",
       "kind": "IntegerLiteral",
       "offset": 1564,
       "length": 2,
       "value": "22"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Shell.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Shell.swift",
       "kind": "Array",
       "offset": 1597,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/RegionLocationManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/RegionLocationManager.swift",
       "kind": "StringLiteral",
       "offset": 608,
       "length": 17,
       "value": "\"RefreshLocation\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/RegionLocationManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/RegionLocationManager.swift",
       "kind": "BooleanLiteral",
       "offset": 492,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Channel.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Channel.swift",
       "kind": "IntegerLiteral",
       "offset": 1486,
       "length": 2,
       "value": "22"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Channel.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Channel.swift",
       "kind": "Array",
       "offset": 1519,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/ConsoleLogger.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/ConsoleLogger.swift",
       "kind": "BooleanLiteral",
       "offset": 1278,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/DNS.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/DNS.swift",
       "kind": "BooleanLiteral",
       "offset": 1346,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/DNS.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/DNS.swift",
       "kind": "FloatLiteral",
       "offset": 1664,
       "length": 4,
       "value": "10.0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Libssh2.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Libssh2.swift",
       "kind": "StringLiteral",
       "offset": 1538,
       "length": 9,
       "value": "\"Libssh2\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Libssh2.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Libssh2.swift",
       "kind": "IntegerLiteral",
       "offset": 13907,
       "length": 6,
       "value": "0x8000"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "StringLiteral",
       "offset": 496,
       "length": 11,
       "value": "\"psk-mixed\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "StringLiteral",
       "offset": 537,
       "length": 15,
       "value": "\"192.168.200.1\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "StringLiteral",
       "offset": 580,
       "length": 6,
       "value": "\"root\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "StringLiteral",
       "offset": 614,
       "length": 17,
       "value": "\"AW@)!*0423#)%ab\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "StringLiteral",
       "offset": 662,
       "length": 64,
       "value": "\"iwinfo wlan0 scan  | grep -A 3 -w \"%@\" | grep \"Encryption\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "StringLiteral",
       "offset": 761,
       "length": 39,
       "value": "\"echo 0 >\/proc\/net\/rtl8723du\/log_level\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "StringLiteral",
       "offset": 835,
       "length": 44,
       "value": "\"iwinfo wlan0 scan | grep -A3 -B1 -w '%@'\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "StringLiteral",
       "offset": 914,
       "length": 37,
       "value": "\"uci set wireless.wlan0.bssid=\"%@\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "StringLiteral",
       "offset": 985,
       "length": 42,
       "value": "\"netstat -npl | grep -w \"0.0.0.0:58601\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "StringLiteral",
       "offset": 1065,
       "length": 90,
       "value": "\"netmgr_pid=`ps -w | grep netmgr| grep -v grep | awk '{print $1}'` && kill -9 $netmgr_pid\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "StringLiteral",
       "offset": 1192,
       "length": 56,
       "value": "\"chmod 755 \/tmp\/netmgr && \/tmp\/netmgr >\/dev\/null 2>&1 &\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "BooleanLiteral",
       "offset": 1401,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "IntegerLiteral",
       "offset": 2259,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/SSHManager.swift",
       "kind": "IntegerLiteral",
       "offset": 13889,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/UDPManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/UDPManager.swift",
       "kind": "IntegerLiteral",
       "offset": 443,
       "length": 5,
       "value": "58601"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/UDPManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/UDPManager.swift",
       "kind": "StringLiteral",
       "offset": 474,
       "length": 17,
       "value": "\"255.255.255.255\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/UDPManager.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Manager\/UDPManager.swift",
       "kind": "BooleanLiteral",
       "offset": 568,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3334,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3361,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3392,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3414,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3436,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3466,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3499,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3540,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3574,
       "length": 1,
       "value": "9"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3602,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3630,
       "length": 2,
       "value": "11"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3663,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3707,
       "length": 2,
       "value": "13"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3758,
       "length": 2,
       "value": "14"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/SwiftSH\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
       "offset": 3788,
       "length": 2,
       "value": "15"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/LockUtils.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredBridgeBinder\/Utils\/LockUtils.swift",
       "kind": "BooleanLiteral",
       "offset": 6577,
       "length": 5,

@@ -419,6 +419,16 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NetSwiftMana
 @end
 
 
+SWIFT_CLASS("_TtC16AlfredNetManager14OfflineManager")
+@interface OfflineManager : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) OfflineManager * _Nonnull shared;)
++ (OfflineManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+- (void)saveOfflineGuestKey:(NSString * _Nonnull)key;
+- (NSString * _Nullable)getOfflineGuestKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 #endif
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

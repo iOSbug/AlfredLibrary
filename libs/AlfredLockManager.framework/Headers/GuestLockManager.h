@@ -75,6 +75,22 @@ notifyCallback:(nullable void (^)(AlfredLock *_Nullable device, AlfredLockRecord
 
 
 /**
+ *    无网络情况下门锁操作控制
+ *    @param     deviceId 指定门锁对象SN
+ *    @param     paramStr URLSAFE_BASE64({password1}.{password2}.{systemId}.{expire_ts}) +"." +URLSAFE_BASE64({verify})
+ *    @param     operation 开关门
+ *    @param     connectCallback 连接状态回调
+ *    @param     callback 回调
+
+ */
+- (void)offline_setOperation:(NSString *)deviceId
+                    paramStr:(NSString *)paramStr
+                   operation:(AlfredLockOperation)operation
+              connectCallbak:(nullable void (^)(AlfredLock *_Nullable device, AlfredLockConnectState state, AlfredError error))connectCallback
+                    callback:(AlfredBLECallback)callback;
+
+
+/**
  *    读取门锁设备密钥数据，因密钥存储的安全机制限制，仅能提取到已存在的密钥序号和时间计划，不包含密钥内容。
  *
  *    @param     deviceId 指定门锁对象SN

@@ -538,6 +538,7 @@ SWIFT_CLASS("_TtC10AlfredCore10AlfredLock")
 @property (nonatomic, strong) AlfredLockInfo * _Nullable lockInfo;
 @property (nonatomic, strong) AlfredLockAbilityModel * _Nullable ability;
 @property (nonatomic, copy) NSString * _Nullable gatewayLockBleSignal;
+- (BOOL)isDeviceML2 SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

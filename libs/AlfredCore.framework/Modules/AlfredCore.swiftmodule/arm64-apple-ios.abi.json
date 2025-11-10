@@ -48050,6 +48050,30 @@
             ]
           },
           {
+            "kind": "Function",
+            "name": "isDeviceML2",
+            "printedName": "isDeviceML2()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AlfredCore@objc(cs)AlfredLock(im)isDeviceML2",
+            "mangledName": "$s10AlfredCore0A4LockC11isDeviceML2SbyF",
+            "moduleName": "AlfredCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -76289,679 +76313,679 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/SwiftLog.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/SwiftLog.swift",
       "kind": "BooleanLiteral",
       "offset": 210,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Utils\/DateExtension.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Utils\/DateExtension.swift",
       "kind": "IntegerLiteral",
       "offset": 1245,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Utils\/DateExtension.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Utils\/DateExtension.swift",
       "kind": "IntegerLiteral",
       "offset": 1261,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredNetManager\/Utils\/DateExtension.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredNetManager\/Utils\/DateExtension.swift",
       "kind": "IntegerLiteral",
       "offset": 1276,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ExtendCustomModelType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ExtendCustomModelType.swift",
       "kind": "StringLiteral",
       "offset": 7073,
       "length": 82,
       "value": "\"This model of type: \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ExtendCustomModelType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ExtendCustomModelType.swift",
       "kind": "StringLiteral",
       "offset": 7113,
       "length": 2,
       "value": "\" is not mappable but is class\/struct type\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ExtendCustomModelType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ExtendCustomModelType.swift",
       "kind": "StringLiteral",
       "offset": 7389,
       "length": 59,
       "value": "\"Can not get properties info for type: \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ExtendCustomModelType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ExtendCustomModelType.swift",
       "kind": "StringLiteral",
       "offset": 7447,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Serializer.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Serializer.swift",
       "kind": "BooleanLiteral",
       "offset": 954,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Serializer.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Serializer.swift",
       "kind": "BooleanLiteral",
       "offset": 1970,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ContextDescriptorType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ContextDescriptorType.swift",
       "kind": "IntegerLiteral",
       "offset": 1001,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ContextDescriptorType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ContextDescriptorType.swift",
       "kind": "IntegerLiteral",
       "offset": 2861,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ContextDescriptorType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ContextDescriptorType.swift",
       "kind": "IntegerLiteral",
       "offset": 2956,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ContextDescriptorType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ContextDescriptorType.swift",
       "kind": "IntegerLiteral",
       "offset": 3121,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ContextDescriptorType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ContextDescriptorType.swift",
       "kind": "IntegerLiteral",
       "offset": 3256,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ContextDescriptorType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/ContextDescriptorType.swift",
       "kind": "IntegerLiteral",
       "offset": 3260,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/BuiltInBasicType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/BuiltInBasicType.swift",
       "kind": "BooleanLiteral",
       "offset": 3073,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/BuiltInBasicType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/BuiltInBasicType.swift",
       "kind": "IntegerLiteral",
       "offset": 3154,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/BuiltInBasicType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/BuiltInBasicType.swift",
       "kind": "StringLiteral",
       "offset": 4926,
       "length": 43,
       "value": "\"Expect object to be an array but it's not\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/BuiltInBasicType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/BuiltInBasicType.swift",
       "kind": "StringLiteral",
       "offset": 5782,
       "length": 42,
       "value": "\"value: \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/BuiltInBasicType.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/BuiltInBasicType.swift",
       "kind": "StringLiteral",
       "offset": 5797,
       "length": 3,
       "value": "\" isn't transformable type!\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
       "kind": "IntegerLiteral",
       "offset": 837,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
       "kind": "IntegerLiteral",
       "offset": 842,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
       "kind": "Array",
       "offset": 905,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
       "kind": "IntegerLiteral",
       "offset": 1032,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
       "kind": "IntegerLiteral",
       "offset": 1051,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
       "kind": "IntegerLiteral",
       "offset": 1070,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Configuration.swift",
       "kind": "IntegerLiteral",
       "offset": 1088,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/HexColorTransform.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/HexColorTransform.swift",
       "kind": "BooleanLiteral",
       "offset": 456,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/HexColorTransform.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/HexColorTransform.swift",
       "kind": "BooleanLiteral",
       "offset": 482,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/HexColorTransform.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/HexColorTransform.swift",
       "kind": "BooleanLiteral",
       "offset": 523,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/HexColorTransform.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/HexColorTransform.swift",
       "kind": "BooleanLiteral",
       "offset": 550,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Logger.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 772,
       "length": 3,
       "value": "\" \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Logger.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 798,
       "length": 4,
       "value": "\"\n\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Logger.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1039,
       "length": 3,
       "value": "\" \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Logger.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1065,
       "length": 4,
       "value": "\"\n\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Logger.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1308,
       "length": 3,
       "value": "\" \""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Logger.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Logger.swift",
       "kind": "StringLiteral",
       "offset": 1334,
       "length": 4,
       "value": "\"\n\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
       "kind": "IntegerLiteral",
       "offset": 238,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
       "kind": "IntegerLiteral",
       "offset": 249,
       "length": 5,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
       "kind": "IntegerLiteral",
       "offset": 264,
       "length": 4,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
       "kind": "IntegerLiteral",
       "offset": 566,
       "length": 16,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
       "kind": "IntegerLiteral",
       "offset": 688,
       "length": 10,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
       "kind": "IntegerLiteral",
       "offset": 746,
       "length": 13,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
       "kind": "IntegerLiteral",
       "offset": 845,
       "length": 12,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/FieldDescriptor.swift",
       "kind": "IntegerLiteral",
       "offset": 1061,
       "length": 9,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 2187,
       "length": 5,
       "value": "0x200"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 2228,
       "length": 5,
       "value": "0x100"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 2262,
       "length": 5,
       "value": "0x400"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 2831,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 2892,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 2951,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 3014,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 3081,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 3173,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 3264,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 3358,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 3455,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 3549,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 3651,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 3756,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 3828,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 3938,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "Array",
       "offset": 6662,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 6958,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "StringLiteral",
       "offset": 7651,
       "length": 13,
       "value": "\"SwiftObject\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 7838,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "Array",
       "offset": 10623,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "Array",
       "offset": 10689,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/Metadata.swift",
       "kind": "IntegerLiteral",
       "offset": 10829,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/URLTransform.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/HandyJSON\/Source\/URLTransform.swift",
       "kind": "BooleanLiteral",
       "offset": 1728,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 205,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 294,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 385,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 473,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 555,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 639,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 720,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 813,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 911,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 994,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 1073,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 1147,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 1229,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 1307,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "BooleanLiteral",
       "offset": 1384,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLockInfo.swift",
       "kind": "IntegerLiteral",
       "offset": 2745,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/NetErrorModel.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/NetErrorModel.swift",
       "kind": "IntegerLiteral",
       "offset": 180,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Utils\/StringExtension.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Utils\/StringExtension.swift",
       "kind": "IntegerLiteral",
       "offset": 5654,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredBridgeHotspot.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredBridgeHotspot.swift",
       "kind": "BooleanLiteral",
       "offset": 237,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredBridgeHotspot.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredBridgeHotspot.swift",
       "kind": "IntegerLiteral",
       "offset": 322,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredFwVersionUpgrade.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredFwVersionUpgrade.swift",
       "kind": "BooleanLiteral",
       "offset": 220,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredBridgePair.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredBridgePair.swift",
       "kind": "BooleanLiteral",
       "offset": 378,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLock.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLock.swift",
       "kind": "BooleanLiteral",
       "offset": 241,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLock.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLock.swift",
       "kind": "BooleanLiteral",
       "offset": 694,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredLock.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredLock.swift",
       "kind": "StringLiteral",
-      "offset": 2698,
+      "offset": 2878,
       "length": 3,
       "value": "\"5\""
     },
     {
-      "filePath": "\/Users\/wtb\/Documents\/AlfredLibrary\/AlfredCore\/Model\/AlfredDeviceBindStatus.swift",
+      "filePath": "\/Users\/wtb\/Documents\/myWork\/AlfredLibrary\/alfredlibrary\/AlfredLibrary\/AlfredCore\/Model\/AlfredDeviceBindStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 316,
       "length": 1,
