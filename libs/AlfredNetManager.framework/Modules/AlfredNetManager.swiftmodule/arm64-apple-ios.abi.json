@@ -338,7 +338,7 @@
                             "kind": "TypeNominal",
                             "name": "ModeAbilitysModel",
                             "printedName": "AlfredNetManager.ModeAbilitysModel",
-                            "usr": "s:16AlfredNetManager17ModeAbilitysModelC"
+                            "usr": "c:@M@AlfredNetManager@objc(cs)ModeAbilitysModel"
                           }
                         ],
                         "usr": "s:Sq"
@@ -4796,7 +4796,7 @@
                             "kind": "TypeNominal",
                             "name": "LockAccessModel",
                             "printedName": "AlfredNetManager.LockAccessModel",
-                            "usr": "s:16AlfredNetManager15LockAccessModelC"
+                            "usr": "c:@M@AlfredNetManager@objc(cs)LockAccessModel"
                           }
                         ],
                         "usr": "s:Sq"
@@ -6253,6 +6253,13 @@
             "printedName": "RequestRetrier",
             "usr": "s:9Alamofire14RequestRetrierP",
             "mangledName": "$s9Alamofire14RequestRetrierP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -7878,7 +7885,7 @@
                         "kind": "TypeNominal",
                         "name": "LogModel",
                         "printedName": "AlfredNetManager.LogModel",
-                        "usr": "s:16AlfredNetManager8LogModelC"
+                        "usr": "c:@M@AlfredNetManager@objc(cs)LogModel"
                       }
                     ],
                     "usr": "s:Sa"
@@ -7918,7 +7925,7 @@
                             "kind": "TypeNominal",
                             "name": "LogModel",
                             "printedName": "AlfredNetManager.LogModel",
-                            "usr": "s:16AlfredNetManager8LogModelC"
+                            "usr": "c:@M@AlfredNetManager@objc(cs)LogModel"
                           }
                         ],
                         "usr": "s:Sa"
@@ -7959,7 +7966,7 @@
                             "kind": "TypeNominal",
                             "name": "LogModel",
                             "printedName": "AlfredNetManager.LogModel",
-                            "usr": "s:16AlfredNetManager8LogModelC"
+                            "usr": "c:@M@AlfredNetManager@objc(cs)LogModel"
                           }
                         ],
                         "usr": "s:Sa"
@@ -8120,11 +8127,11 @@
                 "kind": "TypeNominal",
                 "name": "LogsModel",
                 "printedName": "AlfredNetManager.LogsModel",
-                "usr": "s:16AlfredNetManager9LogsModelC"
+                "usr": "c:@M@AlfredNetManager@objc(cs)LogsModel"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:16AlfredNetManager9LogsModelCACycfc",
+            "usr": "c:@M@AlfredNetManager@objc(cs)LogsModel(im)init",
             "mangledName": "$s16AlfredNetManager9LogsModelCACycfc",
             "moduleName": "AlfredNetManager",
             "overriding": true,
@@ -8139,10 +8146,13 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:16AlfredNetManager9LogsModelC",
+        "usr": "c:@M@AlfredNetManager@objc(cs)LogsModel",
         "mangledName": "$s16AlfredNetManager9LogsModelC",
         "moduleName": "AlfredNetManager",
         "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
         "superclassUsr": "c:@M@AlfredCore@objc(cs)ResultModel",
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
@@ -9211,11 +9221,11 @@
                 "kind": "TypeNominal",
                 "name": "LogModel",
                 "printedName": "AlfredNetManager.LogModel",
-                "usr": "s:16AlfredNetManager8LogModelC"
+                "usr": "c:@M@AlfredNetManager@objc(cs)LogModel"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:16AlfredNetManager8LogModelCACycfc",
+            "usr": "c:@M@AlfredNetManager@objc(cs)LogModel(im)init",
             "mangledName": "$s16AlfredNetManager8LogModelCACycfc",
             "moduleName": "AlfredNetManager",
             "overriding": true,
@@ -9230,10 +9240,13 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:16AlfredNetManager8LogModelC",
+        "usr": "c:@M@AlfredNetManager@objc(cs)LogModel",
         "mangledName": "$s16AlfredNetManager8LogModelC",
         "moduleName": "AlfredNetManager",
         "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
         "superclassUsr": "c:@M@AlfredCore@objc(cs)ResultModel",
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
@@ -9883,7 +9896,7 @@
                             "kind": "TypeNominal",
                             "name": "MessagesModel",
                             "printedName": "AlfredNetManager.MessagesModel",
-                            "usr": "s:16AlfredNetManager13MessagesModelC"
+                            "usr": "c:@M@AlfredNetManager@objc(cs)MessagesModel"
                           }
                         ],
                         "usr": "s:Sq"
@@ -9970,7 +9983,7 @@
                             "kind": "TypeNominal",
                             "name": "MessagesModel",
                             "printedName": "AlfredNetManager.MessagesModel",
-                            "usr": "s:16AlfredNetManager13MessagesModelC"
+                            "usr": "c:@M@AlfredNetManager@objc(cs)MessagesModel"
                           }
                         ],
                         "usr": "s:Sq"
@@ -10057,7 +10070,7 @@
                             "kind": "TypeNominal",
                             "name": "MessagesModel",
                             "printedName": "AlfredNetManager.MessagesModel",
-                            "usr": "s:16AlfredNetManager13MessagesModelC"
+                            "usr": "c:@M@AlfredNetManager@objc(cs)MessagesModel"
                           }
                         ],
                         "usr": "s:Sq"
@@ -10141,7 +10154,7 @@
                             "kind": "TypeNominal",
                             "name": "MessagesModel",
                             "printedName": "AlfredNetManager.MessagesModel",
-                            "usr": "s:16AlfredNetManager13MessagesModelC"
+                            "usr": "c:@M@AlfredNetManager@objc(cs)MessagesModel"
                           }
                         ],
                         "usr": "s:Sq"
@@ -11113,11 +11126,11 @@
                 "kind": "TypeNominal",
                 "name": "LockAccessModel",
                 "printedName": "AlfredNetManager.LockAccessModel",
-                "usr": "s:16AlfredNetManager15LockAccessModelC"
+                "usr": "c:@M@AlfredNetManager@objc(cs)LockAccessModel"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:16AlfredNetManager15LockAccessModelCACycfc",
+            "usr": "c:@M@AlfredNetManager@objc(cs)LockAccessModel(im)init",
             "mangledName": "$s16AlfredNetManager15LockAccessModelCACycfc",
             "moduleName": "AlfredNetManager",
             "overriding": true,
@@ -11132,12 +11145,13 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:16AlfredNetManager15LockAccessModelC",
+        "usr": "c:@M@AlfredNetManager@objc(cs)LockAccessModel",
         "mangledName": "$s16AlfredNetManager15LockAccessModelC",
         "moduleName": "AlfredNetManager",
         "isOpen": true,
         "declAttributes": [
-          "RawDocComment"
+          "RawDocComment",
+          "ObjC"
         ],
         "superclassUsr": "c:@M@AlfredCore@objc(cs)ResultModel",
         "inheritsConvenienceInitializers": true,
@@ -16087,7 +16101,7 @@
                         "kind": "TypeNominal",
                         "name": "ModeAbilityModel",
                         "printedName": "AlfredNetManager.ModeAbilityModel",
-                        "usr": "s:16AlfredNetManager16ModeAbilityModelC"
+                        "usr": "c:@M@AlfredNetManager@objc(cs)ModeAbilityModel"
                       }
                     ],
                     "usr": "s:Sa"
@@ -16127,7 +16141,7 @@
                             "kind": "TypeNominal",
                             "name": "ModeAbilityModel",
                             "printedName": "AlfredNetManager.ModeAbilityModel",
-                            "usr": "s:16AlfredNetManager16ModeAbilityModelC"
+                            "usr": "c:@M@AlfredNetManager@objc(cs)ModeAbilityModel"
                           }
                         ],
                         "usr": "s:Sa"
@@ -16168,7 +16182,7 @@
                             "kind": "TypeNominal",
                             "name": "ModeAbilityModel",
                             "printedName": "AlfredNetManager.ModeAbilityModel",
-                            "usr": "s:16AlfredNetManager16ModeAbilityModelC"
+                            "usr": "c:@M@AlfredNetManager@objc(cs)ModeAbilityModel"
                           }
                         ],
                         "usr": "s:Sa"
@@ -16215,11 +16229,11 @@
                 "kind": "TypeNominal",
                 "name": "ModeAbilitysModel",
                 "printedName": "AlfredNetManager.ModeAbilitysModel",
-                "usr": "s:16AlfredNetManager17ModeAbilitysModelC"
+                "usr": "c:@M@AlfredNetManager@objc(cs)ModeAbilitysModel"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:16AlfredNetManager17ModeAbilitysModelCACycfc",
+            "usr": "c:@M@AlfredNetManager@objc(cs)ModeAbilitysModel(im)init",
             "mangledName": "$s16AlfredNetManager17ModeAbilitysModelCACycfc",
             "moduleName": "AlfredNetManager",
             "overriding": true,
@@ -16234,10 +16248,13 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:16AlfredNetManager17ModeAbilitysModelC",
+        "usr": "c:@M@AlfredNetManager@objc(cs)ModeAbilitysModel",
         "mangledName": "$s16AlfredNetManager17ModeAbilitysModelC",
         "moduleName": "AlfredNetManager",
         "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
         "superclassUsr": "c:@M@AlfredCore@objc(cs)ResultModel",
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
@@ -16933,11 +16950,11 @@
                 "kind": "TypeNominal",
                 "name": "ModeAbilityModel",
                 "printedName": "AlfredNetManager.ModeAbilityModel",
-                "usr": "s:16AlfredNetManager16ModeAbilityModelC"
+                "usr": "c:@M@AlfredNetManager@objc(cs)ModeAbilityModel"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:16AlfredNetManager16ModeAbilityModelCACycfc",
+            "usr": "c:@M@AlfredNetManager@objc(cs)ModeAbilityModel(im)init",
             "mangledName": "$s16AlfredNetManager16ModeAbilityModelCACycfc",
             "moduleName": "AlfredNetManager",
             "overriding": true,
@@ -16952,10 +16969,13 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:16AlfredNetManager16ModeAbilityModelC",
+        "usr": "c:@M@AlfredNetManager@objc(cs)ModeAbilityModel",
         "mangledName": "$s16AlfredNetManager16ModeAbilityModelC",
         "moduleName": "AlfredNetManager",
         "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
         "superclassUsr": "c:@M@AlfredCore@objc(cs)ResultModel",
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
@@ -17097,7 +17117,7 @@
                         "kind": "TypeNominal",
                         "name": "MessageModel",
                         "printedName": "AlfredNetManager.MessageModel",
-                        "usr": "s:16AlfredNetManager12MessageModelC"
+                        "usr": "c:@M@AlfredNetManager@objc(cs)MessageModel"
                       }
                     ],
                     "usr": "s:Sa"
@@ -17137,7 +17157,7 @@
                             "kind": "TypeNominal",
                             "name": "MessageModel",
                             "printedName": "AlfredNetManager.MessageModel",
-                            "usr": "s:16AlfredNetManager12MessageModelC"
+                            "usr": "c:@M@AlfredNetManager@objc(cs)MessageModel"
                           }
                         ],
                         "usr": "s:Sa"
@@ -17178,7 +17198,7 @@
                             "kind": "TypeNominal",
                             "name": "MessageModel",
                             "printedName": "AlfredNetManager.MessageModel",
-                            "usr": "s:16AlfredNetManager12MessageModelC"
+                            "usr": "c:@M@AlfredNetManager@objc(cs)MessageModel"
                           }
                         ],
                         "usr": "s:Sa"
@@ -17225,11 +17245,11 @@
                 "kind": "TypeNominal",
                 "name": "MessagesModel",
                 "printedName": "AlfredNetManager.MessagesModel",
-                "usr": "s:16AlfredNetManager13MessagesModelC"
+                "usr": "c:@M@AlfredNetManager@objc(cs)MessagesModel"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:16AlfredNetManager13MessagesModelCACycfc",
+            "usr": "c:@M@AlfredNetManager@objc(cs)MessagesModel(im)init",
             "mangledName": "$s16AlfredNetManager13MessagesModelCACycfc",
             "moduleName": "AlfredNetManager",
             "overriding": true,
@@ -17244,10 +17264,13 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:16AlfredNetManager13MessagesModelC",
+        "usr": "c:@M@AlfredNetManager@objc(cs)MessagesModel",
         "mangledName": "$s16AlfredNetManager13MessagesModelC",
         "moduleName": "AlfredNetManager",
         "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
         "superclassUsr": "c:@M@AlfredCore@objc(cs)ResultModel",
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
@@ -17946,7 +17969,7 @@
                     "kind": "TypeNominal",
                     "name": "MessageParamModel",
                     "printedName": "AlfredNetManager.MessageParamModel",
-                    "usr": "s:16AlfredNetManager17MessageParamModelC"
+                    "usr": "c:@M@AlfredNetManager@objc(cs)MessageParamModel"
                   }
                 ],
                 "usr": "s:Sq"
@@ -17979,7 +18002,7 @@
                         "kind": "TypeNominal",
                         "name": "MessageParamModel",
                         "printedName": "AlfredNetManager.MessageParamModel",
-                        "usr": "s:16AlfredNetManager17MessageParamModelC"
+                        "usr": "c:@M@AlfredNetManager@objc(cs)MessageParamModel"
                       }
                     ],
                     "usr": "s:Sq"
@@ -18012,7 +18035,7 @@
                         "kind": "TypeNominal",
                         "name": "MessageParamModel",
                         "printedName": "AlfredNetManager.MessageParamModel",
-                        "usr": "s:16AlfredNetManager17MessageParamModelC"
+                        "usr": "c:@M@AlfredNetManager@objc(cs)MessageParamModel"
                       }
                     ],
                     "usr": "s:Sq"
@@ -18515,11 +18538,11 @@
                 "kind": "TypeNominal",
                 "name": "MessageModel",
                 "printedName": "AlfredNetManager.MessageModel",
-                "usr": "s:16AlfredNetManager12MessageModelC"
+                "usr": "c:@M@AlfredNetManager@objc(cs)MessageModel"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:16AlfredNetManager12MessageModelCACycfc",
+            "usr": "c:@M@AlfredNetManager@objc(cs)MessageModel(im)init",
             "mangledName": "$s16AlfredNetManager12MessageModelCACycfc",
             "moduleName": "AlfredNetManager",
             "overriding": true,
@@ -18534,10 +18557,13 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:16AlfredNetManager12MessageModelC",
+        "usr": "c:@M@AlfredNetManager@objc(cs)MessageModel",
         "mangledName": "$s16AlfredNetManager12MessageModelC",
         "moduleName": "AlfredNetManager",
         "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
         "superclassUsr": "c:@M@AlfredCore@objc(cs)ResultModel",
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
@@ -19463,11 +19489,11 @@
                 "kind": "TypeNominal",
                 "name": "MessageParamModel",
                 "printedName": "AlfredNetManager.MessageParamModel",
-                "usr": "s:16AlfredNetManager17MessageParamModelC"
+                "usr": "c:@M@AlfredNetManager@objc(cs)MessageParamModel"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:16AlfredNetManager17MessageParamModelCACycfc",
+            "usr": "c:@M@AlfredNetManager@objc(cs)MessageParamModel(im)init",
             "mangledName": "$s16AlfredNetManager17MessageParamModelCACycfc",
             "moduleName": "AlfredNetManager",
             "overriding": true,
@@ -19482,10 +19508,13 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:16AlfredNetManager17MessageParamModelC",
+        "usr": "c:@M@AlfredNetManager@objc(cs)MessageParamModel",
         "mangledName": "$s16AlfredNetManager17MessageParamModelC",
         "moduleName": "AlfredNetManager",
         "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
         "superclassUsr": "c:@M@AlfredCore@objc(cs)ResultModel",
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
