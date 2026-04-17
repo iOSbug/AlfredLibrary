@@ -25,7 +25,7 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 
-pod 'AlfredLibrary','16.2.07'
+pod 'AlfredLibrary','16.3.05'
 
 
 podFile:
@@ -41,7 +41,7 @@ end
 
 abstract_target 'commonPods' do
 
-  pod 'AlfredLibrary','16.2.07'
+  pod 'AlfredLibrary','16.3.05'
 
   target 'AlfredLibraryDemo' do
       pod 'SnapKit'
