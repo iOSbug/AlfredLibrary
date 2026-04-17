@@ -18,5 +18,4 @@ FOUNDATION_EXPORT const unsigned char AlfredBridgeBinderVersionString[];
 #import <AlfredBridgeBinder/BridgeBinder.h>
 #import <AlfredBridgeBinder/NetworkUtility.h>
 #import <AlfredBridgeBinder/TCPManager.h>
-#import <AlfredBridgeBinder/Libssh2_SH.h>
 

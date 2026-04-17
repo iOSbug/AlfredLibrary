@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
-// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature OpaqueTypeErasure -enable-bare-slash-regex -module-name AlfredCore
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AlfredCore
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 @_exported import AlfredCore
 import Foundation
 import Swift
@@ -22,21 +22,35 @@ open class ISO8601DateTransform : AlfredCore.DateFormatterTransform {
 open class TransformOf<ObjectType, JSONType> : AlfredCore.TransformType {
   public typealias Object = ObjectType
   public typealias JSON = JSONType
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(fromJSON: @escaping (JSONType?) -> ObjectType?, toJSON: @escaping (ObjectType?) -> JSONType?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> ObjectType?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: ObjectType?) -> JSONType?
+  #endif
   @objc deinit
 }
+#if compiler(>=5.3) && $NonescapableTypes
 @_silgen_name("swift_getTypeByMangledNameInContext")
 public func _getTypeByMangledNameInContext(_ name: Swift.UnsafePointer<Swift.UInt8>, _ nameLength: Swift.Int, genericContext: Swift.UnsafeRawPointer?, genericArguments: Swift.UnsafeRawPointer?) -> (any Any.Type)?
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 @_silgen_name("swift_getTypeContextDescriptor")
 public func _swift_getTypeContextDescriptor(_ metadata: Swift.UnsafeRawPointer?) -> Swift.UnsafeRawPointer?
+#endif
 open class DateTransform : AlfredCore.TransformType {
   public typealias Object = Foundation.Date
   public typealias JSON = Swift.Double
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> Foundation.Date?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: Foundation.Date?) -> Swift.Double?
+  #endif
   @objc deinit
 }
 public protocol _ExtendCustomModelType : AlfredCore._Transformable {
@@ -51,32 +65,56 @@ extension AlfredCore._ExtendCustomModelType {
   public mutating func didFinishMapping()
 }
 extension AlfredCore.HandyJSON {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toJSON() -> [Swift.String : Any]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+  #endif
 }
 extension Swift.Collection where Self.Element : AlfredCore.HandyJSON {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toJSON() -> [[Swift.String : Any]?]
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+  #endif
 }
 public protocol _ExtendCustomBasicType : AlfredCore._Transformable {
+  #if compiler(>=5.3) && $NonescapableTypes
   static func _transform(from object: Any) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func _plainValue() -> Any?
+  #endif
 }
 public protocol _RawEnumProtocol : AlfredCore._Transformable {
+  #if compiler(>=5.3) && $NonescapableTypes
   static func _transform(from object: Any) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func _plainValue() -> Any?
+  #endif
 }
 extension Swift.RawRepresentable where Self : AlfredCore._RawEnumProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func _transform(from object: Any) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func _plainValue() -> Any?
+  #endif
 }
 open class DateFormatterTransform : AlfredCore.TransformType {
   public typealias Object = Foundation.Date
   public typealias JSON = Swift.String
   final public let dateFormatter: Foundation.DateFormatter
   public init(dateFormatter: Foundation.DateFormatter)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> Foundation.Date?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: Foundation.Date?) -> Swift.String?
+  #endif
   @objc deinit
 }
 public protocol _Transformable : AlfredCore._Measurable {
@@ -85,19 +123,27 @@ open class EnumTransform<T> : AlfredCore.TransformType where T : Swift.RawRepres
   public typealias Object = T
   public typealias JSON = T.RawValue
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> T?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: T?) -> T.RawValue?
+  #endif
   @objc deinit
 }
 public typealias CustomMappingKeyValueTuple = (Swift.Int, AlfredCore.MappingPropertyHandler)
 public class MappingPropertyHandler {
-  public init(rawPaths: [Swift.String]?, assignmentClosure: ((Any?) -> (Any?))?, takeValueClosure: ((Any?) -> (Any?))?)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(rawPaths: [Swift.String]?, assignmentClosure: ((Any?) -> Any?)?, takeValueClosure: ((Any?) -> Any?)?)
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class HelpingMapper {
   public func specify<T>(property: inout T, name: Swift.String)
   public func specify<T>(property: inout T, converter: @escaping (Swift.String) -> T)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func specify<T>(property: inout T, name: Swift.String?, converter: ((Swift.String) -> T)?)
+  #endif
   public func exclude<T>(property: inout T)
   @objc deinit
 }
@@ -105,11 +151,21 @@ infix operator <-- : LogicalConjunctionPrecedence
 public func <-- <T>(property: inout T, name: Swift.String) -> AlfredCore.CustomMappingKeyValueTuple
 public func <-- <T>(property: inout T, names: [Swift.String]) -> AlfredCore.CustomMappingKeyValueTuple
 public func <-- <Transform>(property: inout Transform.Object, transformer: Transform) -> AlfredCore.CustomMappingKeyValueTuple where Transform : AlfredCore.TransformType
+#if compiler(>=5.3) && $NonescapableTypes
 public func <-- <Transform>(property: inout Transform.Object, transformer: (Swift.String?, Transform?)) -> AlfredCore.CustomMappingKeyValueTuple where Transform : AlfredCore.TransformType
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func <-- <Transform>(property: inout Transform.Object, transformer: ([Swift.String], Transform?)) -> AlfredCore.CustomMappingKeyValueTuple where Transform : AlfredCore.TransformType
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func <-- <Transform>(property: inout Transform.Object?, transformer: Transform) -> AlfredCore.CustomMappingKeyValueTuple where Transform : AlfredCore.TransformType
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func <-- <Transform>(property: inout Transform.Object?, transformer: (Swift.String?, Transform?)) -> AlfredCore.CustomMappingKeyValueTuple where Transform : AlfredCore.TransformType
+#endif
+#if compiler(>=5.3) && $NonescapableTypes
 public func <-- <Transform>(property: inout Transform.Object?, transformer: ([Swift.String], Transform?)) -> AlfredCore.CustomMappingKeyValueTuple where Transform : AlfredCore.TransformType
+#endif
 infix operator <<< : AssignmentPrecedence
 public func <<< (mapper: AlfredCore.HelpingMapper, mapping: AlfredCore.CustomMappingKeyValueTuple)
 public func <<< (mapper: AlfredCore.HelpingMapper, mappings: [AlfredCore.CustomMappingKeyValueTuple])
@@ -135,7 +191,9 @@ public enum DebugMode : Swift.Int {
   case debug
   case error
   case none
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -149,55 +207,99 @@ public struct HandyJSONConfiguration {
   public static var deserializeOptions: AlfredCore.DeserializeOptions
 }
 extension AlfredCore.HandyJSON {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func deserialize(from dict: Foundation.NSDictionary?, designatedPath: Swift.String? = nil) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func deserialize(from dict: [Swift.String : Any]?, designatedPath: Swift.String? = nil) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func deserialize(from json: Swift.String?, designatedPath: Swift.String? = nil) -> Self?
+  #endif
 }
 extension Swift.Array where Element : AlfredCore.HandyJSON {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func deserialize(from json: Swift.String?, designatedPath: Swift.String? = nil) -> [Element?]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func deserialize(from array: Foundation.NSArray?) -> [Element?]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func deserialize(from array: [Any]?) -> [Element?]?
+  #endif
 }
 @_hasMissingDesignatedInitializers public class JSONDeserializer<T> where T : AlfredCore.HandyJSON {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func deserializeFrom(dict: Foundation.NSDictionary?, designatedPath: Swift.String? = nil) -> T?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func deserializeFrom(dict: [Swift.String : Any]?, designatedPath: Swift.String? = nil) -> T?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func deserializeFrom(json: Swift.String?, designatedPath: Swift.String? = nil) -> T?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func update(object: inout T, from dict: [Swift.String : Any]?, designatedPath: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func update(object: inout T, from json: Swift.String?, designatedPath: Swift.String? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func deserializeModelArrayFrom(json: Swift.String?, designatedPath: Swift.String? = nil) -> [T?]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func deserializeModelArrayFrom(array: Foundation.NSArray?) -> [T?]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func deserializeModelArrayFrom(array: [Any]?) -> [T?]?
+  #endif
   @objc deinit
 }
 open class HexColorTransform : AlfredCore.TransformType {
   public typealias Object = UIKit.UIColor
   public typealias JSON = Swift.String
   public init(prefixToJSON: Swift.Bool = false, alphaToJSON: Swift.Bool = false)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> AlfredCore.HexColorTransform.Object?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: AlfredCore.HexColorTransform.Object?) -> AlfredCore.HexColorTransform.JSON?
+  #endif
   @objc deinit
 }
 open class NSDecimalNumberTransform : AlfredCore.TransformType {
   public typealias Object = Foundation.NSDecimalNumber
   public typealias JSON = Swift.String
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> Foundation.NSDecimalNumber?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: Foundation.NSDecimalNumber?) -> Swift.String?
+  #endif
   @objc deinit
 }
 open class DataTransform : AlfredCore.TransformType {
   public typealias Object = Foundation.Data
   public typealias JSON = Swift.String
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> Foundation.Data?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: Foundation.Data?) -> Swift.String?
+  #endif
   @objc deinit
 }
 public protocol TransformType {
   associatedtype Object
   associatedtype JSON
+  #if compiler(>=5.3) && $NonescapableTypes
   func transformFromJSON(_ value: Any?) -> Self.Object?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func transformToJSON(_ value: Self.Object?) -> Self.JSON?
+  #endif
 }
 public protocol HandyJSONCustomTransformable : AlfredCore._ExtendCustomBasicType {
 }
@@ -209,8 +311,12 @@ open class URLTransform : AlfredCore.TransformType {
   public typealias Object = Foundation.URL
   public typealias JSON = Swift.String
   public init(shouldEncodeURLString: Swift.Bool = true)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformFromJSON(_ value: Any?) -> Foundation.URL?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func transformToJSON(_ value: Foundation.URL?) -> Swift.String?
+  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class SDKInitModel : AlfredCore.ResultModel {
@@ -245,14 +351,18 @@ open class URLTransform : AlfredCore.TransformType {
   @objc public var battery: Swift.String?
   @objc public var batterytime: Swift.String?
   @objc public var timeSeconds: Swift.UInt64
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func getLockInfo(_ info: Swift.String) -> AlfredCore.AlfredLockInfo?
+  #endif
   @objc public static func getML2AutoTime(info: Swift.String) -> Swift.String
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class NetErrorModel : ObjectiveC.NSObject {
   @objc public var eCode: Swift.Int
   @objc public var eMessage: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(_ eCode: Swift.Int?, eMessage: Swift.String?)
+  #endif
   @objc override dynamic public init()
   @objc deinit
 }
@@ -306,11 +416,17 @@ open class URLTransform : AlfredCore.TransformType {
   @objc deinit
 }
 public protocol NetDecodable : AlfredCore.HandyJSON {
+  #if compiler(>=5.3) && $NonescapableTypes
   static func parse(json: Any) -> ((any AlfredCore.NetDecodable)?, AlfredCore.NetErrorModel?)
+  #endif
 }
 extension AlfredCore.NetDecodable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func parse(json: Any) -> ((any AlfredCore.NetDecodable)?, AlfredCore.NetErrorModel?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func parseArr(json: Any) -> ([any AlfredCore.NetDecodable]?, AlfredCore.NetErrorModel?)
+  #endif
 }
 @objc @_inheritsConvenienceInitializers open class ResultModel : ObjectiveC.NSObject, AlfredCore.NetDecodable {
   @objc override required dynamic public init()
@@ -336,8 +452,12 @@ extension AlfredCore.NetDecodable {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class GCDTimerUtils : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public class func dispatchTimer(timeInterval: Swift.Double, repeatCount: Swift.Int, handler: @escaping ((any Dispatch.DispatchSourceTimer)?, Swift.Int) -> ()) -> (any Dispatch.DispatchSourceTimer)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public class func dispatchTimer(timeInterval: Swift.Double, handler: @escaping ((any Dispatch.DispatchSourceTimer)?) -> ()) -> (any Dispatch.DispatchSourceTimer)?
+  #endif
   @objc public class func dispatchAfter(after: Swift.Double, handler: @escaping () -> ())
   @objc override dynamic public init()
   @objc deinit
@@ -461,11 +581,21 @@ extension AlfredCore.NetDecodable {
     @objc set
   }
   override public func mapping(mapper: AlfredCore.HelpingMapper)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func getCurrentRecord(record: Swift.String) -> AlfredCore.AlfredLockRecord?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func getNewLockLog(_ logstr: Swift.String) -> AlfredCore.AlfredLockRecord?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func getCurrentRecordNotApp(record: Swift.String) -> AlfredCore.AlfredLockRecord?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func getCurrentGuestRecord(record: Swift.String) -> AlfredCore.AlfredLockRecord?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func getLockAllLog(_ logstr: Swift.String) -> AlfredCore.AlfredLockRecord?
+  #endif
   @objc required dynamic public init()
   @objc deinit
 }
