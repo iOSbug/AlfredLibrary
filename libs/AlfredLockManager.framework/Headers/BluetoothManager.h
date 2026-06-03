@@ -51,6 +51,24 @@ typedef void(^BleOADResultBlock)(OADReturnValues code, NSString *errorMsg); //OA
 @property (nonatomic, assign, readonly) BOOL systemBLEStatus; //手机系统蓝牙是否开启
 @property (nonatomic, strong) NSData *binData;
 
+/**
+ OAD升级结果回调
+ */
+- (void)setOADResultCallback:(nullable BleOADResultBlock)callback;
+
+/**
+ 开始普通蓝牙OAD升级
+ */
+- (void)startOTAUpdate;
+
+/**
+ 开始DB1 Pro蓝牙OAD升级
+ */
+- (void)checkUpdateDb1proOAD:(NSString *)umode
+                    deviceId:(NSString *)deviceId
+                      devNum:(NSInteger)devNum
+                     version:(NSString *)version;
+
 
 /**
  SDK 实例化

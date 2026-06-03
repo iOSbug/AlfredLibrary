@@ -7,5 +7,4 @@ framework module AlfredCore {
 
 module AlfredCore.Swift {
   header "AlfredCore-Swift.h"
-  requires objc
 }

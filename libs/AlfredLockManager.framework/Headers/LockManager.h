@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <AlfredCore/AlfredCore.h>
 #import <AlfredCore/AlfredCore-Swift.h>
+#import <AlfredLockManager/BluetoothManager.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -248,6 +249,19 @@ notifyCallback:(nullable void (^)(AlfredLock *device, AlfredLockRecord *record))
                page:(int)page
               limit:(int)limit
            callback:(AlfredBLECallback)callback;
+
+/**
+ *    触发蓝牙固件升级。普通门锁会忽略db1ProFrontPanel参数；DB1 Pro使用该参数选择前面板或后面板升级。
+ *
+ *    @param     deviceId 指定门锁对象SN
+ *    @param     version NetManager checkFirmwareUpdate返回的固件版本数据
+ *    @param     db1ProFrontPanel DB1 Pro是否升级前面板，YES为前面板，NO为后面板
+ *    @param     callback OAD升级结果回调
+ */
+- (void)upgradeFirmware:(NSString *)deviceId
+                version:(AlfredVersion *)version
+       db1ProFrontPanel:(BOOL)db1ProFrontPanel
+               callback:(BleOADResultBlock)callback;
 
 /**
  *   主动断开指定门锁的蓝牙通讯连接

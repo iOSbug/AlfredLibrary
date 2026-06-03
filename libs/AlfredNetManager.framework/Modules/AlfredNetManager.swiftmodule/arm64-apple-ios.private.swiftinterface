@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
-// swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AlfredNetManager
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AlfredNetManager
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
 import AVFoundation
 import Alamofire
 import AlfredCore
@@ -14,6 +14,11 @@ import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers public class DeviceAbility : ObjectiveC.NSObject {
+  public static func getModeAbility()
+  @objc override dynamic public init()
+  @objc deinit
+}
 public typealias RequestRetryCompletion = (_ shouldRetry: Swift.Bool, _ timeDelay: Foundation.TimeInterval) -> Swift.Void
 @objc @_inheritsConvenienceInitializers public class AlfredLibManager : ObjectiveC.NSObject {
   @objc public static func sdkInit(_ appKey: Swift.String, appSecret: Swift.String, success: @escaping () -> (), failure: @escaping AlfredCore.AlfredErrorCallback)
@@ -25,9 +30,7 @@ public typealias RequestRetryCompletion = (_ shouldRetry: Swift.Bool, _ timeDela
 @objc public class ErrorModel : ObjectiveC.NSObject {
   public var eCode: Swift.Int?
   @objc public var eMessage: Swift.String?
-  #if compiler(>=5.3) && $NonescapableTypes
   public init(_ eCode: Swift.Int?, eMessage: Swift.String?)
-  #endif
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class NetAPI : ObjectiveC.NSObject {
@@ -43,27 +46,15 @@ public typealias ArrNetCompletionHandler<T> = ([T.Response]?, AlfredCore.NetErro
   @objc public var bridgeList: [AlfredCore.AlfredBridge]
   @objc public func clear()
   @objc public func unbindDevice(deviceId: Swift.String)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getLockDevice(_ deviceId: Swift.String?) -> AlfredCore.AlfredLock?
-  #endif
   @objc public func updateLockCache(_ device: AlfredCore.AlfredLock)
   @objc public func updateBridgeCache(_ device: AlfredCore.AlfredBridge)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getLockBindGateway(_ device: AlfredCore.AlfredLock?) -> AlfredCore.AlfredBridge?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getMygatewayByGatewayDid(_ did: Swift.String?) -> AlfredCore.AlfredBridge?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getMygatewayByLockId(_ deviceId: Swift.String?) -> AlfredCore.AlfredBridge?
-  #endif
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getMyLocksByGatewayDid(_ did: Swift.String?) -> [AlfredCore.AlfredLock]
-  #endif
   @objc public func saveGatewayTimezone(_ gatewayId: Swift.String, _ timezones: AlfredCore.AlfredTimeZone)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getGatewayTimezone(_ gatewayId: Swift.String) -> AlfredCore.AlfredTimeZone?
-  #endif
   @objc override dynamic public init()
   @objc deinit
 }
@@ -76,14 +67,13 @@ public typealias ArrNetCompletionHandler<T> = ([T.Response]?, AlfredCore.NetErro
   @objc public static let shared: AlfredNetManager.NetSwiftManager
   @objc public func queryDevices(_ success: @escaping (AlfredCore.AlfredDevices) -> (), failure: @escaping (AlfredCore.NetErrorModel) -> ())
   @objc public func fetchDevice(_ deviceID: Swift.String, deviceType: AlfredCore.AlfredDeviceType, success: @escaping (AlfredCore.AlfredLock) -> (), failure: @escaping (AlfredCore.NetErrorModel) -> ())
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func fetchBridge(_ deviceID: Swift.String, success: @escaping (AlfredCore.AlfredBridge) -> (), failure: ((AlfredCore.NetErrorModel) -> ())?)
-  #endif
   @objc public func fetchLockRecords(_ deviceID: Swift.String, limit: Swift.String, page: Swift.String, success: @escaping (AlfredCore.AlfredLockRecords) -> (), failure: @escaping (AlfredCore.NetErrorModel) -> ())
   @objc public func updateLockRecords(_ params: [Swift.String : Any], success: @escaping () -> (), failure: @escaping (AlfredCore.NetErrorModel) -> ())
   @objc public func renameDevice(_ deviceID: Swift.String, deviceDid: Swift.String, deviceType: AlfredCore.AlfredDeviceType, alias: Swift.String, success: @escaping () -> (), failure: @escaping (AlfredCore.NetErrorModel) -> ())
   @objc public func unbindDevice(_ deviceID: Swift.String, deviceType: AlfredCore.AlfredDeviceType, success: @escaping () -> (), failure: @escaping (AlfredCore.NetErrorModel) -> ())
   @objc public func timestamp(_ success: @escaping (Swift.String) -> (), failure: @escaping (AlfredCore.NetErrorModel) -> ())
+  @objc public func checkBLEUpdate(_ deviceID: Swift.String, success: @escaping (AlfredCore.AlfredVersion) -> (), failure: @escaping (AlfredCore.NetErrorModel) -> ())
   @objc override dynamic public init()
   @objc deinit
 }
@@ -126,18 +116,14 @@ public let AccountActiveApi: Swift.String
 @objc @_inheritsConvenienceInitializers public class OfflineManager : ObjectiveC.NSObject {
   @objc public static let shared: AlfredNetManager.OfflineManager
   @objc public func saveOfflineGuestKey(_ key: Swift.String)
-  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getOfflineGuestKey() -> Swift.String?
-  #endif
   @objc override dynamic public init()
   @objc deinit
 }
 public enum NetHTTPMethod : Swift.String {
   case get
   case post
-  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
-  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -147,9 +133,7 @@ public protocol NetRequest {
   var host: Swift.String { get set }
   var path: Swift.String { get }
   var method: AlfredNetManager.NetHTTPMethod { get }
-  #if compiler(>=5.3) && $NonescapableTypes
   var parameter: [Swift.String : Any]? { get }
-  #endif
   var query: [Swift.String : Swift.String] { get }
   associatedtype Response : AlfredCore.NetDecodable
 }

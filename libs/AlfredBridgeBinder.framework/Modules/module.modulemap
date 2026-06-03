@@ -7,5 +7,4 @@ framework module AlfredBridgeBinder {
 
 module AlfredBridgeBinder.Swift {
   header "AlfredBridgeBinder-Swift.h"
-  requires objc
 }

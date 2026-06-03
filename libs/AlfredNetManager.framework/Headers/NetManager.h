@@ -101,6 +101,20 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)timestamp:(nullable void (^)(NSString *timestamp))success
           failure:(nullable void (^)(NetErrorModel *error))failure;
 
+
+/**
+ *    检测固件是否需要升级
+ *
+ *    @param     deviceID          指定设备的SN
+ *    @param     success              成功回调 AlfredVersion
+ *    @param     failure              失败回调
+
+ */
+- (void)checkFirmwareUpdate:(NSString*)deviceID
+                    success:(nullable void (^)(AlfredVersion *version))success
+                    failure:(nullable void (^)(NetErrorModel *error))failure;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
