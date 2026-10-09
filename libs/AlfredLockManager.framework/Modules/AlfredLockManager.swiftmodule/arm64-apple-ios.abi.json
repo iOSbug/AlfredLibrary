@@ -23,625 +23,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "Message",
-        "printedName": "Message",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "messageID",
-            "printedName": "messageID",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17AlfredLockManager7MessageV9messageIDSivp",
-            "mangledName": "$s17AlfredLockManager7MessageV9messageIDSivp",
-            "moduleName": "AlfredLockManager",
-            "declAttributes": [
-              "HasStorage"
-            ],
-            "fixedbinaryorder": 0,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17AlfredLockManager7MessageV9messageIDSivg",
-                "mangledName": "$s17AlfredLockManager7MessageV9messageIDSivg",
-                "moduleName": "AlfredLockManager",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17AlfredLockManager7MessageV9messageIDSivs",
-                "mangledName": "$s17AlfredLockManager7MessageV9messageIDSivs",
-                "moduleName": "AlfredLockManager",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17AlfredLockManager7MessageV9messageIDSivM",
-                "mangledName": "$s17AlfredLockManager7MessageV9messageIDSivM",
-                "moduleName": "AlfredLockManager",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "handle",
-            "printedName": "handle",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Any?, AlfredCore.AlfredError) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Any?, AlfredCore.AlfredError) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Any?, AlfredCore.AlfredError)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "Any?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "ProtocolComposition",
-                                "printedName": "Any"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "AlfredError",
-                            "printedName": "AlfredCore.AlfredError",
-                            "usr": "c:@E@AlfredError"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17AlfredLockManager7MessageV6handleyypSg_So0A5ErrorVtcSgvp",
-            "mangledName": "$s17AlfredLockManager7MessageV6handleyypSg_So0A5ErrorVtcSgvp",
-            "moduleName": "AlfredLockManager",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage"
-            ],
-            "fixedbinaryorder": 1,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "((Any?, AlfredCore.AlfredError) -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(Any?, AlfredCore.AlfredError) -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Tuple",
-                            "printedName": "(Any?, AlfredCore.AlfredError)",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "Optional",
-                                "printedName": "Any?",
-                                "children": [
-                                  {
-                                    "kind": "TypeNominal",
-                                    "name": "ProtocolComposition",
-                                    "printedName": "Any"
-                                  }
-                                ],
-                                "usr": "s:Sq"
-                              },
-                              {
-                                "kind": "TypeNominal",
-                                "name": "AlfredError",
-                                "printedName": "AlfredCore.AlfredError",
-                                "usr": "c:@E@AlfredError"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17AlfredLockManager7MessageV6handleyypSg_So0A5ErrorVtcSgvg",
-                "mangledName": "$s17AlfredLockManager7MessageV6handleyypSg_So0A5ErrorVtcSgvg",
-                "moduleName": "AlfredLockManager",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "((Any?, AlfredCore.AlfredError) -> ())?",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(Any?, AlfredCore.AlfredError) -> ()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Void",
-                            "printedName": "()"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Tuple",
-                            "printedName": "(Any?, AlfredCore.AlfredError)",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "Optional",
-                                "printedName": "Any?",
-                                "children": [
-                                  {
-                                    "kind": "TypeNominal",
-                                    "name": "ProtocolComposition",
-                                    "printedName": "Any"
-                                  }
-                                ],
-                                "usr": "s:Sq"
-                              },
-                              {
-                                "kind": "TypeNominal",
-                                "name": "AlfredError",
-                                "printedName": "AlfredCore.AlfredError",
-                                "usr": "c:@E@AlfredError"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17AlfredLockManager7MessageV6handleyypSg_So0A5ErrorVtcSgvs",
-                "mangledName": "$s17AlfredLockManager7MessageV6handleyypSg_So0A5ErrorVtcSgvs",
-                "moduleName": "AlfredLockManager",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17AlfredLockManager7MessageV6handleyypSg_So0A5ErrorVtcSgvM",
-                "mangledName": "$s17AlfredLockManager7MessageV6handleyypSg_So0A5ErrorVtcSgvM",
-                "moduleName": "AlfredLockManager",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "timeout",
-            "printedName": "timeout",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17AlfredLockManager7MessageV7timeoutSivp",
-            "mangledName": "$s17AlfredLockManager7MessageV7timeoutSivp",
-            "moduleName": "AlfredLockManager",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage"
-            ],
-            "fixedbinaryorder": 2,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17AlfredLockManager7MessageV7timeoutSivg",
-                "mangledName": "$s17AlfredLockManager7MessageV7timeoutSivg",
-                "moduleName": "AlfredLockManager",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17AlfredLockManager7MessageV7timeoutSivs",
-                "mangledName": "$s17AlfredLockManager7MessageV7timeoutSivs",
-                "moduleName": "AlfredLockManager",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17AlfredLockManager7MessageV7timeoutSivM",
-                "mangledName": "$s17AlfredLockManager7MessageV7timeoutSivM",
-                "moduleName": "AlfredLockManager",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "status",
-            "printedName": "status",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17AlfredLockManager7MessageV6statusSivp",
-            "mangledName": "$s17AlfredLockManager7MessageV6statusSivp",
-            "moduleName": "AlfredLockManager",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage"
-            ],
-            "fixedbinaryorder": 3,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17AlfredLockManager7MessageV6statusSivg",
-                "mangledName": "$s17AlfredLockManager7MessageV6statusSivg",
-                "moduleName": "AlfredLockManager",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17AlfredLockManager7MessageV6statusSivs",
-                "mangledName": "$s17AlfredLockManager7MessageV6statusSivs",
-                "moduleName": "AlfredLockManager",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17AlfredLockManager7MessageV6statusSivM",
-                "mangledName": "$s17AlfredLockManager7MessageV6statusSivM",
-                "moduleName": "AlfredLockManager",
-                "implicit": true,
-                "declAttributes": [
-                  "Transparent"
-                ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(messageID:handle:timeout:status:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Message",
-                "printedName": "AlfredLockManager.Message",
-                "usr": "s:17AlfredLockManager7MessageV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Any?, AlfredCore.AlfredError) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Any?, AlfredCore.AlfredError) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Tuple",
-                        "printedName": "(Any?, AlfredCore.AlfredError)",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Optional",
-                            "printedName": "Any?",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "ProtocolComposition",
-                                "printedName": "Any"
-                              }
-                            ],
-                            "usr": "s:Sq"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "AlfredError",
-                            "printedName": "AlfredCore.AlfredError",
-                            "usr": "c:@E@AlfredError"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "hasDefaultArg": true,
-                "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "hasDefaultArg": true,
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:17AlfredLockManager7MessageV9messageID6handle7timeout6statusACSi_yypSg_So0A5ErrorVtcSgS2itcfc",
-            "mangledName": "$s17AlfredLockManager7MessageV9messageID6handle7timeout6statusACSi_yypSg_So0A5ErrorVtcSgS2itcfc",
-            "moduleName": "AlfredLockManager",
-            "implicit": true,
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:17AlfredLockManager7MessageV",
-        "mangledName": "$s17AlfredLockManager7MessageV",
-        "moduleName": "AlfredLockManager",
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "BLEMessageStack",
         "printedName": "BLEMessageStack",
         "children": [
@@ -697,31 +78,6 @@
                 "accessorKind": "get"
               }
             ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "BLEMessageStack",
-                "printedName": "AlfredLockManager.BLEMessageStack",
-                "usr": "c:@M@AlfredLockManager@objc(cs)BLEMessageStack"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@AlfredLockManager@objc(cs)BLEMessageStack(im)init",
-            "mangledName": "$s17AlfredLockManager15BLEMessageStackCACycfc",
-            "moduleName": "AlfredLockManager",
-            "overriding": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
           },
           {
             "kind": "Function",
@@ -797,7 +153,6 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)BLEMessageStack(im)push:timeout:handle:",
             "mangledName": "$s17AlfredLockManager15BLEMessageStackC4push_7timeout6handleySi_SiyypSg_So0A5ErrorVtcSgtF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -867,51 +222,11 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)BLEMessageStack(im)pull:",
             "mangledName": "$s17AlfredLockManager15BLEMessageStackC4pullyyypSg_So0A5ErrorVtcSgSiF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "DiscardableResult",
               "ObjC",
               "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "startnTimer",
-            "printedName": "startnTimer()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17AlfredLockManager15BLEMessageStackC11startnTimeryyF",
-            "mangledName": "$s17AlfredLockManager15BLEMessageStackC11startnTimeryyF",
-            "moduleName": "AlfredLockManager",
-            "isOpen": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "timerLoop",
-            "printedName": "timerLoop()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AlfredLockManager@objc(cs)BLEMessageStack(im)timerLoop",
-            "mangledName": "$s17AlfredLockManager15BLEMessageStackC9timerLoopyyF",
-            "moduleName": "AlfredLockManager",
-            "isOpen": true,
-            "declAttributes": [
-              "ObjC"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -930,7 +245,6 @@
             "usr": "s:17AlfredLockManager15BLEMessageStackC5clearyyF",
             "mangledName": "$s17AlfredLockManager15BLEMessageStackC5clearyyF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
@@ -942,7 +256,6 @@
         "usr": "c:@M@AlfredLockManager@objc(cs)BLEMessageStack",
         "mangledName": "$s17AlfredLockManager15BLEMessageStackC",
         "moduleName": "AlfredLockManager",
-        "isOpen": true,
         "declAttributes": [
           "AccessControl",
           "ObjC"
@@ -1119,7 +432,6 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)LockSwiftManager(py)guestCacheDevice",
             "mangledName": "$s17AlfredLockManager0b5SwiftC0C16guestCacheDevice0A4Core0aB0CSgvp",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
@@ -1153,7 +465,6 @@
                 "mangledName": "$s17AlfredLockManager0b5SwiftC0C16guestCacheDevice0A4Core0aB0CSgvg",
                 "moduleName": "AlfredLockManager",
                 "implicit": true,
-                "isOpen": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -1189,7 +500,6 @@
                 "mangledName": "$s17AlfredLockManager0b5SwiftC0C16guestCacheDevice0A4Core0aB0CSgvs",
                 "moduleName": "AlfredLockManager",
                 "implicit": true,
-                "isOpen": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -1211,7 +521,6 @@
                 "mangledName": "$s17AlfredLockManager0b5SwiftC0C16guestCacheDevice0A4Core0aB0CSgvM",
                 "moduleName": "AlfredLockManager",
                 "implicit": true,
-                "isOpen": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -1319,7 +628,6 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)LockSwiftManager(im)access:timeout:connectCallback:notifyCallback:",
             "mangledName": "$s17AlfredLockManager0b5SwiftC0C6access_7timeout15connectCallback06notifyH0y0A4Core0aB0C_SiyAJ_So0aB12ConnectStateVSo0A5ErrorVtcyAJ_AH0aB6RecordCSgtctF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -1391,7 +699,6 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)LockSwiftManager(im)upgradeFirmware:version:db1ProFrontPanel:callback:",
             "mangledName": "$s17AlfredLockManager0b5SwiftC0C15upgradeFirmware_7version16db1ProFrontPanel8callbacky0A4Core0aB0C_AH0A7VersionCSbySo15OADReturnValuesV_SStctF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -1468,7 +775,6 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)LockSwiftManager(im)setConfig:configID:values:callback:",
             "mangledName": "$s17AlfredLockManager0b5SwiftC0C9setConfig_8configID6values8callbacky0A4Core0aB0C_So0ab7RequestF0VypyypSg_So0A5ErrorVtctF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -1541,7 +847,6 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)LockSwiftManager(im)getLockCodes:codeType:callback:",
             "mangledName": "$s17AlfredLockManager0b5SwiftC0C03getB5Codes_8codeType8callbacky0A4Core0aB0C_So0ab4CodeH0VyypSg_So0A5ErrorVtctF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -1620,58 +925,9 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)LockSwiftManager(im)deleteLockCode:codeType:codeIndex:callback:",
             "mangledName": "$s17AlfredLockManager0b5SwiftC0C06deleteB4Code_8codeType0G5Index8callbacky0A4Core0aB0C_So0abfH0VSiyypSg_So0A5ErrorVtctF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getLockCodeByIndex",
-            "printedName": "getLockCodeByIndex(_:codeType:codeIndex:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AlfredCore.AlfredLockCode?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AlfredLockCode",
-                    "printedName": "AlfredCore.AlfredLockCode",
-                    "usr": "c:@M@AlfredCore@objc(cs)AlfredLockCode"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AlfredLock",
-                "printedName": "AlfredCore.AlfredLock",
-                "usr": "c:@M@AlfredCore@objc(cs)AlfredLock"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AlfredLockCodeType",
-                "printedName": "AlfredCore.AlfredLockCodeType",
-                "usr": "c:@E@AlfredLockCodeType"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17AlfredLockManager0b5SwiftC0C03getB11CodeByIndex_8codeType0iH00A4Core0abF0CSgAG0aB0C_So0abfJ0VSitF",
-            "mangledName": "$s17AlfredLockManager0b5SwiftC0C03getB11CodeByIndex_8codeType0iH00A4Core0abF0CSgAG0aB0C_So0abfJ0VSitF",
-            "moduleName": "AlfredLockManager",
-            "isOpen": true,
-            "declAttributes": [
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
@@ -1753,7 +1009,6 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)LockSwiftManager(im)addLockCode:codeType:codeIndex:value:callback:",
             "mangledName": "$s17AlfredLockManager0b5SwiftC0C03addB4Code_8codeType0G5Index5value8callbacky0A4Core0aB0C_So0abfH0VSiSSyypSg_So0A5ErrorVtctF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -1850,7 +1105,6 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)LockSwiftManager(im)setLockCodeSchedule:codeType:codeIndex:startTime:endTime:timezone:callback:",
             "mangledName": "$s17AlfredLockManager0b5SwiftC0C03setB12CodeSchedule_8codeType0H5Index9startTime03endL08timezone8callbacky0A4Core0aB0C_So0abfI0VSiS3SyypSg_So0A5ErrorVtctF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -1954,7 +1208,6 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)LockSwiftManager(im)setLockCodeWeekSchedule:codeType:codeIndex:startTime:endTime:weekdays:callback:",
             "mangledName": "$s17AlfredLockManager0b5SwiftC0C03setB16CodeWeekSchedule_8codeType0I5Index9startTime03endM08weekdays8callbacky0A4Core0aB0C_So0abfJ0VSiS2SSayypGyypSg_So0A5ErrorVtctF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -2033,52 +1286,9 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)LockSwiftManager(im)deleteLockCodeSchedule:codeType:codeIndex:callback:",
             "mangledName": "$s17AlfredLockManager0b5SwiftC0C06deleteB12CodeSchedule_8codeType0H5Index8callbacky0A4Core0aB0C_So0abfI0VSiyypSg_So0A5ErrorVtctF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getAvailableScheduleId",
-            "printedName": "getAvailableScheduleId(_:lockCode:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AlfredLock",
-                "printedName": "AlfredCore.AlfredLock",
-                "usr": "c:@M@AlfredCore@objc(cs)AlfredLock"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AlfredLockCode",
-                "printedName": "AlfredCore.AlfredLockCode",
-                "usr": "c:@M@AlfredCore@objc(cs)AlfredLockCode"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17AlfredLockManager0b5SwiftC0C22getAvailableScheduleId_8lockCodeSSSg0A4Core0aB0C_AG0abJ0CtF",
-            "mangledName": "$s17AlfredLockManager0b5SwiftC0C22getAvailableScheduleId_8lockCodeSSSg0A4Core0aB0C_AG0abJ0CtF",
-            "moduleName": "AlfredLockManager",
-            "isOpen": true,
-            "declAttributes": [
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
@@ -2154,7 +1364,6 @@
             "usr": "c:@M@AlfredLockManager@objc(cs)LockSwiftManager(im)syncRecords:page:limit:callback:",
             "mangledName": "$s17AlfredLockManager0b5SwiftC0C11syncRecords_4page5limit8callbacky0A4Core0aB0C_S2SyypSg_So0A5ErrorVtctF",
             "moduleName": "AlfredLockManager",
-            "isOpen": true,
             "declAttributes": [
               "AccessControl",
               "ObjC",
@@ -2193,7 +1402,6 @@
         "usr": "c:@M@AlfredLockManager@objc(cs)LockSwiftManager",
         "mangledName": "$s17AlfredLockManager0b5SwiftC0C",
         "moduleName": "AlfredLockManager",
-        "isOpen": true,
         "declAttributes": [
           "AccessControl",
           "ObjC"

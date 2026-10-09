@@ -178,7 +178,6 @@
             "usr": "c:@M@AlfredLockBinder@objc(cs)LockBinderManager(im)searchDeviceListWithTimeout:name:success:failure:",
             "mangledName": "$s16AlfredLockBinder0bC7ManagerC16searchDeviceList7timeout4name7success7failureySi_SSySay0A4Core0aF10BindStatusCGcySo0A5ErrorV_SSSgtctF",
             "moduleName": "AlfredLockBinder",
-            "isOpen": true,
             "objc_name": "searchDeviceListWithTimeout:name:success:failure:",
             "declAttributes": [
               "AccessControl",
@@ -271,7 +270,6 @@
             "usr": "c:@M@AlfredLockBinder@objc(cs)LockBinderManager(im)bindLockWithDevice:mcode:success:failure:",
             "mangledName": "$s16AlfredLockBinder0bC7ManagerC04bindB06device5mcode7success7failurey0A4Core0A16DeviceBindStatusC_SSyAI0aB0CcySo0A5ErrorV_SSSgtctF",
             "moduleName": "AlfredLockBinder",
-            "isOpen": true,
             "objc_name": "bindLockWithDevice:mcode:success:failure:",
             "declAttributes": [
               "AccessControl",
@@ -357,7 +355,6 @@
             "usr": "c:@M@AlfredLockBinder@objc(cs)LockBinderManager(im)unbindLockWithDeviceId:success:failure:",
             "mangledName": "$s16AlfredLockBinder0bC7ManagerC06unbindB08deviceId7success7failureySS_yycySo0A5ErrorV_SSSgtctF",
             "moduleName": "AlfredLockBinder",
-            "isOpen": true,
             "objc_name": "unbindLockWithDeviceId:success:failure:",
             "declAttributes": [
               "AccessControl",
@@ -397,7 +394,6 @@
         "usr": "c:@M@AlfredLockBinder@objc(cs)LockBinderManager",
         "mangledName": "$s16AlfredLockBinder0bC7ManagerC",
         "moduleName": "AlfredLockBinder",
-        "isOpen": true,
         "declAttributes": [
           "AccessControl",
           "ObjC"
